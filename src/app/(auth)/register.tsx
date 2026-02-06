@@ -1,27 +1,36 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 import { useRouter, Link } from 'expo-router';
-import { Container } from '../../components/ui/container';
-import { Button } from '../../components/ui/button';
-import { Input } from '../../components/ui/input';
+import { Container, Button, Input, Layout } from '../../components/ui';
 import { Text as CustomText } from '../../components/ui/text';
-import { Layout } from '../../components/ui/layout';
 import { useColors } from '../../hooks/useColors';
-import { spacing } from '../../themes';
+import { spacing } from '../../../themes';
 
-export default function ForgotPasswordScreen() {
+export default function RegisterScreen() {
   const router = useRouter();
   const colors = useColors();
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
   const [error, setError] = useState('');
 
-  const handleResetPassword = async () => {
+  const handleRegister = async () => {
     setError('');
 
-    if (!email) {
-      setError('Please enter your email');
+    if (!name || !email || !password || !confirmPassword) {
+      setError('Please fill in all fields');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+
+    if (password.length < 8) {
+      setError('Password must be at least 8 characters');
       return;
     }
 
@@ -30,34 +39,10 @@ export default function ForgotPasswordScreen() {
     // Simulate API call
     setTimeout(() => {
       setLoading(false);
-      setSent(true);
+      // Navigate to main app on success
+      router.replace('/(app)');
     }, 2000);
   };
-
-  if (sent) {
-    return (
-      <Container>
-        <View style={styles.centeredContent}>
-          <Layout spacing={spacing.lg}>
-            <View style={styles.successIcon}>
-              <CustomText variant="title">✉️</CustomText>
-            </View>
-            <CustomText variant="title" style={styles.centeredText}>
-              Check Your Email
-            </CustomText>
-            <CustomText variant="body" style={[styles.centeredText, { color: colors.text }]}>
-              We've sent password reset instructions to {email}
-            </CustomText>
-            <Button
-              title="Back to Login"
-              onPress={() => router.push('/(auth)/login')}
-              style={styles.button}
-            />
-          </Layout>
-        </View>
-      </Container>
-    );
-  }
 
   return (
     <Container>
@@ -73,10 +58,10 @@ export default function ForgotPasswordScreen() {
             {/* Header */}
             <View style={styles.header}>
               <CustomText variant="title" style={styles.title}>
-                Forgot Password?
+                Create Account
               </CustomText>
               <CustomText variant="body" style={[styles.subtitle, { color: colors.text }]}>
-                Enter your email to reset your password
+                Sign up to get started
               </CustomText>
             </View>
 
@@ -92,6 +77,15 @@ export default function ForgotPasswordScreen() {
             {/* Form */}
             <View style={styles.form}>
               <Input
+                label="Full Name"
+                placeholder="Enter your full name"
+                value={name}
+                onChangeText={setName}
+                autoCapitalize="words"
+                autoComplete="name"
+              />
+
+              <Input
                 label="Email"
                 placeholder="Enter your email"
                 value={email}
@@ -101,20 +95,41 @@ export default function ForgotPasswordScreen() {
                 autoComplete="email"
               />
 
+              <Input
+                label="Password"
+                placeholder="Create a password"
+                value={password}
+                onChangeText={setPassword}
+                secureTextEntry
+                autoComplete="password-new"
+              />
+
+              <Input
+                label="Confirm Password"
+                placeholder="Confirm your password"
+                value={confirmPassword}
+                onChangeText={setConfirmPassword}
+                secureTextEntry
+                autoComplete="password-new"
+              />
+
               <Button
-                title={loading ? 'Sending...' : 'Reset Password'}
-                onPress={handleResetPassword}
+                title={loading ? 'Creating Account...' : 'Sign Up'}
+                onPress={handleRegister}
                 disabled={loading}
-                style={styles.button}
+                style={styles.registerButton}
               />
             </View>
 
-            {/* Back to Login */}
+            {/* Login Link */}
             <View style={styles.footer}>
+              <Text style={{ color: colors.text }}>
+                Already have an account?{' '}
+              </Text>
               <Link href="/(auth)/login" asChild>
-                <CustomText variant="body" style={{ color: colors.primary }}>
-                  ← Back to Login
-                </CustomText>
+                <Text style={[styles.loginLink, { color: colors.primary }]}>
+                  Sign In
+                </Text>
               </Link>
             </View>
           </Layout>
@@ -133,21 +148,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical: spacing.xl,
   },
-  centeredContent: {
-    flex: 1,
-    justifyContent: 'center',
-  },
   header: {
     alignItems: 'center',
     marginBottom: spacing.lg,
   },
   title: {
     marginBottom: spacing.sm,
-    textAlign: 'center',
   },
   subtitle: {
     opacity: 0.7,
-    textAlign: 'center',
   },
   errorContainer: {
     padding: spacing.md,
@@ -157,18 +166,16 @@ const styles = StyleSheet.create({
   form: {
     width: '100%',
   },
-  button: {
+  registerButton: {
     marginTop: spacing.md,
   },
   footer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'center',
     marginTop: spacing.xl,
   },
-  successIcon: {
-    alignItems: 'center',
-    marginBottom: spacing.md,
-  },
-  centeredText: {
-    textAlign: 'center',
+  loginLink: {
+    fontWeight: '600',
   },
 });

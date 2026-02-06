@@ -1,27 +1,24 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, StyleSheet, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 import { useRouter, Link } from 'expo-router';
-import { Container } from '../../components/ui/container';
-import { Button } from '../../components/ui/button';
-import { Input } from '../../components/ui/input';
+import { Container,Button, Input,  Layout } from '../../components/ui';
 import { Text as CustomText } from '../../components/ui/text';
-import { Layout } from '../../components/ui/layout';
 import { useColors } from '../../hooks/useColors';
-import { spacing } from '../../themes';
+import { spacing } from '../../../themes';
 
-export default function LoginScreen() {
+export default function ForgotPasswordScreen() {
   const router = useRouter();
   const colors = useColors();
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
   const [error, setError] = useState('');
 
-  const handleLogin = async () => {
+  const handleResetPassword = async () => {
     setError('');
 
-    if (!email || !password) {
-      setError('Please fill in all fields');
+    if (!email) {
+      setError('Please enter your email');
       return;
     }
 
@@ -30,10 +27,34 @@ export default function LoginScreen() {
     // Simulate API call
     setTimeout(() => {
       setLoading(false);
-      // Navigate to main app on success
-      router.replace('/(app)');
+      setSent(true);
     }, 2000);
   };
+
+  if (sent) {
+    return (
+      <Container>
+        <View style={styles.centeredContent}>
+          <Layout spacing={spacing.lg}>
+            <View style={styles.successIcon}>
+              <CustomText variant="title">✉️</CustomText>
+            </View>
+            <CustomText variant="title" style={styles.centeredText}>
+              Check Your Email
+            </CustomText>
+            <CustomText variant="body" style={[styles.centeredText, { color: colors.text }]}>
+              We've sent password reset instructions to {email}
+            </CustomText>
+            <Button
+              title="Back to Login"
+              onPress={() => router.push('/(auth)/login')}
+              style={styles.button}
+            />
+          </Layout>
+        </View>
+      </Container>
+    );
+  }
 
   return (
     <Container>
@@ -49,10 +70,10 @@ export default function LoginScreen() {
             {/* Header */}
             <View style={styles.header}>
               <CustomText variant="title" style={styles.title}>
-                Welcome Back
+                Forgot Password?
               </CustomText>
               <CustomText variant="body" style={[styles.subtitle, { color: colors.text }]}>
-                Sign in to continue
+                Enter your email to reset your password
               </CustomText>
             </View>
 
@@ -77,38 +98,20 @@ export default function LoginScreen() {
                 autoComplete="email"
               />
 
-              <Input
-                label="Password"
-                placeholder="Enter your password"
-                value={password}
-                onChangeText={setPassword}
-                secureTextEntry
-                autoComplete="password"
-              />
-
-              <Link href="/(auth)/forgot-password" asChild>
-                <Text style={[styles.forgotPassword, { color: colors.primary }]}>
-                  Forgot Password?
-                </Text>
-              </Link>
-
               <Button
-                title={loading ? 'Signing In...' : 'Sign In'}
-                onPress={handleLogin}
+                title={loading ? 'Sending...' : 'Reset Password'}
+                onPress={handleResetPassword}
                 disabled={loading}
-                style={styles.loginButton}
+                style={styles.button}
               />
             </View>
 
-            {/* Register Link */}
+            {/* Back to Login */}
             <View style={styles.footer}>
-              <Text style={{ color: colors.text }}>
-                Don't have an account?{' '}
-              </Text>
-              <Link href="/(auth)/register" asChild>
-                <Text style={[styles.registerLink, { color: colors.primary }]}>
-                  Sign Up
-                </Text>
+              <Link href="/(auth)/login" asChild>
+                <CustomText variant="body" style={{ color: colors.primary }}>
+                  ← Back to Login
+                </CustomText>
               </Link>
             </View>
           </Layout>
@@ -127,15 +130,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical: spacing.xl,
   },
+  centeredContent: {
+    flex: 1,
+    justifyContent: 'center',
+  },
   header: {
     alignItems: 'center',
     marginBottom: spacing.lg,
   },
   title: {
     marginBottom: spacing.sm,
+    textAlign: 'center',
   },
   subtitle: {
     opacity: 0.7,
+    textAlign: 'center',
   },
   errorContainer: {
     padding: spacing.md,
@@ -145,22 +154,18 @@ const styles = StyleSheet.create({
   form: {
     width: '100%',
   },
-  forgotPassword: {
-    textAlign: 'right',
-    marginTop: spacing.sm,
-    marginBottom: spacing.md,
-    fontSize: 14,
-  },
-  loginButton: {
+  button: {
     marginTop: spacing.md,
   },
   footer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
     alignItems: 'center',
     marginTop: spacing.xl,
   },
-  registerLink: {
-    fontWeight: '600',
+  successIcon: {
+    alignItems: 'center',
+    marginBottom: spacing.md,
+  },
+  centeredText: {
+    textAlign: 'center',
   },
 });

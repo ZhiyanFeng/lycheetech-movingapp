@@ -1,11 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
-import { Container } from '../../components/ui/container';
-import { Text } from '../../components/ui/text';
-import { Button } from '../../components/ui/button';
-import { Layout } from '../../components/ui/layout';
+import { Container,Text, Button, Layout } from '../../components/ui';
 import { useColors } from '../../hooks/useColors';
-import { spacing } from '../../themes';
+import { spacing } from '../../../themes';
 
 export default function BookingsScreen() {
   const colors = useColors();

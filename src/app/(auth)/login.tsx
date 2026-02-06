@@ -1,39 +1,24 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 import { useRouter, Link } from 'expo-router';
-import { Container } from '../../components/ui/container';
-import { Button } from '../../components/ui/button';
-import { Input } from '../../components/ui/input';
+import { Container, Button, Input, Layout } from '../../components/ui';
 import { Text as CustomText } from '../../components/ui/text';
-import { Layout } from '../../components/ui/layout';
 import { useColors } from '../../hooks/useColors';
-import { spacing } from '../../themes';
+import { spacing } from '../../../themes';
 
-export default function RegisterScreen() {
+export default function LoginScreen() {
   const router = useRouter();
   const colors = useColors();
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const handleRegister = async () => {
+  const handleLogin = async () => {
     setError('');
 
-    if (!name || !email || !password || !confirmPassword) {
+    if (!email || !password) {
       setError('Please fill in all fields');
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setError('Passwords do not match');
-      return;
-    }
-
-    if (password.length < 8) {
-      setError('Password must be at least 8 characters');
       return;
     }
 
@@ -61,10 +46,10 @@ export default function RegisterScreen() {
             {/* Header */}
             <View style={styles.header}>
               <CustomText variant="title" style={styles.title}>
-                Create Account
+                Welcome Back
               </CustomText>
               <CustomText variant="body" style={[styles.subtitle, { color: colors.text }]}>
-                Sign up to get started
+                Sign in to continue
               </CustomText>
             </View>
 
@@ -80,15 +65,6 @@ export default function RegisterScreen() {
             {/* Form */}
             <View style={styles.form}>
               <Input
-                label="Full Name"
-                placeholder="Enter your full name"
-                value={name}
-                onChangeText={setName}
-                autoCapitalize="words"
-                autoComplete="name"
-              />
-
-              <Input
                 label="Email"
                 placeholder="Enter your email"
                 value={email}
@@ -100,38 +76,35 @@ export default function RegisterScreen() {
 
               <Input
                 label="Password"
-                placeholder="Create a password"
+                placeholder="Enter your password"
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry
-                autoComplete="password-new"
+                autoComplete="password"
               />
 
-              <Input
-                label="Confirm Password"
-                placeholder="Confirm your password"
-                value={confirmPassword}
-                onChangeText={setConfirmPassword}
-                secureTextEntry
-                autoComplete="password-new"
-              />
+              <Link href="/(auth)/forgot-password" asChild>
+                <Text style={[styles.forgotPassword, { color: colors.primary }]}>
+                  Forgot Password?
+                </Text>
+              </Link>
 
               <Button
-                title={loading ? 'Creating Account...' : 'Sign Up'}
-                onPress={handleRegister}
+                title={loading ? 'Signing In...' : 'Sign In'}
+                onPress={handleLogin}
                 disabled={loading}
-                style={styles.registerButton}
+                style={styles.loginButton}
               />
             </View>
 
-            {/* Login Link */}
+            {/* Register Link */}
             <View style={styles.footer}>
               <Text style={{ color: colors.text }}>
-                Already have an account?{' '}
+                Don't have an account?{' '}
               </Text>
-              <Link href="/(auth)/login" asChild>
-                <Text style={[styles.loginLink, { color: colors.primary }]}>
-                  Sign In
+              <Link href="/(auth)/register" asChild>
+                <Text style={[styles.registerLink, { color: colors.primary }]}>
+                  Sign Up
                 </Text>
               </Link>
             </View>
@@ -169,7 +142,13 @@ const styles = StyleSheet.create({
   form: {
     width: '100%',
   },
-  registerButton: {
+  forgotPassword: {
+    textAlign: 'right',
+    marginTop: spacing.sm,
+    marginBottom: spacing.md,
+    fontSize: 14,
+  },
+  loginButton: {
     marginTop: spacing.md,
   },
   footer: {
@@ -178,7 +157,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: spacing.xl,
   },
-  loginLink: {
+  registerLink: {
     fontWeight: '600',
   },
 });

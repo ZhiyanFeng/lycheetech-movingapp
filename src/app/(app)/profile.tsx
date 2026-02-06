@@ -1,11 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
-import { Container } from '../../components/ui/container';
-import { Text } from '../../components/ui/text';
-import { Layout } from '../../components/ui/layout';
+import { Container, Text, Layout } from '../../components/ui';
 import { useColors } from '../../hooks/useColors';
-import { spacing } from '../../themes';
+import { spacing } from '../../../themes';
 
 export default function ProfileScreen() {
   const router = useRouter();
