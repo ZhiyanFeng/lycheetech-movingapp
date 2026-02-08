@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "lycheetech-movingapp",
-    "slug": "lycheetech-movingapp",
+    "name": "lychee moving",
+    "slug": "lychee-moving",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
