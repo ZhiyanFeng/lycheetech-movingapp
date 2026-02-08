@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "656805707235",
+    "project_id": "lychee-moving",
+    "storage_bucket": "lychee-moving.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656805707235:android:69332192eb6487d7b374d6",
+        "android_client_info": {
+          "package_name": "com.lycheetech.moving"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEi7-P_5ikOkwAcGUf6nhYpK201wu6_B8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
