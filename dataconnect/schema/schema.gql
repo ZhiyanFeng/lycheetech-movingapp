@@ -1,0 +1,101 @@
+type User @table {
+  displayName: String!
+  email: String!
+  createdAt: Timestamp!
+  phoneNumber: String
+  address: String
+}
+
+type Mover @table {
+  companyName: String!
+  email: String!
+  createdAt: Timestamp!
+  phoneNumber: String
+  address: String
+  description: String
+  serviceAreas: [String]
+  avatarUrl: String
+  vehicleUrl: String
+}
+
+
+type Vehicle @table {
+  mover: Mover!
+  make: String!
+  model: String!
+  year: Int!
+  licensePlate: String!
+  capacity: Float!
+  createdAt: Timestamp!
+  status: String!
+}
+
+type MovingRequest @table {
+  user: User!
+  originAddress: String!
+  destinationAddress: String!
+  moveDate: Date!
+  createdAt: Timestamp!
+  status: String!
+  description: String
+  itemDetails: String
+}
+
+type Bid @table {
+  mover: Mover!
+  movingRequest: MovingRequest!
+  amount: Float!
+  createdAt: Timestamp!
+  status: String!
+  details: String
+}
+
+type Job @table {
+  movingRequest: MovingRequest!
+  mover: Mover!
+  bid: Bid!
+  vehicle: Vehicle!
+  startDate: Date!
+  status: String!
+  createdAt: Timestamp!
+  completionDate: Date
+  notes: String
+  downPayment: Payment
+  invoice: Invoice
+}
+
+type Inventory @table {
+  job: Job!
+  name: String!
+  quantity: Int!
+  description: String
+}
+
+type Payment @table {
+  job: Job!
+  amount: Float!
+  paymentType: String!
+  paymentDate: Timestamp!
+  status: String!
+  transactionId: String
+}
+
+type Invoice @table {
+  job: Job!
+  amountDue: Float!
+  dueDate: Date!
+  createdAt: Timestamp!
+  status: String!
+  issueDate: Date!
+  payment: Payment
+}
+
+type Booking @table {
+  movingRequest: MovingRequest!
+  acceptedBid: Bid!
+  user: User!
+  mover: Mover!
+  bookingDate: Timestamp!
+  status: String!
+  notes: String
+}
