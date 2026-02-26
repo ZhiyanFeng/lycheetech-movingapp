@@ -1,0 +1,3969 @@
+"""
+✨ `Bid_KeyOutput` returns the primary key fields of table type `Bid`.
+
+It has the same format as `Bid_Key`, but is only used as mutation return value.
+"""
+scalar Bid_KeyOutput
+"""
+✨ `BidStatus_Expr` is a server value variant of enum type `BidStatus`.
+
+It accepts a CEL expression.
+"""
+scalar BidStatus_Expr
+"""
+✨ `Inventory_KeyOutput` returns the primary key fields of table type `Inventory`.
+
+It has the same format as `Inventory_Key`, but is only used as mutation return value.
+"""
+scalar Inventory_KeyOutput
+"""
+✨ `Invoice_KeyOutput` returns the primary key fields of table type `Invoice`.
+
+It has the same format as `Invoice_Key`, but is only used as mutation return value.
+"""
+scalar Invoice_KeyOutput
+"""
+✨ `InvoiceStatus_Expr` is a server value variant of enum type `InvoiceStatus`.
+
+It accepts a CEL expression.
+"""
+scalar InvoiceStatus_Expr
+"""
+✨ `Job_KeyOutput` returns the primary key fields of table type `Job`.
+
+It has the same format as `Job_Key`, but is only used as mutation return value.
+"""
+scalar Job_KeyOutput
+"""
+✨ `JobStatus_Expr` is a server value variant of enum type `JobStatus`.
+
+It accepts a CEL expression.
+"""
+scalar JobStatus_Expr
+"""
+✨ `Mover_KeyOutput` returns the primary key fields of table type `Mover`.
+
+It has the same format as `Mover_Key`, but is only used as mutation return value.
+"""
+scalar Mover_KeyOutput
+"""
+✨ `MovingRequest_KeyOutput` returns the primary key fields of table type `MovingRequest`.
+
+It has the same format as `MovingRequest_Key`, but is only used as mutation return value.
+"""
+scalar MovingRequest_KeyOutput
+"""
+✨ `Payment_KeyOutput` returns the primary key fields of table type `Payment`.
+
+It has the same format as `Payment_Key`, but is only used as mutation return value.
+"""
+scalar Payment_KeyOutput
+"""
+✨ `PaymentStatus_Expr` is a server value variant of enum type `PaymentStatus`.
+
+It accepts a CEL expression.
+"""
+scalar PaymentStatus_Expr
+"""
+✨ `RequestStatus_Expr` is a server value variant of enum type `RequestStatus`.
+
+It accepts a CEL expression.
+"""
+scalar RequestStatus_Expr
+"""
+✨ `User_KeyOutput` returns the primary key fields of table type `User`.
+
+It has the same format as `User_Key`, but is only used as mutation return value.
+"""
+scalar User_KeyOutput
+"""
+✨ `Vehicle_KeyOutput` returns the primary key fields of table type `Vehicle`.
+
+It has the same format as `Vehicle_Key`, but is only used as mutation return value.
+"""
+scalar Vehicle_KeyOutput
+"""
+✨ `VehicleStatus_Expr` is a server value variant of enum type `VehicleStatus`.
+
+It accepts a CEL expression.
+"""
+scalar VehicleStatus_Expr
+"""
+✨ Generated data input type for table 'Bid'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Bid_Data {
+  """
+  ✨ Generated from Field `Bid`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Bid`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Bid`.`moverId` of type `UUID!`
+  """
+  moverId: UUID
+  """
+  ✨ `_expr` server value variant of `moverId` (✨ Generated from Field `Bid`.`moverId` of type `UUID!`)
+  """
+  moverId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Bid`.`movingRequestId` of type `UUID!`
+  """
+  movingRequestId: UUID
+  """
+  ✨ `_expr` server value variant of `movingRequestId` (✨ Generated from Field `Bid`.`movingRequestId` of type `UUID!`)
+  """
+  movingRequestId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Bid`.`mover` of type `Mover!`
+  """
+  mover: Mover_Key
+  """
+  ✨ Generated from Field `Bid`.`movingRequest` of type `MovingRequest!`
+  """
+  movingRequest: MovingRequest_Key
+  """
+  ✨ Generated from Field `Bid`.`amount` of type `Float!`
+  """
+  amount: Float
+  """
+  ✨ `_expr` server value variant of `amount` (✨ Generated from Field `Bid`.`amount` of type `Float!`)
+  """
+  amount_expr: Float_Expr
+  """
+  ✨ `_update` server value variant of `amount` (✨ Generated from Field `Bid`.`amount` of type `Float!`)
+  """
+  amount_update: [Float_Update!]
+  """
+  ✨ Generated from Field `Bid`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Bid`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Bid`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Bid`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Bid`.`details` of type `String`
+  """
+  details: String
+  """
+  ✨ `_expr` server value variant of `details` (✨ Generated from Field `Bid`.`details` of type `String`)
+  """
+  details_expr: String_Expr
+  """
+  ✨ Generated from Field `Bid`.`status` of type `BidStatus!`
+  """
+  status: BidStatus
+  """
+  ✨ `_expr` server value variant of `status` (✨ Generated from Field `Bid`.`status` of type `BidStatus!`)
+  """
+  status_expr: BidStatus_Expr
+}
+"""
+✨ Generated filter input type for table 'Bid'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Bid_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Bid_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Bid_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Bid_Filter!]
+  """
+  ✨ Generated from Field `Bid`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Bid`.`moverId` of type `UUID!`
+  """
+  moverId: UUID_Filter
+  """
+  ✨ Generated from Field `Bid`.`movingRequestId` of type `UUID!`
+  """
+  movingRequestId: UUID_Filter
+  """
+  ✨ Generated from Field `Bid`.`mover` of type `Mover!`
+  """
+  mover: Mover_Filter
+  """
+  ✨ Generated from Field `Bid`.`movingRequest` of type `MovingRequest!`
+  """
+  movingRequest: MovingRequest_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount` of type `Float!`
+  """
+  amount: Float_Filter
+  """
+  ✨ Generated from Field `Bid`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Bid`.`details` of type `String`
+  """
+  details: String_Filter
+  """
+  ✨ Generated from Field `Bid`.`status` of type `BidStatus!`
+  """
+  status: BidStatus_Filter
+  """
+  ✨ Generated from Field `Bid`.`jobs_on_bid` of type `[Job!]!`
+  """
+  jobs_on_bid: Job_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Bid'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Bid_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Bid_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Bid_Filter
+}
+"""
+✨ Generated having input type for table 'Bid'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Bid_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Bid_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Bid_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Bid_Having!]
+  """
+  ✨ Generated from Field `Bid`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount_count` of type `Int!`
+  """
+  amount_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`details_count` of type `Int!`
+  """
+  details_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`moverId_count` of type `Int!`
+  """
+  moverId_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`movingRequestId_count` of type `Int!`
+  """
+  movingRequestId_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`status_count` of type `Int!`
+  """
+  status_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount_sum` of type `Float`
+  """
+  amount_sum: Float_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount_avg` of type `Float`
+  """
+  amount_avg: Float_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount_min` of type `Float`
+  """
+  amount_min: Float_Filter
+  """
+  ✨ Generated from Field `Bid`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount_max` of type `Float`
+  """
+  amount_max: Float_Filter
+  """
+  ✨ Generated from Field `Bid`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'Bid'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Bid_Key {
+  """
+  ✨ Generated from Field `Bid`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Bid`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Bid'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Bid_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Bid_Filter
+}
+"""
+✨ Generated order input type for table 'Bid'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Bid_Order {
+  """
+  ✨ Generated from Field `Bid`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`moverId` of type `UUID!`
+  """
+  moverId: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`movingRequestId` of type `UUID!`
+  """
+  movingRequestId: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`mover` of type `Mover!`
+  """
+  mover: Mover_Order
+  """
+  ✨ Generated from Field `Bid`.`movingRequest` of type `MovingRequest!`
+  """
+  movingRequest: MovingRequest_Order
+  """
+  ✨ Generated from Field `Bid`.`amount` of type `Float!`
+  """
+  amount: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`details` of type `String`
+  """
+  details: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`status` of type `BidStatus!`
+  """
+  status: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`amount_count` of type `Int!`
+  """
+  amount_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`details_count` of type `Int!`
+  """
+  details_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`moverId_count` of type `Int!`
+  """
+  moverId_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`movingRequestId_count` of type `Int!`
+  """
+  movingRequestId_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`status_count` of type `Int!`
+  """
+  status_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`amount_sum` of type `Float`
+  """
+  amount_sum: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`amount_avg` of type `Float`
+  """
+  amount_avg: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`amount_min` of type `Float`
+  """
+  amount_min: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`amount_max` of type `Float`
+  """
+  amount_max: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}
+"""
+✨ Generated filter input type for table 'BidStatus'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input BidStatus_Filter {
+  """
+  Match if field is exactly equal to provided value.
+  """
+  eq: BidStatus
+  """
+  ✨ `_expr` server value variant of `eq` (Match if field is exactly equal to provided value.)
+  """
+  eq_expr: BidStatus_Expr
+  """
+  Match if field is not equal to provided value.
+  """
+  ne: BidStatus
+  """
+  ✨ `_expr` server value variant of `ne` (Match if field is not equal to provided value.)
+  """
+  ne_expr: BidStatus_Expr
+  """
+  When true, match if field `IS NULL`. When false, match if field is `NOT NULL`.
+  """
+  isNull: Boolean
+  """
+  Match if field value is among the provided list of values.
+  """
+  in: [BidStatus!]
+  """
+  Match if field value is not among the provided list of values.
+  """
+  nin: [BidStatus!]
+  """
+  Match if field value is greater than the provided value, based on index ordering of supported enum values.
+  """
+  gt: BidStatus
+  """
+  ✨ `_expr` server value variant of `gt` (Match if field value is greater than the provided value, based on index ordering of supported enum values.)
+  """
+  gt_expr: BidStatus_Expr
+  """
+  Match if field is greater than or equal to the provided value.
+  """
+  ge: BidStatus
+  """
+  ✨ `_expr` server value variant of `ge` (Match if field is greater than or equal to the provided value.)
+  """
+  ge_expr: BidStatus_Expr
+  """
+  Match if field value is less than the provided value, based on index ordering of supported enum values.
+  """
+  lt: BidStatus
+  """
+  ✨ `_expr` server value variant of `lt` (Match if field value is less than the provided value, based on index ordering of supported enum values.)
+  """
+  lt_expr: BidStatus_Expr
+  """
+  Match if field is less than or equal to the provided value, based on index ordering of supported enum values.
+  """
+  le: BidStatus
+  """
+  ✨ `_expr` server value variant of `le` (Match if field is less than or equal to the provided value, based on index ordering of supported enum values.)
+  """
+  le_expr: BidStatus_Expr
+}
+"""
+✨ Generated list filter input type for table 'BidStatus'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input BidStatus_ListFilter {
+  """
+  Match if list field contains the provided value as a member.
+  """
+  includes: BidStatus
+  """
+  ✨ `_expr` server value variant of `includes` (Match if list field contains the provided value as a member.)
+  """
+  includes_expr: BidStatus_Expr
+  """
+  Match if list field contains all of the provided values as members.
+  """
+  includesAll: [BidStatus!]
+  """
+  Match if list field does not contain the provided value as a member.
+  """
+  excludes: BidStatus
+  """
+  ✨ `_expr` server value variant of `excludes` (Match if list field does not contain the provided value as a member.)
+  """
+  excludes_expr: BidStatus_Expr
+  """
+  Match if list field does not contain any of the provided values as members.
+  """
+  excludesAll: [BidStatus!]
+  """
+  The desired number of enum values that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: BidStatus_Filter
+}
+"""
+✨ Generated data input type for table 'Inventory'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Inventory_Data {
+  """
+  ✨ Generated from Field `Inventory`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Inventory`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Inventory`.`jobId` of type `UUID!`
+  """
+  jobId: UUID
+  """
+  ✨ `_expr` server value variant of `jobId` (✨ Generated from Field `Inventory`.`jobId` of type `UUID!`)
+  """
+  jobId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Inventory`.`job` of type `Job!`
+  """
+  job: Job_Key
+  """
+  ✨ Generated from Field `Inventory`.`description` of type `String`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `Inventory`.`description` of type `String`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `Inventory`.`name` of type `String!`
+  """
+  name: String
+  """
+  ✨ `_expr` server value variant of `name` (✨ Generated from Field `Inventory`.`name` of type `String!`)
+  """
+  name_expr: String_Expr
+  """
+  ✨ Generated from Field `Inventory`.`quantity` of type `Int!`
+  """
+  quantity: Int
+  """
+  ✨ `_expr` server value variant of `quantity` (✨ Generated from Field `Inventory`.`quantity` of type `Int!`)
+  """
+  quantity_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `quantity` (✨ Generated from Field `Inventory`.`quantity` of type `Int!`)
+  """
+  quantity_update: [Int_Update!]
+}
+"""
+✨ Generated filter input type for table 'Inventory'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Inventory_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Inventory_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Inventory_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Inventory_Filter!]
+  """
+  ✨ Generated from Field `Inventory`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Inventory`.`jobId` of type `UUID!`
+  """
+  jobId: UUID_Filter
+  """
+  ✨ Generated from Field `Inventory`.`job` of type `Job!`
+  """
+  job: Job_Filter
+  """
+  ✨ Generated from Field `Inventory`.`description` of type `String`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `Inventory`.`name` of type `String!`
+  """
+  name: String_Filter
+  """
+  ✨ Generated from Field `Inventory`.`quantity` of type `Int!`
+  """
+  quantity: Int_Filter
+}
+"""
+✨ Generated first-row input type for table 'Inventory'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Inventory_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Inventory_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Inventory_Filter
+}
+"""
+✨ Generated having input type for table 'Inventory'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Inventory_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Inventory_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Inventory_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Inventory_Having!]
+  """
+  ✨ Generated from Field `Inventory`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Inventory`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `Inventory`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Inventory`.`jobId_count` of type `Int!`
+  """
+  jobId_count: Int_Filter
+  """
+  ✨ Generated from Field `Inventory`.`name_count` of type `Int!`
+  """
+  name_count: Int_Filter
+  """
+  ✨ Generated from Field `Inventory`.`quantity_count` of type `Int!`
+  """
+  quantity_count: Int_Filter
+  """
+  ✨ Generated from Field `Inventory`.`quantity_sum` of type `Int`
+  """
+  quantity_sum: Int_Filter
+  """
+  ✨ Generated from Field `Inventory`.`quantity_avg` of type `Float`
+  """
+  quantity_avg: Float_Filter
+  """
+  ✨ Generated from Field `Inventory`.`quantity_min` of type `Int`
+  """
+  quantity_min: Int_Filter
+  """
+  ✨ Generated from Field `Inventory`.`quantity_max` of type `Int`
+  """
+  quantity_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Inventory'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Inventory_Key {
+  """
+  ✨ Generated from Field `Inventory`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Inventory`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Inventory'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Inventory_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Inventory_Filter
+}
+"""
+✨ Generated order input type for table 'Inventory'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Inventory_Order {
+  """
+  ✨ Generated from Field `Inventory`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`jobId` of type `UUID!`
+  """
+  jobId: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`job` of type `Job!`
+  """
+  job: Job_Order
+  """
+  ✨ Generated from Field `Inventory`.`description` of type `String`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`name` of type `String!`
+  """
+  name: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`quantity` of type `Int!`
+  """
+  quantity: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`jobId_count` of type `Int!`
+  """
+  jobId_count: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`name_count` of type `Int!`
+  """
+  name_count: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`quantity_count` of type `Int!`
+  """
+  quantity_count: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`quantity_sum` of type `Int`
+  """
+  quantity_sum: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`quantity_avg` of type `Float`
+  """
+  quantity_avg: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`quantity_min` of type `Int`
+  """
+  quantity_min: OrderDirection
+  """
+  ✨ Generated from Field `Inventory`.`quantity_max` of type `Int`
+  """
+  quantity_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Invoice'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Invoice_Data {
+  """
+  ✨ Generated from Field `Invoice`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Invoice`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Invoice`.`jobId` of type `UUID!`
+  """
+  jobId: UUID
+  """
+  ✨ `_expr` server value variant of `jobId` (✨ Generated from Field `Invoice`.`jobId` of type `UUID!`)
+  """
+  jobId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Invoice`.`paymentId` of type `UUID`
+  """
+  paymentId: UUID
+  """
+  ✨ `_expr` server value variant of `paymentId` (✨ Generated from Field `Invoice`.`paymentId` of type `UUID`)
+  """
+  paymentId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Invoice`.`job` of type `Job!`
+  """
+  job: Job_Key
+  """
+  ✨ Generated from Field `Invoice`.`payment` of type `Payment`
+  """
+  payment: Payment_Key
+  """
+  ✨ Generated from Field `Invoice`.`amountDue` of type `Float!`
+  """
+  amountDue: Float
+  """
+  ✨ `_expr` server value variant of `amountDue` (✨ Generated from Field `Invoice`.`amountDue` of type `Float!`)
+  """
+  amountDue_expr: Float_Expr
+  """
+  ✨ `_update` server value variant of `amountDue` (✨ Generated from Field `Invoice`.`amountDue` of type `Float!`)
+  """
+  amountDue_update: [Float_Update!]
+  """
+  ✨ Generated from Field `Invoice`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Invoice`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Invoice`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Invoice`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Invoice`.`dueDate` of type `Date!`
+  """
+  dueDate: Date
+  """
+  ✨ `_date` server value variant of `dueDate` (✨ Generated from Field `Invoice`.`dueDate` of type `Date!`)
+  """
+  dueDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `dueDate` (✨ Generated from Field `Invoice`.`dueDate` of type `Date!`)
+  """
+  dueDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `dueDate` (✨ Generated from Field `Invoice`.`dueDate` of type `Date!`)
+  """
+  dueDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `Invoice`.`issueDate` of type `Date!`
+  """
+  issueDate: Date
+  """
+  ✨ `_date` server value variant of `issueDate` (✨ Generated from Field `Invoice`.`issueDate` of type `Date!`)
+  """
+  issueDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `issueDate` (✨ Generated from Field `Invoice`.`issueDate` of type `Date!`)
+  """
+  issueDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `issueDate` (✨ Generated from Field `Invoice`.`issueDate` of type `Date!`)
+  """
+  issueDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `Invoice`.`status` of type `InvoiceStatus!`
+  """
+  status: InvoiceStatus
+  """
+  ✨ `_expr` server value variant of `status` (✨ Generated from Field `Invoice`.`status` of type `InvoiceStatus!`)
+  """
+  status_expr: InvoiceStatus_Expr
+}
+"""
+✨ Generated filter input type for table 'Invoice'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Invoice_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Invoice_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Invoice_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Invoice_Filter!]
+  """
+  ✨ Generated from Field `Invoice`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Invoice`.`jobId` of type `UUID!`
+  """
+  jobId: UUID_Filter
+  """
+  ✨ Generated from Field `Invoice`.`paymentId` of type `UUID`
+  """
+  paymentId: UUID_Filter
+  """
+  ✨ Generated from Field `Invoice`.`job` of type `Job!`
+  """
+  job: Job_Filter
+  """
+  ✨ Generated from Field `Invoice`.`payment` of type `Payment`
+  """
+  payment: Payment_Filter
+  """
+  ✨ Generated from Field `Invoice`.`amountDue` of type `Float!`
+  """
+  amountDue: Float_Filter
+  """
+  ✨ Generated from Field `Invoice`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Invoice`.`dueDate` of type `Date!`
+  """
+  dueDate: Date_Filter
+  """
+  ✨ Generated from Field `Invoice`.`issueDate` of type `Date!`
+  """
+  issueDate: Date_Filter
+  """
+  ✨ Generated from Field `Invoice`.`status` of type `InvoiceStatus!`
+  """
+  status: InvoiceStatus_Filter
+}
+"""
+✨ Generated first-row input type for table 'Invoice'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Invoice_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Invoice_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Invoice_Filter
+}
+"""
+✨ Generated having input type for table 'Invoice'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Invoice_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Invoice_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Invoice_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Invoice_Having!]
+  """
+  ✨ Generated from Field `Invoice`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Invoice`.`amountDue_count` of type `Int!`
+  """
+  amountDue_count: Int_Filter
+  """
+  ✨ Generated from Field `Invoice`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Invoice`.`dueDate_count` of type `Int!`
+  """
+  dueDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Invoice`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Invoice`.`issueDate_count` of type `Int!`
+  """
+  issueDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Invoice`.`jobId_count` of type `Int!`
+  """
+  jobId_count: Int_Filter
+  """
+  ✨ Generated from Field `Invoice`.`paymentId_count` of type `Int!`
+  """
+  paymentId_count: Int_Filter
+  """
+  ✨ Generated from Field `Invoice`.`status_count` of type `Int!`
+  """
+  status_count: Int_Filter
+  """
+  ✨ Generated from Field `Invoice`.`amountDue_sum` of type `Float`
+  """
+  amountDue_sum: Float_Filter
+  """
+  ✨ Generated from Field `Invoice`.`amountDue_avg` of type `Float`
+  """
+  amountDue_avg: Float_Filter
+  """
+  ✨ Generated from Field `Invoice`.`amountDue_min` of type `Float`
+  """
+  amountDue_min: Float_Filter
+  """
+  ✨ Generated from Field `Invoice`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Invoice`.`dueDate_min` of type `Date`
+  """
+  dueDate_min: Date_Filter
+  """
+  ✨ Generated from Field `Invoice`.`issueDate_min` of type `Date`
+  """
+  issueDate_min: Date_Filter
+  """
+  ✨ Generated from Field `Invoice`.`amountDue_max` of type `Float`
+  """
+  amountDue_max: Float_Filter
+  """
+  ✨ Generated from Field `Invoice`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `Invoice`.`dueDate_max` of type `Date`
+  """
+  dueDate_max: Date_Filter
+  """
+  ✨ Generated from Field `Invoice`.`issueDate_max` of type `Date`
+  """
+  issueDate_max: Date_Filter
+}
+"""
+✨ Generated key input type for table 'Invoice'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Invoice_Key {
+  """
+  ✨ Generated from Field `Invoice`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Invoice`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Invoice'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Invoice_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Invoice_Filter
+}
+"""
+✨ Generated order input type for table 'Invoice'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Invoice_Order {
+  """
+  ✨ Generated from Field `Invoice`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`jobId` of type `UUID!`
+  """
+  jobId: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`paymentId` of type `UUID`
+  """
+  paymentId: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`job` of type `Job!`
+  """
+  job: Job_Order
+  """
+  ✨ Generated from Field `Invoice`.`payment` of type `Payment`
+  """
+  payment: Payment_Order
+  """
+  ✨ Generated from Field `Invoice`.`amountDue` of type `Float!`
+  """
+  amountDue: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`dueDate` of type `Date!`
+  """
+  dueDate: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`issueDate` of type `Date!`
+  """
+  issueDate: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`status` of type `InvoiceStatus!`
+  """
+  status: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`amountDue_count` of type `Int!`
+  """
+  amountDue_count: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`dueDate_count` of type `Int!`
+  """
+  dueDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`issueDate_count` of type `Int!`
+  """
+  issueDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`jobId_count` of type `Int!`
+  """
+  jobId_count: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`paymentId_count` of type `Int!`
+  """
+  paymentId_count: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`status_count` of type `Int!`
+  """
+  status_count: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`amountDue_sum` of type `Float`
+  """
+  amountDue_sum: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`amountDue_avg` of type `Float`
+  """
+  amountDue_avg: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`amountDue_min` of type `Float`
+  """
+  amountDue_min: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`dueDate_min` of type `Date`
+  """
+  dueDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`issueDate_min` of type `Date`
+  """
+  issueDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`amountDue_max` of type `Float`
+  """
+  amountDue_max: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`dueDate_max` of type `Date`
+  """
+  dueDate_max: OrderDirection
+  """
+  ✨ Generated from Field `Invoice`.`issueDate_max` of type `Date`
+  """
+  issueDate_max: OrderDirection
+}
+"""
+✨ Generated filter input type for table 'InvoiceStatus'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input InvoiceStatus_Filter {
+  """
+  Match if field is exactly equal to provided value.
+  """
+  eq: InvoiceStatus
+  """
+  ✨ `_expr` server value variant of `eq` (Match if field is exactly equal to provided value.)
+  """
+  eq_expr: InvoiceStatus_Expr
+  """
+  Match if field is not equal to provided value.
+  """
+  ne: InvoiceStatus
+  """
+  ✨ `_expr` server value variant of `ne` (Match if field is not equal to provided value.)
+  """
+  ne_expr: InvoiceStatus_Expr
+  """
+  When true, match if field `IS NULL`. When false, match if field is `NOT NULL`.
+  """
+  isNull: Boolean
+  """
+  Match if field value is among the provided list of values.
+  """
+  in: [InvoiceStatus!]
+  """
+  Match if field value is not among the provided list of values.
+  """
+  nin: [InvoiceStatus!]
+  """
+  Match if field value is greater than the provided value, based on index ordering of supported enum values.
+  """
+  gt: InvoiceStatus
+  """
+  ✨ `_expr` server value variant of `gt` (Match if field value is greater than the provided value, based on index ordering of supported enum values.)
+  """
+  gt_expr: InvoiceStatus_Expr
+  """
+  Match if field is greater than or equal to the provided value.
+  """
+  ge: InvoiceStatus
+  """
+  ✨ `_expr` server value variant of `ge` (Match if field is greater than or equal to the provided value.)
+  """
+  ge_expr: InvoiceStatus_Expr
+  """
+  Match if field value is less than the provided value, based on index ordering of supported enum values.
+  """
+  lt: InvoiceStatus
+  """
+  ✨ `_expr` server value variant of `lt` (Match if field value is less than the provided value, based on index ordering of supported enum values.)
+  """
+  lt_expr: InvoiceStatus_Expr
+  """
+  Match if field is less than or equal to the provided value, based on index ordering of supported enum values.
+  """
+  le: InvoiceStatus
+  """
+  ✨ `_expr` server value variant of `le` (Match if field is less than or equal to the provided value, based on index ordering of supported enum values.)
+  """
+  le_expr: InvoiceStatus_Expr
+}
+"""
+✨ Generated list filter input type for table 'InvoiceStatus'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input InvoiceStatus_ListFilter {
+  """
+  Match if list field contains the provided value as a member.
+  """
+  includes: InvoiceStatus
+  """
+  ✨ `_expr` server value variant of `includes` (Match if list field contains the provided value as a member.)
+  """
+  includes_expr: InvoiceStatus_Expr
+  """
+  Match if list field contains all of the provided values as members.
+  """
+  includesAll: [InvoiceStatus!]
+  """
+  Match if list field does not contain the provided value as a member.
+  """
+  excludes: InvoiceStatus
+  """
+  ✨ `_expr` server value variant of `excludes` (Match if list field does not contain the provided value as a member.)
+  """
+  excludes_expr: InvoiceStatus_Expr
+  """
+  Match if list field does not contain any of the provided values as members.
+  """
+  excludesAll: [InvoiceStatus!]
+  """
+  The desired number of enum values that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: InvoiceStatus_Filter
+}
+"""
+✨ Generated data input type for table 'Job'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Job_Data {
+  """
+  ✨ Generated from Field `Job`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Job`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Job`.`bidId` of type `UUID!`
+  """
+  bidId: UUID
+  """
+  ✨ `_expr` server value variant of `bidId` (✨ Generated from Field `Job`.`bidId` of type `UUID!`)
+  """
+  bidId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Job`.`moverId` of type `UUID!`
+  """
+  moverId: UUID
+  """
+  ✨ `_expr` server value variant of `moverId` (✨ Generated from Field `Job`.`moverId` of type `UUID!`)
+  """
+  moverId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Job`.`movingRequestId` of type `UUID!`
+  """
+  movingRequestId: UUID
+  """
+  ✨ `_expr` server value variant of `movingRequestId` (✨ Generated from Field `Job`.`movingRequestId` of type `UUID!`)
+  """
+  movingRequestId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Job`.`vehicleId` of type `UUID!`
+  """
+  vehicleId: UUID
+  """
+  ✨ `_expr` server value variant of `vehicleId` (✨ Generated from Field `Job`.`vehicleId` of type `UUID!`)
+  """
+  vehicleId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Job`.`bid` of type `Bid!`
+  """
+  bid: Bid_Key
+  """
+  ✨ Generated from Field `Job`.`mover` of type `Mover!`
+  """
+  mover: Mover_Key
+  """
+  ✨ Generated from Field `Job`.`movingRequest` of type `MovingRequest!`
+  """
+  movingRequest: MovingRequest_Key
+  """
+  ✨ Generated from Field `Job`.`vehicle` of type `Vehicle!`
+  """
+  vehicle: Vehicle_Key
+  """
+  ✨ Generated from Field `Job`.`completionDate` of type `Date`
+  """
+  completionDate: Date
+  """
+  ✨ `_date` server value variant of `completionDate` (✨ Generated from Field `Job`.`completionDate` of type `Date`)
+  """
+  completionDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `completionDate` (✨ Generated from Field `Job`.`completionDate` of type `Date`)
+  """
+  completionDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `completionDate` (✨ Generated from Field `Job`.`completionDate` of type `Date`)
+  """
+  completionDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `Job`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Job`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Job`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Job`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Job`.`notes` of type `String`
+  """
+  notes: String
+  """
+  ✨ `_expr` server value variant of `notes` (✨ Generated from Field `Job`.`notes` of type `String`)
+  """
+  notes_expr: String_Expr
+  """
+  ✨ Generated from Field `Job`.`startDate` of type `Date!`
+  """
+  startDate: Date
+  """
+  ✨ `_date` server value variant of `startDate` (✨ Generated from Field `Job`.`startDate` of type `Date!`)
+  """
+  startDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `startDate` (✨ Generated from Field `Job`.`startDate` of type `Date!`)
+  """
+  startDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `startDate` (✨ Generated from Field `Job`.`startDate` of type `Date!`)
+  """
+  startDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `Job`.`status` of type `JobStatus!`
+  """
+  status: JobStatus
+  """
+  ✨ `_expr` server value variant of `status` (✨ Generated from Field `Job`.`status` of type `JobStatus!`)
+  """
+  status_expr: JobStatus_Expr
+}
+"""
+✨ Generated filter input type for table 'Job'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Job_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Job_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Job_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Job_Filter!]
+  """
+  ✨ Generated from Field `Job`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Job`.`bidId` of type `UUID!`
+  """
+  bidId: UUID_Filter
+  """
+  ✨ Generated from Field `Job`.`moverId` of type `UUID!`
+  """
+  moverId: UUID_Filter
+  """
+  ✨ Generated from Field `Job`.`movingRequestId` of type `UUID!`
+  """
+  movingRequestId: UUID_Filter
+  """
+  ✨ Generated from Field `Job`.`vehicleId` of type `UUID!`
+  """
+  vehicleId: UUID_Filter
+  """
+  ✨ Generated from Field `Job`.`bid` of type `Bid!`
+  """
+  bid: Bid_Filter
+  """
+  ✨ Generated from Field `Job`.`mover` of type `Mover!`
+  """
+  mover: Mover_Filter
+  """
+  ✨ Generated from Field `Job`.`movingRequest` of type `MovingRequest!`
+  """
+  movingRequest: MovingRequest_Filter
+  """
+  ✨ Generated from Field `Job`.`vehicle` of type `Vehicle!`
+  """
+  vehicle: Vehicle_Filter
+  """
+  ✨ Generated from Field `Job`.`completionDate` of type `Date`
+  """
+  completionDate: Date_Filter
+  """
+  ✨ Generated from Field `Job`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Job`.`notes` of type `String`
+  """
+  notes: String_Filter
+  """
+  ✨ Generated from Field `Job`.`startDate` of type `Date!`
+  """
+  startDate: Date_Filter
+  """
+  ✨ Generated from Field `Job`.`status` of type `JobStatus!`
+  """
+  status: JobStatus_Filter
+  """
+  ✨ Generated from Field `Job`.`inventories_on_job` of type `[Inventory!]!`
+  """
+  inventories_on_job: Inventory_ListFilter
+  """
+  ✨ Generated from Field `Job`.`invoices_on_job` of type `[Invoice!]!`
+  """
+  invoices_on_job: Invoice_ListFilter
+  """
+  ✨ Generated from Field `Job`.`payments_on_job` of type `[Payment!]!`
+  """
+  payments_on_job: Payment_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Job'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Job_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Job_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Job_Filter
+}
+"""
+✨ Generated having input type for table 'Job'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Job_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Job_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Job_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Job_Having!]
+  """
+  ✨ Generated from Field `Job`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`bidId_count` of type `Int!`
+  """
+  bidId_count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`completionDate_count` of type `Int!`
+  """
+  completionDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`moverId_count` of type `Int!`
+  """
+  moverId_count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`movingRequestId_count` of type `Int!`
+  """
+  movingRequestId_count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`notes_count` of type `Int!`
+  """
+  notes_count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`startDate_count` of type `Int!`
+  """
+  startDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`status_count` of type `Int!`
+  """
+  status_count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`vehicleId_count` of type `Int!`
+  """
+  vehicleId_count: Int_Filter
+  """
+  ✨ Generated from Field `Job`.`completionDate_min` of type `Date`
+  """
+  completionDate_min: Date_Filter
+  """
+  ✨ Generated from Field `Job`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Job`.`startDate_min` of type `Date`
+  """
+  startDate_min: Date_Filter
+  """
+  ✨ Generated from Field `Job`.`completionDate_max` of type `Date`
+  """
+  completionDate_max: Date_Filter
+  """
+  ✨ Generated from Field `Job`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `Job`.`startDate_max` of type `Date`
+  """
+  startDate_max: Date_Filter
+}
+"""
+✨ Generated key input type for table 'Job'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Job_Key {
+  """
+  ✨ Generated from Field `Job`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Job`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Job'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Job_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Job_Filter
+}
+"""
+✨ Generated order input type for table 'Job'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Job_Order {
+  """
+  ✨ Generated from Field `Job`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`bidId` of type `UUID!`
+  """
+  bidId: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`moverId` of type `UUID!`
+  """
+  moverId: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`movingRequestId` of type `UUID!`
+  """
+  movingRequestId: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`vehicleId` of type `UUID!`
+  """
+  vehicleId: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`bid` of type `Bid!`
+  """
+  bid: Bid_Order
+  """
+  ✨ Generated from Field `Job`.`mover` of type `Mover!`
+  """
+  mover: Mover_Order
+  """
+  ✨ Generated from Field `Job`.`movingRequest` of type `MovingRequest!`
+  """
+  movingRequest: MovingRequest_Order
+  """
+  ✨ Generated from Field `Job`.`vehicle` of type `Vehicle!`
+  """
+  vehicle: Vehicle_Order
+  """
+  ✨ Generated from Field `Job`.`completionDate` of type `Date`
+  """
+  completionDate: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`notes` of type `String`
+  """
+  notes: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`startDate` of type `Date!`
+  """
+  startDate: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`status` of type `JobStatus!`
+  """
+  status: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`bidId_count` of type `Int!`
+  """
+  bidId_count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`completionDate_count` of type `Int!`
+  """
+  completionDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`moverId_count` of type `Int!`
+  """
+  moverId_count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`movingRequestId_count` of type `Int!`
+  """
+  movingRequestId_count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`notes_count` of type `Int!`
+  """
+  notes_count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`startDate_count` of type `Int!`
+  """
+  startDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`status_count` of type `Int!`
+  """
+  status_count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`vehicleId_count` of type `Int!`
+  """
+  vehicleId_count: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`completionDate_min` of type `Date`
+  """
+  completionDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`startDate_min` of type `Date`
+  """
+  startDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`completionDate_max` of type `Date`
+  """
+  completionDate_max: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `Job`.`startDate_max` of type `Date`
+  """
+  startDate_max: OrderDirection
+}
+"""
+✨ Generated filter input type for table 'JobStatus'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input JobStatus_Filter {
+  """
+  Match if field is exactly equal to provided value.
+  """
+  eq: JobStatus
+  """
+  ✨ `_expr` server value variant of `eq` (Match if field is exactly equal to provided value.)
+  """
+  eq_expr: JobStatus_Expr
+  """
+  Match if field is not equal to provided value.
+  """
+  ne: JobStatus
+  """
+  ✨ `_expr` server value variant of `ne` (Match if field is not equal to provided value.)
+  """
+  ne_expr: JobStatus_Expr
+  """
+  When true, match if field `IS NULL`. When false, match if field is `NOT NULL`.
+  """
+  isNull: Boolean
+  """
+  Match if field value is among the provided list of values.
+  """
+  in: [JobStatus!]
+  """
+  Match if field value is not among the provided list of values.
+  """
+  nin: [JobStatus!]
+  """
+  Match if field value is greater than the provided value, based on index ordering of supported enum values.
+  """
+  gt: JobStatus
+  """
+  ✨ `_expr` server value variant of `gt` (Match if field value is greater than the provided value, based on index ordering of supported enum values.)
+  """
+  gt_expr: JobStatus_Expr
+  """
+  Match if field is greater than or equal to the provided value.
+  """
+  ge: JobStatus
+  """
+  ✨ `_expr` server value variant of `ge` (Match if field is greater than or equal to the provided value.)
+  """
+  ge_expr: JobStatus_Expr
+  """
+  Match if field value is less than the provided value, based on index ordering of supported enum values.
+  """
+  lt: JobStatus
+  """
+  ✨ `_expr` server value variant of `lt` (Match if field value is less than the provided value, based on index ordering of supported enum values.)
+  """
+  lt_expr: JobStatus_Expr
+  """
+  Match if field is less than or equal to the provided value, based on index ordering of supported enum values.
+  """
+  le: JobStatus
+  """
+  ✨ `_expr` server value variant of `le` (Match if field is less than or equal to the provided value, based on index ordering of supported enum values.)
+  """
+  le_expr: JobStatus_Expr
+}
+"""
+✨ Generated list filter input type for table 'JobStatus'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input JobStatus_ListFilter {
+  """
+  Match if list field contains the provided value as a member.
+  """
+  includes: JobStatus
+  """
+  ✨ `_expr` server value variant of `includes` (Match if list field contains the provided value as a member.)
+  """
+  includes_expr: JobStatus_Expr
+  """
+  Match if list field contains all of the provided values as members.
+  """
+  includesAll: [JobStatus!]
+  """
+  Match if list field does not contain the provided value as a member.
+  """
+  excludes: JobStatus
+  """
+  ✨ `_expr` server value variant of `excludes` (Match if list field does not contain the provided value as a member.)
+  """
+  excludes_expr: JobStatus_Expr
+  """
+  Match if list field does not contain any of the provided values as members.
+  """
+  excludesAll: [JobStatus!]
+  """
+  The desired number of enum values that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: JobStatus_Filter
+}
+"""
+✨ Generated data input type for table 'Mover'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Mover_Data {
+  """
+  ✨ Generated from Field `Mover`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Mover`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Mover`.`address` of type `String`
+  """
+  address: String
+  """
+  ✨ `_expr` server value variant of `address` (✨ Generated from Field `Mover`.`address` of type `String`)
+  """
+  address_expr: String_Expr
+  """
+  ✨ Generated from Field `Mover`.`avatarUrl` of type `String`
+  """
+  avatarUrl: String
+  """
+  ✨ `_expr` server value variant of `avatarUrl` (✨ Generated from Field `Mover`.`avatarUrl` of type `String`)
+  """
+  avatarUrl_expr: String_Expr
+  """
+  ✨ Generated from Field `Mover`.`companyName` of type `String!`
+  """
+  companyName: String
+  """
+  ✨ `_expr` server value variant of `companyName` (✨ Generated from Field `Mover`.`companyName` of type `String!`)
+  """
+  companyName_expr: String_Expr
+  """
+  ✨ Generated from Field `Mover`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Mover`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Mover`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Mover`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Mover`.`description` of type `String`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `Mover`.`description` of type `String`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `Mover`.`email` of type `String!`
+  """
+  email: String
+  """
+  ✨ `_expr` server value variant of `email` (✨ Generated from Field `Mover`.`email` of type `String!`)
+  """
+  email_expr: String_Expr
+  """
+  ✨ Generated from Field `Mover`.`phoneNumber` of type `String`
+  """
+  phoneNumber: String
+  """
+  ✨ `_expr` server value variant of `phoneNumber` (✨ Generated from Field `Mover`.`phoneNumber` of type `String`)
+  """
+  phoneNumber_expr: String_Expr
+  """
+  ✨ Generated from Field `Mover`.`serviceAreas` of type `[String]`
+  """
+  serviceAreas: [String!]
+  """
+  ✨ `_update` server value variant of `serviceAreas` (✨ Generated from Field `Mover`.`serviceAreas` of type `[String]`)
+  """
+  serviceAreas_update: [String_ListUpdate!]
+  """
+  ✨ Generated from Field `Mover`.`vehicleUrl` of type `String`
+  """
+  vehicleUrl: String
+  """
+  ✨ `_expr` server value variant of `vehicleUrl` (✨ Generated from Field `Mover`.`vehicleUrl` of type `String`)
+  """
+  vehicleUrl_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Mover'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Mover_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Mover_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Mover_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Mover_Filter!]
+  """
+  ✨ Generated from Field `Mover`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Mover`.`address` of type `String`
+  """
+  address: String_Filter
+  """
+  ✨ Generated from Field `Mover`.`avatarUrl` of type `String`
+  """
+  avatarUrl: String_Filter
+  """
+  ✨ Generated from Field `Mover`.`companyName` of type `String!`
+  """
+  companyName: String_Filter
+  """
+  ✨ Generated from Field `Mover`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Mover`.`description` of type `String`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `Mover`.`email` of type `String!`
+  """
+  email: String_Filter
+  """
+  ✨ Generated from Field `Mover`.`phoneNumber` of type `String`
+  """
+  phoneNumber: String_Filter
+  """
+  ✨ Generated from Field `Mover`.`serviceAreas` of type `[String]`
+  """
+  serviceAreas: String_ListFilter
+  """
+  ✨ Generated from Field `Mover`.`vehicleUrl` of type `String`
+  """
+  vehicleUrl: String_Filter
+  """
+  ✨ Generated from Field `Mover`.`bids_on_mover` of type `[Bid!]!`
+  """
+  bids_on_mover: Bid_ListFilter
+  """
+  ✨ Generated from Field `Mover`.`jobs_on_mover` of type `[Job!]!`
+  """
+  jobs_on_mover: Job_ListFilter
+  """
+  ✨ Generated from Field `Mover`.`vehicles_on_mover` of type `[Vehicle!]!`
+  """
+  vehicles_on_mover: Vehicle_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Mover'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Mover_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Mover_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Mover_Filter
+}
+"""
+✨ Generated having input type for table 'Mover'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Mover_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Mover_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Mover_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Mover_Having!]
+  """
+  ✨ Generated from Field `Mover`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Mover`.`address_count` of type `Int!`
+  """
+  address_count: Int_Filter
+  """
+  ✨ Generated from Field `Mover`.`avatarUrl_count` of type `Int!`
+  """
+  avatarUrl_count: Int_Filter
+  """
+  ✨ Generated from Field `Mover`.`companyName_count` of type `Int!`
+  """
+  companyName_count: Int_Filter
+  """
+  ✨ Generated from Field `Mover`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Mover`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `Mover`.`email_count` of type `Int!`
+  """
+  email_count: Int_Filter
+  """
+  ✨ Generated from Field `Mover`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Mover`.`phoneNumber_count` of type `Int!`
+  """
+  phoneNumber_count: Int_Filter
+  """
+  ✨ Generated from Field `Mover`.`vehicleUrl_count` of type `Int!`
+  """
+  vehicleUrl_count: Int_Filter
+  """
+  ✨ Generated from Field `Mover`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Mover`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'Mover'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Mover_Key {
+  """
+  ✨ Generated from Field `Mover`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Mover`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Mover'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Mover_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Mover_Filter
+}
+"""
+✨ Generated order input type for table 'Mover'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Mover_Order {
+  """
+  ✨ Generated from Field `Mover`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`address` of type `String`
+  """
+  address: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`avatarUrl` of type `String`
+  """
+  avatarUrl: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`companyName` of type `String!`
+  """
+  companyName: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`description` of type `String`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`email` of type `String!`
+  """
+  email: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`phoneNumber` of type `String`
+  """
+  phoneNumber: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`vehicleUrl` of type `String`
+  """
+  vehicleUrl: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`address_count` of type `Int!`
+  """
+  address_count: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`avatarUrl_count` of type `Int!`
+  """
+  avatarUrl_count: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`companyName_count` of type `Int!`
+  """
+  companyName_count: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`email_count` of type `Int!`
+  """
+  email_count: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`phoneNumber_count` of type `Int!`
+  """
+  phoneNumber_count: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`vehicleUrl_count` of type `Int!`
+  """
+  vehicleUrl_count: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Mover`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'MovingRequest'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input MovingRequest_Data {
+  """
+  ✨ Generated from Field `MovingRequest`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `MovingRequest`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `MovingRequest`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `MovingRequest`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `MovingRequest`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `MovingRequest`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `MovingRequest`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `MovingRequest`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `MovingRequest`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `MovingRequest`.`description` of type `String`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `MovingRequest`.`description` of type `String`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `MovingRequest`.`destinationAddress` of type `String!`
+  """
+  destinationAddress: String
+  """
+  ✨ `_expr` server value variant of `destinationAddress` (✨ Generated from Field `MovingRequest`.`destinationAddress` of type `String!`)
+  """
+  destinationAddress_expr: String_Expr
+  """
+  ✨ Generated from Field `MovingRequest`.`itemDetails` of type `String`
+  """
+  itemDetails: String
+  """
+  ✨ `_expr` server value variant of `itemDetails` (✨ Generated from Field `MovingRequest`.`itemDetails` of type `String`)
+  """
+  itemDetails_expr: String_Expr
+  """
+  ✨ Generated from Field `MovingRequest`.`moveDate` of type `Date!`
+  """
+  moveDate: Date
+  """
+  ✨ `_date` server value variant of `moveDate` (✨ Generated from Field `MovingRequest`.`moveDate` of type `Date!`)
+  """
+  moveDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `moveDate` (✨ Generated from Field `MovingRequest`.`moveDate` of type `Date!`)
+  """
+  moveDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `moveDate` (✨ Generated from Field `MovingRequest`.`moveDate` of type `Date!`)
+  """
+  moveDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `MovingRequest`.`originAddress` of type `String!`
+  """
+  originAddress: String
+  """
+  ✨ `_expr` server value variant of `originAddress` (✨ Generated from Field `MovingRequest`.`originAddress` of type `String!`)
+  """
+  originAddress_expr: String_Expr
+  """
+  ✨ Generated from Field `MovingRequest`.`status` of type `RequestStatus!`
+  """
+  status: RequestStatus
+  """
+  ✨ `_expr` server value variant of `status` (✨ Generated from Field `MovingRequest`.`status` of type `RequestStatus!`)
+  """
+  status_expr: RequestStatus_Expr
+}
+"""
+✨ Generated filter input type for table 'MovingRequest'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input MovingRequest_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [MovingRequest_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: MovingRequest_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [MovingRequest_Filter!]
+  """
+  ✨ Generated from Field `MovingRequest`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`description` of type `String`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`destinationAddress` of type `String!`
+  """
+  destinationAddress: String_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`itemDetails` of type `String`
+  """
+  itemDetails: String_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`moveDate` of type `Date!`
+  """
+  moveDate: Date_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`originAddress` of type `String!`
+  """
+  originAddress: String_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`status` of type `RequestStatus!`
+  """
+  status: RequestStatus_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`bids_on_movingRequest` of type `[Bid!]!`
+  """
+  bids_on_movingRequest: Bid_ListFilter
+  """
+  ✨ Generated from Field `MovingRequest`.`jobs_on_movingRequest` of type `[Job!]!`
+  """
+  jobs_on_movingRequest: Job_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'MovingRequest'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input MovingRequest_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [MovingRequest_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: MovingRequest_Filter
+}
+"""
+✨ Generated having input type for table 'MovingRequest'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input MovingRequest_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [MovingRequest_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: MovingRequest_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [MovingRequest_Having!]
+  """
+  ✨ Generated from Field `MovingRequest`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`destinationAddress_count` of type `Int!`
+  """
+  destinationAddress_count: Int_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`itemDetails_count` of type `Int!`
+  """
+  itemDetails_count: Int_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`moveDate_count` of type `Int!`
+  """
+  moveDate_count: Int_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`originAddress_count` of type `Int!`
+  """
+  originAddress_count: Int_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`status_count` of type `Int!`
+  """
+  status_count: Int_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`moveDate_min` of type `Date`
+  """
+  moveDate_min: Date_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `MovingRequest`.`moveDate_max` of type `Date`
+  """
+  moveDate_max: Date_Filter
+}
+"""
+✨ Generated key input type for table 'MovingRequest'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input MovingRequest_Key {
+  """
+  ✨ Generated from Field `MovingRequest`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `MovingRequest`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'MovingRequest'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input MovingRequest_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: MovingRequest_Filter
+}
+"""
+✨ Generated order input type for table 'MovingRequest'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input MovingRequest_Order {
+  """
+  ✨ Generated from Field `MovingRequest`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `MovingRequest`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`description` of type `String`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`destinationAddress` of type `String!`
+  """
+  destinationAddress: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`itemDetails` of type `String`
+  """
+  itemDetails: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`moveDate` of type `Date!`
+  """
+  moveDate: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`originAddress` of type `String!`
+  """
+  originAddress: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`status` of type `RequestStatus!`
+  """
+  status: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`destinationAddress_count` of type `Int!`
+  """
+  destinationAddress_count: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`itemDetails_count` of type `Int!`
+  """
+  itemDetails_count: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`moveDate_count` of type `Int!`
+  """
+  moveDate_count: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`originAddress_count` of type `Int!`
+  """
+  originAddress_count: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`status_count` of type `Int!`
+  """
+  status_count: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`moveDate_min` of type `Date`
+  """
+  moveDate_min: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `MovingRequest`.`moveDate_max` of type `Date`
+  """
+  moveDate_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Payment'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Payment_Data {
+  """
+  ✨ Generated from Field `Payment`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Payment`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Payment`.`jobId` of type `UUID!`
+  """
+  jobId: UUID
+  """
+  ✨ `_expr` server value variant of `jobId` (✨ Generated from Field `Payment`.`jobId` of type `UUID!`)
+  """
+  jobId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Payment`.`job` of type `Job!`
+  """
+  job: Job_Key
+  """
+  ✨ Generated from Field `Payment`.`amount` of type `Float!`
+  """
+  amount: Float
+  """
+  ✨ `_expr` server value variant of `amount` (✨ Generated from Field `Payment`.`amount` of type `Float!`)
+  """
+  amount_expr: Float_Expr
+  """
+  ✨ `_update` server value variant of `amount` (✨ Generated from Field `Payment`.`amount` of type `Float!`)
+  """
+  amount_update: [Float_Update!]
+  """
+  ✨ Generated from Field `Payment`.`paymentDate` of type `Timestamp!`
+  """
+  paymentDate: Timestamp
+  """
+  ✨ `_expr` server value variant of `paymentDate` (✨ Generated from Field `Payment`.`paymentDate` of type `Timestamp!`)
+  """
+  paymentDate_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `paymentDate` (✨ Generated from Field `Payment`.`paymentDate` of type `Timestamp!`)
+  """
+  paymentDate_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `paymentDate` (✨ Generated from Field `Payment`.`paymentDate` of type `Timestamp!`)
+  """
+  paymentDate_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Payment`.`paymentType` of type `String!`
+  """
+  paymentType: String
+  """
+  ✨ `_expr` server value variant of `paymentType` (✨ Generated from Field `Payment`.`paymentType` of type `String!`)
+  """
+  paymentType_expr: String_Expr
+  """
+  ✨ Generated from Field `Payment`.`status` of type `PaymentStatus!`
+  """
+  status: PaymentStatus
+  """
+  ✨ `_expr` server value variant of `status` (✨ Generated from Field `Payment`.`status` of type `PaymentStatus!`)
+  """
+  status_expr: PaymentStatus_Expr
+  """
+  ✨ Generated from Field `Payment`.`transactionId` of type `String`
+  """
+  transactionId: String
+  """
+  ✨ `_expr` server value variant of `transactionId` (✨ Generated from Field `Payment`.`transactionId` of type `String`)
+  """
+  transactionId_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Payment'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Payment_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Payment_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Payment_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Payment_Filter!]
+  """
+  ✨ Generated from Field `Payment`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Payment`.`jobId` of type `UUID!`
+  """
+  jobId: UUID_Filter
+  """
+  ✨ Generated from Field `Payment`.`job` of type `Job!`
+  """
+  job: Job_Filter
+  """
+  ✨ Generated from Field `Payment`.`amount` of type `Float!`
+  """
+  amount: Float_Filter
+  """
+  ✨ Generated from Field `Payment`.`paymentDate` of type `Timestamp!`
+  """
+  paymentDate: Timestamp_Filter
+  """
+  ✨ Generated from Field `Payment`.`paymentType` of type `String!`
+  """
+  paymentType: String_Filter
+  """
+  ✨ Generated from Field `Payment`.`status` of type `PaymentStatus!`
+  """
+  status: PaymentStatus_Filter
+  """
+  ✨ Generated from Field `Payment`.`transactionId` of type `String`
+  """
+  transactionId: String_Filter
+  """
+  ✨ Generated from Field `Payment`.`invoices_on_payment` of type `[Invoice!]!`
+  """
+  invoices_on_payment: Invoice_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Payment'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Payment_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Payment_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Payment_Filter
+}
+"""
+✨ Generated having input type for table 'Payment'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Payment_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Payment_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Payment_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Payment_Having!]
+  """
+  ✨ Generated from Field `Payment`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Payment`.`amount_count` of type `Int!`
+  """
+  amount_count: Int_Filter
+  """
+  ✨ Generated from Field `Payment`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Payment`.`jobId_count` of type `Int!`
+  """
+  jobId_count: Int_Filter
+  """
+  ✨ Generated from Field `Payment`.`paymentDate_count` of type `Int!`
+  """
+  paymentDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Payment`.`paymentType_count` of type `Int!`
+  """
+  paymentType_count: Int_Filter
+  """
+  ✨ Generated from Field `Payment`.`status_count` of type `Int!`
+  """
+  status_count: Int_Filter
+  """
+  ✨ Generated from Field `Payment`.`transactionId_count` of type `Int!`
+  """
+  transactionId_count: Int_Filter
+  """
+  ✨ Generated from Field `Payment`.`amount_sum` of type `Float`
+  """
+  amount_sum: Float_Filter
+  """
+  ✨ Generated from Field `Payment`.`amount_avg` of type `Float`
+  """
+  amount_avg: Float_Filter
+  """
+  ✨ Generated from Field `Payment`.`amount_min` of type `Float`
+  """
+  amount_min: Float_Filter
+  """
+  ✨ Generated from Field `Payment`.`paymentDate_min` of type `Timestamp`
+  """
+  paymentDate_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Payment`.`amount_max` of type `Float`
+  """
+  amount_max: Float_Filter
+  """
+  ✨ Generated from Field `Payment`.`paymentDate_max` of type `Timestamp`
+  """
+  paymentDate_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'Payment'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Payment_Key {
+  """
+  ✨ Generated from Field `Payment`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Payment`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Payment'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Payment_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Payment_Filter
+}
+"""
+✨ Generated order input type for table 'Payment'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Payment_Order {
+  """
+  ✨ Generated from Field `Payment`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`jobId` of type `UUID!`
+  """
+  jobId: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`job` of type `Job!`
+  """
+  job: Job_Order
+  """
+  ✨ Generated from Field `Payment`.`amount` of type `Float!`
+  """
+  amount: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`paymentDate` of type `Timestamp!`
+  """
+  paymentDate: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`paymentType` of type `String!`
+  """
+  paymentType: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`status` of type `PaymentStatus!`
+  """
+  status: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`transactionId` of type `String`
+  """
+  transactionId: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`amount_count` of type `Int!`
+  """
+  amount_count: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`jobId_count` of type `Int!`
+  """
+  jobId_count: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`paymentDate_count` of type `Int!`
+  """
+  paymentDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`paymentType_count` of type `Int!`
+  """
+  paymentType_count: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`status_count` of type `Int!`
+  """
+  status_count: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`transactionId_count` of type `Int!`
+  """
+  transactionId_count: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`amount_sum` of type `Float`
+  """
+  amount_sum: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`amount_avg` of type `Float`
+  """
+  amount_avg: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`amount_min` of type `Float`
+  """
+  amount_min: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`paymentDate_min` of type `Timestamp`
+  """
+  paymentDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`amount_max` of type `Float`
+  """
+  amount_max: OrderDirection
+  """
+  ✨ Generated from Field `Payment`.`paymentDate_max` of type `Timestamp`
+  """
+  paymentDate_max: OrderDirection
+}
+"""
+✨ Generated filter input type for table 'PaymentStatus'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input PaymentStatus_Filter {
+  """
+  Match if field is exactly equal to provided value.
+  """
+  eq: PaymentStatus
+  """
+  ✨ `_expr` server value variant of `eq` (Match if field is exactly equal to provided value.)
+  """
+  eq_expr: PaymentStatus_Expr
+  """
+  Match if field is not equal to provided value.
+  """
+  ne: PaymentStatus
+  """
+  ✨ `_expr` server value variant of `ne` (Match if field is not equal to provided value.)
+  """
+  ne_expr: PaymentStatus_Expr
+  """
+  When true, match if field `IS NULL`. When false, match if field is `NOT NULL`.
+  """
+  isNull: Boolean
+  """
+  Match if field value is among the provided list of values.
+  """
+  in: [PaymentStatus!]
+  """
+  Match if field value is not among the provided list of values.
+  """
+  nin: [PaymentStatus!]
+  """
+  Match if field value is greater than the provided value, based on index ordering of supported enum values.
+  """
+  gt: PaymentStatus
+  """
+  ✨ `_expr` server value variant of `gt` (Match if field value is greater than the provided value, based on index ordering of supported enum values.)
+  """
+  gt_expr: PaymentStatus_Expr
+  """
+  Match if field is greater than or equal to the provided value.
+  """
+  ge: PaymentStatus
+  """
+  ✨ `_expr` server value variant of `ge` (Match if field is greater than or equal to the provided value.)
+  """
+  ge_expr: PaymentStatus_Expr
+  """
+  Match if field value is less than the provided value, based on index ordering of supported enum values.
+  """
+  lt: PaymentStatus
+  """
+  ✨ `_expr` server value variant of `lt` (Match if field value is less than the provided value, based on index ordering of supported enum values.)
+  """
+  lt_expr: PaymentStatus_Expr
+  """
+  Match if field is less than or equal to the provided value, based on index ordering of supported enum values.
+  """
+  le: PaymentStatus
+  """
+  ✨ `_expr` server value variant of `le` (Match if field is less than or equal to the provided value, based on index ordering of supported enum values.)
+  """
+  le_expr: PaymentStatus_Expr
+}
+"""
+✨ Generated list filter input type for table 'PaymentStatus'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input PaymentStatus_ListFilter {
+  """
+  Match if list field contains the provided value as a member.
+  """
+  includes: PaymentStatus
+  """
+  ✨ `_expr` server value variant of `includes` (Match if list field contains the provided value as a member.)
+  """
+  includes_expr: PaymentStatus_Expr
+  """
+  Match if list field contains all of the provided values as members.
+  """
+  includesAll: [PaymentStatus!]
+  """
+  Match if list field does not contain the provided value as a member.
+  """
+  excludes: PaymentStatus
+  """
+  ✨ `_expr` server value variant of `excludes` (Match if list field does not contain the provided value as a member.)
+  """
+  excludes_expr: PaymentStatus_Expr
+  """
+  Match if list field does not contain any of the provided values as members.
+  """
+  excludesAll: [PaymentStatus!]
+  """
+  The desired number of enum values that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: PaymentStatus_Filter
+}
+"""
+✨ Generated filter input type for table 'RequestStatus'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input RequestStatus_Filter {
+  """
+  Match if field is exactly equal to provided value.
+  """
+  eq: RequestStatus
+  """
+  ✨ `_expr` server value variant of `eq` (Match if field is exactly equal to provided value.)
+  """
+  eq_expr: RequestStatus_Expr
+  """
+  Match if field is not equal to provided value.
+  """
+  ne: RequestStatus
+  """
+  ✨ `_expr` server value variant of `ne` (Match if field is not equal to provided value.)
+  """
+  ne_expr: RequestStatus_Expr
+  """
+  When true, match if field `IS NULL`. When false, match if field is `NOT NULL`.
+  """
+  isNull: Boolean
+  """
+  Match if field value is among the provided list of values.
+  """
+  in: [RequestStatus!]
+  """
+  Match if field value is not among the provided list of values.
+  """
+  nin: [RequestStatus!]
+  """
+  Match if field value is greater than the provided value, based on index ordering of supported enum values.
+  """
+  gt: RequestStatus
+  """
+  ✨ `_expr` server value variant of `gt` (Match if field value is greater than the provided value, based on index ordering of supported enum values.)
+  """
+  gt_expr: RequestStatus_Expr
+  """
+  Match if field is greater than or equal to the provided value.
+  """
+  ge: RequestStatus
+  """
+  ✨ `_expr` server value variant of `ge` (Match if field is greater than or equal to the provided value.)
+  """
+  ge_expr: RequestStatus_Expr
+  """
+  Match if field value is less than the provided value, based on index ordering of supported enum values.
+  """
+  lt: RequestStatus
+  """
+  ✨ `_expr` server value variant of `lt` (Match if field value is less than the provided value, based on index ordering of supported enum values.)
+  """
+  lt_expr: RequestStatus_Expr
+  """
+  Match if field is less than or equal to the provided value, based on index ordering of supported enum values.
+  """
+  le: RequestStatus
+  """
+  ✨ `_expr` server value variant of `le` (Match if field is less than or equal to the provided value, based on index ordering of supported enum values.)
+  """
+  le_expr: RequestStatus_Expr
+}
+"""
+✨ Generated list filter input type for table 'RequestStatus'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input RequestStatus_ListFilter {
+  """
+  Match if list field contains the provided value as a member.
+  """
+  includes: RequestStatus
+  """
+  ✨ `_expr` server value variant of `includes` (Match if list field contains the provided value as a member.)
+  """
+  includes_expr: RequestStatus_Expr
+  """
+  Match if list field contains all of the provided values as members.
+  """
+  includesAll: [RequestStatus!]
+  """
+  Match if list field does not contain the provided value as a member.
+  """
+  excludes: RequestStatus
+  """
+  ✨ `_expr` server value variant of `excludes` (Match if list field does not contain the provided value as a member.)
+  """
+  excludes_expr: RequestStatus_Expr
+  """
+  Match if list field does not contain any of the provided values as members.
+  """
+  excludesAll: [RequestStatus!]
+  """
+  The desired number of enum values that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: RequestStatus_Filter
+}
+"""
+✨ Generated data input type for table 'User'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input User_Data {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `User`.`address` of type `String`
+  """
+  address: String
+  """
+  ✨ `_expr` server value variant of `address` (✨ Generated from Field `User`.`address` of type `String`)
+  """
+  address_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `User`.`displayName` of type `String!`
+  """
+  displayName: String
+  """
+  ✨ `_expr` server value variant of `displayName` (✨ Generated from Field `User`.`displayName` of type `String!`)
+  """
+  displayName_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: String
+  """
+  ✨ `_expr` server value variant of `email` (✨ Generated from Field `User`.`email` of type `String!`)
+  """
+  email_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`phoneNumber` of type `String`
+  """
+  phoneNumber: String
+  """
+  ✨ `_expr` server value variant of `phoneNumber` (✨ Generated from Field `User`.`phoneNumber` of type `String`)
+  """
+  phoneNumber_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'User'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [User_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: User_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [User_Filter!]
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `User`.`address` of type `String`
+  """
+  address: String_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`displayName` of type `String!`
+  """
+  displayName: String_Filter
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: String_Filter
+  """
+  ✨ Generated from Field `User`.`phoneNumber` of type `String`
+  """
+  phoneNumber: String_Filter
+  """
+  ✨ Generated from Field `User`.`movingRequests_on_user` of type `[MovingRequest!]!`
+  """
+  movingRequests_on_user: MovingRequest_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'User'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input User_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [User_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: User_Filter
+}
+"""
+✨ Generated having input type for table 'User'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [User_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: User_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [User_Having!]
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`address_count` of type `Int!`
+  """
+  address_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`displayName_count` of type `Int!`
+  """
+  displayName_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`phoneNumber_count` of type `Int!`
+  """
+  phoneNumber_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'User'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input User_Key {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'User'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input User_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: User_Filter
+}
+"""
+✨ Generated order input type for table 'User'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input User_Order {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `User`.`address` of type `String`
+  """
+  address: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `User`.`displayName` of type `String!`
+  """
+  displayName: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: OrderDirection
+  """
+  ✨ Generated from Field `User`.`phoneNumber` of type `String`
+  """
+  phoneNumber: OrderDirection
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`address_count` of type `Int!`
+  """
+  address_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`displayName_count` of type `Int!`
+  """
+  displayName_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`phoneNumber_count` of type `Int!`
+  """
+  phoneNumber_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Vehicle'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Vehicle_Data {
+  """
+  ✨ Generated from Field `Vehicle`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Vehicle`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Vehicle`.`moverId` of type `UUID!`
+  """
+  moverId: UUID
+  """
+  ✨ `_expr` server value variant of `moverId` (✨ Generated from Field `Vehicle`.`moverId` of type `UUID!`)
+  """
+  moverId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Vehicle`.`mover` of type `Mover!`
+  """
+  mover: Mover_Key
+  """
+  ✨ Generated from Field `Vehicle`.`capacity` of type `Float!`
+  """
+  capacity: Float
+  """
+  ✨ `_expr` server value variant of `capacity` (✨ Generated from Field `Vehicle`.`capacity` of type `Float!`)
+  """
+  capacity_expr: Float_Expr
+  """
+  ✨ `_update` server value variant of `capacity` (✨ Generated from Field `Vehicle`.`capacity` of type `Float!`)
+  """
+  capacity_update: [Float_Update!]
+  """
+  ✨ Generated from Field `Vehicle`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Vehicle`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Vehicle`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Vehicle`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Vehicle`.`licensePlate` of type `String!`
+  """
+  licensePlate: String
+  """
+  ✨ `_expr` server value variant of `licensePlate` (✨ Generated from Field `Vehicle`.`licensePlate` of type `String!`)
+  """
+  licensePlate_expr: String_Expr
+  """
+  ✨ Generated from Field `Vehicle`.`make` of type `String!`
+  """
+  make: String
+  """
+  ✨ `_expr` server value variant of `make` (✨ Generated from Field `Vehicle`.`make` of type `String!`)
+  """
+  make_expr: String_Expr
+  """
+  ✨ Generated from Field `Vehicle`.`model` of type `String!`
+  """
+  model: String
+  """
+  ✨ `_expr` server value variant of `model` (✨ Generated from Field `Vehicle`.`model` of type `String!`)
+  """
+  model_expr: String_Expr
+  """
+  ✨ Generated from Field `Vehicle`.`status` of type `VehicleStatus!`
+  """
+  status: VehicleStatus
+  """
+  ✨ `_expr` server value variant of `status` (✨ Generated from Field `Vehicle`.`status` of type `VehicleStatus!`)
+  """
+  status_expr: VehicleStatus_Expr
+  """
+  ✨ Generated from Field `Vehicle`.`year` of type `Int!`
+  """
+  year: Int
+  """
+  ✨ `_expr` server value variant of `year` (✨ Generated from Field `Vehicle`.`year` of type `Int!`)
+  """
+  year_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `year` (✨ Generated from Field `Vehicle`.`year` of type `Int!`)
+  """
+  year_update: [Int_Update!]
+}
+"""
+✨ Generated filter input type for table 'Vehicle'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Vehicle_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Vehicle_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Vehicle_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Vehicle_Filter!]
+  """
+  ✨ Generated from Field `Vehicle`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`moverId` of type `UUID!`
+  """
+  moverId: UUID_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`mover` of type `Mover!`
+  """
+  mover: Mover_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`capacity` of type `Float!`
+  """
+  capacity: Float_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`licensePlate` of type `String!`
+  """
+  licensePlate: String_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`make` of type `String!`
+  """
+  make: String_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`model` of type `String!`
+  """
+  model: String_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`status` of type `VehicleStatus!`
+  """
+  status: VehicleStatus_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`year` of type `Int!`
+  """
+  year: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`jobs_on_vehicle` of type `[Job!]!`
+  """
+  jobs_on_vehicle: Job_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Vehicle'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Vehicle_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Vehicle_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Vehicle_Filter
+}
+"""
+✨ Generated having input type for table 'Vehicle'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Vehicle_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Vehicle_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Vehicle_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Vehicle_Having!]
+  """
+  ✨ Generated from Field `Vehicle`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`capacity_count` of type `Int!`
+  """
+  capacity_count: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`licensePlate_count` of type `Int!`
+  """
+  licensePlate_count: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`make_count` of type `Int!`
+  """
+  make_count: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`model_count` of type `Int!`
+  """
+  model_count: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`moverId_count` of type `Int!`
+  """
+  moverId_count: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`status_count` of type `Int!`
+  """
+  status_count: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`year_count` of type `Int!`
+  """
+  year_count: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`capacity_sum` of type `Float`
+  """
+  capacity_sum: Float_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`year_sum` of type `Int`
+  """
+  year_sum: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`capacity_avg` of type `Float`
+  """
+  capacity_avg: Float_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`year_avg` of type `Float`
+  """
+  year_avg: Float_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`capacity_min` of type `Float`
+  """
+  capacity_min: Float_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`year_min` of type `Int`
+  """
+  year_min: Int_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`capacity_max` of type `Float`
+  """
+  capacity_max: Float_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `Vehicle`.`year_max` of type `Int`
+  """
+  year_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Vehicle'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Vehicle_Key {
+  """
+  ✨ Generated from Field `Vehicle`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Vehicle`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Vehicle'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Vehicle_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Vehicle_Filter
+}
+"""
+✨ Generated order input type for table 'Vehicle'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Vehicle_Order {
+  """
+  ✨ Generated from Field `Vehicle`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`moverId` of type `UUID!`
+  """
+  moverId: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`mover` of type `Mover!`
+  """
+  mover: Mover_Order
+  """
+  ✨ Generated from Field `Vehicle`.`capacity` of type `Float!`
+  """
+  capacity: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`licensePlate` of type `String!`
+  """
+  licensePlate: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`make` of type `String!`
+  """
+  make: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`model` of type `String!`
+  """
+  model: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`status` of type `VehicleStatus!`
+  """
+  status: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`year` of type `Int!`
+  """
+  year: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`capacity_count` of type `Int!`
+  """
+  capacity_count: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`licensePlate_count` of type `Int!`
+  """
+  licensePlate_count: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`make_count` of type `Int!`
+  """
+  make_count: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`model_count` of type `Int!`
+  """
+  model_count: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`moverId_count` of type `Int!`
+  """
+  moverId_count: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`status_count` of type `Int!`
+  """
+  status_count: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`year_count` of type `Int!`
+  """
+  year_count: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`capacity_sum` of type `Float`
+  """
+  capacity_sum: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`year_sum` of type `Int`
+  """
+  year_sum: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`capacity_avg` of type `Float`
+  """
+  capacity_avg: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`year_avg` of type `Float`
+  """
+  year_avg: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`capacity_min` of type `Float`
+  """
+  capacity_min: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`year_min` of type `Int`
+  """
+  year_min: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`capacity_max` of type `Float`
+  """
+  capacity_max: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `Vehicle`.`year_max` of type `Int`
+  """
+  year_max: OrderDirection
+}
+"""
+✨ Generated filter input type for table 'VehicleStatus'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input VehicleStatus_Filter {
+  """
+  Match if field is exactly equal to provided value.
+  """
+  eq: VehicleStatus
+  """
+  ✨ `_expr` server value variant of `eq` (Match if field is exactly equal to provided value.)
+  """
+  eq_expr: VehicleStatus_Expr
+  """
+  Match if field is not equal to provided value.
+  """
+  ne: VehicleStatus
+  """
+  ✨ `_expr` server value variant of `ne` (Match if field is not equal to provided value.)
+  """
+  ne_expr: VehicleStatus_Expr
+  """
+  When true, match if field `IS NULL`. When false, match if field is `NOT NULL`.
+  """
+  isNull: Boolean
+  """
+  Match if field value is among the provided list of values.
+  """
+  in: [VehicleStatus!]
+  """
+  Match if field value is not among the provided list of values.
+  """
+  nin: [VehicleStatus!]
+  """
+  Match if field value is greater than the provided value, based on index ordering of supported enum values.
+  """
+  gt: VehicleStatus
+  """
+  ✨ `_expr` server value variant of `gt` (Match if field value is greater than the provided value, based on index ordering of supported enum values.)
+  """
+  gt_expr: VehicleStatus_Expr
+  """
+  Match if field is greater than or equal to the provided value.
+  """
+  ge: VehicleStatus
+  """
+  ✨ `_expr` server value variant of `ge` (Match if field is greater than or equal to the provided value.)
+  """
+  ge_expr: VehicleStatus_Expr
+  """
+  Match if field value is less than the provided value, based on index ordering of supported enum values.
+  """
+  lt: VehicleStatus
+  """
+  ✨ `_expr` server value variant of `lt` (Match if field value is less than the provided value, based on index ordering of supported enum values.)
+  """
+  lt_expr: VehicleStatus_Expr
+  """
+  Match if field is less than or equal to the provided value, based on index ordering of supported enum values.
+  """
+  le: VehicleStatus
+  """
+  ✨ `_expr` server value variant of `le` (Match if field is less than or equal to the provided value, based on index ordering of supported enum values.)
+  """
+  le_expr: VehicleStatus_Expr
+}
+"""
+✨ Generated list filter input type for table 'VehicleStatus'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input VehicleStatus_ListFilter {
+  """
+  Match if list field contains the provided value as a member.
+  """
+  includes: VehicleStatus
+  """
+  ✨ `_expr` server value variant of `includes` (Match if list field contains the provided value as a member.)
+  """
+  includes_expr: VehicleStatus_Expr
+  """
+  Match if list field contains all of the provided values as members.
+  """
+  includesAll: [VehicleStatus!]
+  """
+  Match if list field does not contain the provided value as a member.
+  """
+  excludes: VehicleStatus
+  """
+  ✨ `_expr` server value variant of `excludes` (Match if list field does not contain the provided value as a member.)
+  """
+  excludes_expr: VehicleStatus_Expr
+  """
+  Match if list field does not contain any of the provided values as members.
+  """
+  excludesAll: [VehicleStatus!]
+  """
+  The desired number of enum values that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: VehicleStatus_Filter
+}

@@ -1,0 +1,102 @@
+extend type Bid {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Bid", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Bid`.`mover`. It must match the value of `Mover`.`id`. See `@ref` for how to customize it.
+  """
+  moverId: UUID! @fdc_generated(from: "Bid.mover", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Bid`.`movingRequest`. It must match the value of `MovingRequest`.`id`. See `@ref` for how to customize it.
+  """
+  movingRequestId: UUID! @fdc_generated(from: "Bid.movingRequest", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Inventory {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Inventory", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Inventory`.`job`. It must match the value of `Job`.`id`. See `@ref` for how to customize it.
+  """
+  jobId: UUID! @fdc_generated(from: "Inventory.job", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Invoice {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Invoice", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Invoice`.`job`. It must match the value of `Job`.`id`. See `@ref` for how to customize it.
+  """
+  jobId: UUID! @fdc_generated(from: "Invoice.job", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Invoice`.`payment`. It must match the value of `Payment`.`id`. See `@ref` for how to customize it.
+  """
+  paymentId: UUID @fdc_generated(from: "Invoice.payment", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Job {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Job", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Job`.`bid`. It must match the value of `Bid`.`id`. See `@ref` for how to customize it.
+  """
+  bidId: UUID! @fdc_generated(from: "Job.bid", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Job`.`mover`. It must match the value of `Mover`.`id`. See `@ref` for how to customize it.
+  """
+  moverId: UUID! @fdc_generated(from: "Job.mover", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Job`.`movingRequest`. It must match the value of `MovingRequest`.`id`. See `@ref` for how to customize it.
+  """
+  movingRequestId: UUID! @fdc_generated(from: "Job.movingRequest", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Job`.`vehicle`. It must match the value of `Vehicle`.`id`. See `@ref` for how to customize it.
+  """
+  vehicleId: UUID! @fdc_generated(from: "Job.vehicle", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Mover {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Mover", purpose: IMPLICIT_KEY_FIELD)
+}
+extend type MovingRequest {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "MovingRequest", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `MovingRequest`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: UUID! @fdc_generated(from: "MovingRequest.user", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Payment {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Payment", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Payment`.`job`. It must match the value of `Job`.`id`. See `@ref` for how to customize it.
+  """
+  jobId: UUID! @fdc_generated(from: "Payment.job", purpose: IMPLICIT_REF_FIELD)
+}
+extend type User {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "User", purpose: IMPLICIT_KEY_FIELD)
+}
+extend type Vehicle {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Vehicle", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Vehicle`.`mover`. It must match the value of `Mover`.`id`. See `@ref` for how to customize it.
+  """
+  moverId: UUID! @fdc_generated(from: "Vehicle.mover", purpose: IMPLICIT_REF_FIELD)
+}

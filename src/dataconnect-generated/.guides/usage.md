@@ -12,26 +12,28 @@ For each operation, there is a wrapper hook that can be used to call the operati
 
 Here are all of the hooks that get generated:
 ```ts
-import { useCreateMovie, useUpsertUser, useAddReview, useDeleteReview, useListMovies, useListUsers, useListUserReviews, useGetMovieById, useSearchMovie } from '@dataconnect/generated/react';
+import { useGetUser, useGetUserByEmail, useListMovers, useGetMover, useListMovingRequestsByStatus, useGetMovingRequest, useListBidsForRequest, useListJobsForUser, useGetJob, useCreateUser } from '@dataconnect/generated/react';
 // The types of these hooks are available in react/index.d.ts
 
-const { data, isPending, isSuccess, isError, error } = useCreateMovie(createMovieVars);
+const { data, isPending, isSuccess, isError, error } = useGetUser(getUserVars);
 
-const { data, isPending, isSuccess, isError, error } = useUpsertUser(upsertUserVars);
+const { data, isPending, isSuccess, isError, error } = useGetUserByEmail(getUserByEmailVars);
 
-const { data, isPending, isSuccess, isError, error } = useAddReview(addReviewVars);
+const { data, isPending, isSuccess, isError, error } = useListMovers();
 
-const { data, isPending, isSuccess, isError, error } = useDeleteReview(deleteReviewVars);
+const { data, isPending, isSuccess, isError, error } = useGetMover(getMoverVars);
 
-const { data, isPending, isSuccess, isError, error } = useListMovies();
+const { data, isPending, isSuccess, isError, error } = useListMovingRequestsByStatus(listMovingRequestsByStatusVars);
 
-const { data, isPending, isSuccess, isError, error } = useListUsers();
+const { data, isPending, isSuccess, isError, error } = useGetMovingRequest(getMovingRequestVars);
 
-const { data, isPending, isSuccess, isError, error } = useListUserReviews();
+const { data, isPending, isSuccess, isError, error } = useListBidsForRequest(listBidsForRequestVars);
 
-const { data, isPending, isSuccess, isError, error } = useGetMovieById(getMovieByIdVars);
+const { data, isPending, isSuccess, isError, error } = useListJobsForUser(listJobsForUserVars);
 
-const { data, isPending, isSuccess, isError, error } = useSearchMovie(searchMovieVars);
+const { data, isPending, isSuccess, isError, error } = useGetJob(getJobVars);
+
+const { data, isPending, isSuccess, isError, error } = useCreateUser(createUserVars);
 
 ```
 
@@ -70,35 +72,38 @@ If a user is not using a supported framework, they can use the generated SDK dir
 Here's an example of how to use it with the first 5 operations:
 
 ```js
-import { createMovie, upsertUser, addReview, deleteReview, listMovies, listUsers, listUserReviews, getMovieById, searchMovie } from '@dataconnect/generated';
+import { getUser, getUserByEmail, listMovers, getMover, listMovingRequestsByStatus, getMovingRequest, listBidsForRequest, listJobsForUser, getJob, createUser } from '@dataconnect/generated';
 
 
-// Operation CreateMovie:  For variables, look at type CreateMovieVars in ../index.d.ts
-const { data } = await CreateMovie(dataConnect, createMovieVars);
+// Operation GetUser:  For variables, look at type GetUserVars in ../index.d.ts
+const { data } = await GetUser(dataConnect, getUserVars);
 
-// Operation UpsertUser:  For variables, look at type UpsertUserVars in ../index.d.ts
-const { data } = await UpsertUser(dataConnect, upsertUserVars);
+// Operation GetUserByEmail:  For variables, look at type GetUserByEmailVars in ../index.d.ts
+const { data } = await GetUserByEmail(dataConnect, getUserByEmailVars);
 
-// Operation AddReview:  For variables, look at type AddReviewVars in ../index.d.ts
-const { data } = await AddReview(dataConnect, addReviewVars);
+// Operation ListMovers: 
+const { data } = await ListMovers(dataConnect);
 
-// Operation DeleteReview:  For variables, look at type DeleteReviewVars in ../index.d.ts
-const { data } = await DeleteReview(dataConnect, deleteReviewVars);
+// Operation GetMover:  For variables, look at type GetMoverVars in ../index.d.ts
+const { data } = await GetMover(dataConnect, getMoverVars);
 
-// Operation ListMovies: 
-const { data } = await ListMovies(dataConnect);
+// Operation ListMovingRequestsByStatus:  For variables, look at type ListMovingRequestsByStatusVars in ../index.d.ts
+const { data } = await ListMovingRequestsByStatus(dataConnect, listMovingRequestsByStatusVars);
 
-// Operation ListUsers: 
-const { data } = await ListUsers(dataConnect);
+// Operation GetMovingRequest:  For variables, look at type GetMovingRequestVars in ../index.d.ts
+const { data } = await GetMovingRequest(dataConnect, getMovingRequestVars);
 
-// Operation ListUserReviews: 
-const { data } = await ListUserReviews(dataConnect);
+// Operation ListBidsForRequest:  For variables, look at type ListBidsForRequestVars in ../index.d.ts
+const { data } = await ListBidsForRequest(dataConnect, listBidsForRequestVars);
 
-// Operation GetMovieById:  For variables, look at type GetMovieByIdVars in ../index.d.ts
-const { data } = await GetMovieById(dataConnect, getMovieByIdVars);
+// Operation ListJobsForUser:  For variables, look at type ListJobsForUserVars in ../index.d.ts
+const { data } = await ListJobsForUser(dataConnect, listJobsForUserVars);
 
-// Operation SearchMovie:  For variables, look at type SearchMovieVars in ../index.d.ts
-const { data } = await SearchMovie(dataConnect, searchMovieVars);
+// Operation GetJob:  For variables, look at type GetJobVars in ../index.d.ts
+const { data } = await GetJob(dataConnect, getJobVars);
+
+// Operation CreateUser:  For variables, look at type CreateUserVars in ../index.d.ts
+const { data } = await CreateUser(dataConnect, createUserVars);
 
 
 ```

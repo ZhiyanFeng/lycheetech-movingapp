@@ -1,0 +1,1010 @@
+extend type Mutation {
+  """
+  ✨ Insert a single `Bid` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  bid_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Bid_Data!
+  ): Bid_KeyOutput! @fdc_generated(from: "Bid", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Inventory` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  inventory_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Inventory_Data!
+  ): Inventory_KeyOutput! @fdc_generated(from: "Inventory", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Invoice` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  invoice_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Invoice_Data!
+  ): Invoice_KeyOutput! @fdc_generated(from: "Invoice", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Job` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  job_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Job_Data!
+  ): Job_KeyOutput! @fdc_generated(from: "Job", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Mover` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  mover_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Mover_Data!
+  ): Mover_KeyOutput! @fdc_generated(from: "Mover", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `MovingRequest` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  movingRequest_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: MovingRequest_Data!
+  ): MovingRequest_KeyOutput! @fdc_generated(from: "MovingRequest", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Payment` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  payment_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Payment_Data!
+  ): Payment_KeyOutput! @fdc_generated(from: "Payment", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `User` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Vehicle` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  vehicle_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Vehicle_Data!
+  ): Vehicle_KeyOutput! @fdc_generated(from: "Vehicle", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert `Bid` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  bid_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Bid_Data!]!
+  ): [Bid_KeyOutput!]! @fdc_generated(from: "Bid", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Inventory` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  inventory_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Inventory_Data!]!
+  ): [Inventory_KeyOutput!]! @fdc_generated(from: "Inventory", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Invoice` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  invoice_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Invoice_Data!]!
+  ): [Invoice_KeyOutput!]! @fdc_generated(from: "Invoice", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Job` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  job_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Job_Data!]!
+  ): [Job_KeyOutput!]! @fdc_generated(from: "Job", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Mover` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  mover_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Mover_Data!]!
+  ): [Mover_KeyOutput!]! @fdc_generated(from: "Mover", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `MovingRequest` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  movingRequest_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [MovingRequest_Data!]!
+  ): [MovingRequest_KeyOutput!]! @fdc_generated(from: "MovingRequest", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Payment` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  payment_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Payment_Data!]!
+  ): [Payment_KeyOutput!]! @fdc_generated(from: "Payment", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `User` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Vehicle` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  vehicle_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Vehicle_Data!]!
+  ): [Vehicle_KeyOutput!]! @fdc_generated(from: "Vehicle", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert or update a single `Bid` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Bid`.
+  """
+  bid_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Bid_Data!
+  ): Bid_KeyOutput! @fdc_generated(from: "Bid", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Inventory` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Inventory`.
+  """
+  inventory_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Inventory_Data!
+  ): Inventory_KeyOutput! @fdc_generated(from: "Inventory", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Invoice` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Invoice`.
+  """
+  invoice_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Invoice_Data!
+  ): Invoice_KeyOutput! @fdc_generated(from: "Invoice", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Job` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Job`.
+  """
+  job_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Job_Data!
+  ): Job_KeyOutput! @fdc_generated(from: "Job", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Mover` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Mover`.
+  """
+  mover_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Mover_Data!
+  ): Mover_KeyOutput! @fdc_generated(from: "Mover", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `MovingRequest` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `MovingRequest`.
+  """
+  movingRequest_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: MovingRequest_Data!
+  ): MovingRequest_KeyOutput! @fdc_generated(from: "MovingRequest", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Payment` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Payment`.
+  """
+  payment_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Payment_Data!
+  ): Payment_KeyOutput! @fdc_generated(from: "Payment", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `User` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Vehicle` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Vehicle`.
+  """
+  vehicle_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Vehicle_Data!
+  ): Vehicle_KeyOutput! @fdc_generated(from: "Vehicle", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update `Bid` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Bid`.
+  """
+  bid_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Bid_Data!]!
+  ): [Bid_KeyOutput!]! @fdc_generated(from: "Bid", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Inventory` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Inventory`.
+  """
+  inventory_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Inventory_Data!]!
+  ): [Inventory_KeyOutput!]! @fdc_generated(from: "Inventory", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Invoice` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Invoice`.
+  """
+  invoice_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Invoice_Data!]!
+  ): [Invoice_KeyOutput!]! @fdc_generated(from: "Invoice", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Job` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Job`.
+  """
+  job_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Job_Data!]!
+  ): [Job_KeyOutput!]! @fdc_generated(from: "Job", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Mover` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Mover`.
+  """
+  mover_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Mover_Data!]!
+  ): [Mover_KeyOutput!]! @fdc_generated(from: "Mover", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `MovingRequest` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `MovingRequest`.
+  """
+  movingRequest_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [MovingRequest_Data!]!
+  ): [MovingRequest_KeyOutput!]! @fdc_generated(from: "MovingRequest", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Payment` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Payment`.
+  """
+  payment_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Payment_Data!]!
+  ): [Payment_KeyOutput!]! @fdc_generated(from: "Payment", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `User` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Vehicle` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Vehicle`.
+  """
+  vehicle_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Vehicle_Data!]!
+  ): [Vehicle_KeyOutput!]! @fdc_generated(from: "Vehicle", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Update a single `Bid` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Bid` or `null` if not found.
+  """
+  bid_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Bid_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Bid_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Bid_Data!
+  ): Bid_KeyOutput @fdc_generated(from: "Bid", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Inventory` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Inventory` or `null` if not found.
+  """
+  inventory_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Inventory_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Inventory_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Inventory_Data!
+  ): Inventory_KeyOutput @fdc_generated(from: "Inventory", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Invoice` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Invoice` or `null` if not found.
+  """
+  invoice_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Invoice_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Invoice_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Invoice_Data!
+  ): Invoice_KeyOutput @fdc_generated(from: "Invoice", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Job` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Job` or `null` if not found.
+  """
+  job_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Job_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Job_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Job_Data!
+  ): Job_KeyOutput @fdc_generated(from: "Job", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Mover` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Mover` or `null` if not found.
+  """
+  mover_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Mover_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Mover_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Mover_Data!
+  ): Mover_KeyOutput @fdc_generated(from: "Mover", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `MovingRequest` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `MovingRequest` or `null` if not found.
+  """
+  movingRequest_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: MovingRequest_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: MovingRequest_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: MovingRequest_Data!
+  ): MovingRequest_KeyOutput @fdc_generated(from: "MovingRequest", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Payment` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Payment` or `null` if not found.
+  """
+  payment_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Payment_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Payment_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Payment_Data!
+  ): Payment_KeyOutput @fdc_generated(from: "Payment", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `User` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `User` or `null` if not found.
+  """
+  user_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: User_Data!
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Vehicle` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Vehicle` or `null` if not found.
+  """
+  vehicle_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Vehicle_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Vehicle_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Vehicle_Data!
+  ): Vehicle_KeyOutput @fdc_generated(from: "Vehicle", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update `Bid` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  bid_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Bid_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Bid_Data!
+  ): Int! @fdc_generated(from: "Bid", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Inventory` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  inventory_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Inventory_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Inventory_Data!
+  ): Int! @fdc_generated(from: "Inventory", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Invoice` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  invoice_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Invoice_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Invoice_Data!
+  ): Int! @fdc_generated(from: "Invoice", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Job` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  job_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Job_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Job_Data!
+  ): Int! @fdc_generated(from: "Job", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Mover` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  mover_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Mover_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Mover_Data!
+  ): Int! @fdc_generated(from: "Mover", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `MovingRequest` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  movingRequest_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: MovingRequest_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: MovingRequest_Data!
+  ): Int! @fdc_generated(from: "MovingRequest", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Payment` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  payment_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Payment_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Payment_Data!
+  ): Int! @fdc_generated(from: "Payment", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `User` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  user_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: User_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: User_Data!
+  ): Int! @fdc_generated(from: "User", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Vehicle` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  vehicle_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Vehicle_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Vehicle_Data!
+  ): Int! @fdc_generated(from: "Vehicle", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Delete a single `Bid` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  bid_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Bid_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Bid_FirstRow
+  ): Bid_KeyOutput @fdc_generated(from: "Bid", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Inventory` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  inventory_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Inventory_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Inventory_FirstRow
+  ): Inventory_KeyOutput @fdc_generated(from: "Inventory", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Invoice` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  invoice_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Invoice_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Invoice_FirstRow
+  ): Invoice_KeyOutput @fdc_generated(from: "Invoice", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Job` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  job_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Job_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Job_FirstRow
+  ): Job_KeyOutput @fdc_generated(from: "Job", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Mover` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  mover_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Mover_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Mover_FirstRow
+  ): Mover_KeyOutput @fdc_generated(from: "Mover", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `MovingRequest` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  movingRequest_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: MovingRequest_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: MovingRequest_FirstRow
+  ): MovingRequest_KeyOutput @fdc_generated(from: "MovingRequest", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Payment` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  payment_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Payment_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Payment_FirstRow
+  ): Payment_KeyOutput @fdc_generated(from: "Payment", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `User` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  user_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Vehicle` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  vehicle_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Vehicle_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Vehicle_FirstRow
+  ): Vehicle_KeyOutput @fdc_generated(from: "Vehicle", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete `Bid` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  bid_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Bid_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Bid", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Inventory` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  inventory_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Inventory_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Inventory", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Invoice` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  invoice_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Invoice_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Invoice", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Job` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  job_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Job_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Job", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Mover` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  mover_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Mover_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Mover", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `MovingRequest` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  movingRequest_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: MovingRequest_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "MovingRequest", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Payment` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  payment_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Payment_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Payment", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `User` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  user_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: User_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "User", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Vehicle` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  vehicle_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Vehicle_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Vehicle", purpose: DELETE_MULTIPLE)
+}

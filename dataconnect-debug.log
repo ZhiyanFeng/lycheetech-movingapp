@@ -1,0 +1,45 @@
+I0221 19:39:37.683128   16548 load.go:31] Reloading schema and connectors...
+I0221 19:39:37.725846   16548 control.go:100] [/emulator/lychee-moving-development cf5d] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3439B] connector\queries.gql [2084B] 
+I0221 19:39:37.764805   16548 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "C:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+I0221 19:39:37.777663   16548 collector.go:107] schema extensions wrote into "C:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\relation.gql [49255B] main\query.gql [11253B] main\mutation.gql [30265B] main\implicit.gql [5158B] prelude.gql [73281B] main\input.gql [116973B] 
+I0221 19:39:37.781691   16548 collector.go:107] connector "moving" javascriptSdk wrote into "C:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+Generated sources: esm\index.esm.js [9570B] index.cjs.js [10943B] react\esm\index.esm.js [8095B] .guides/usage.md [4114B] esm\package.json [17B] react\index.d.ts [10498B] react\package.json [459B] react\esm\package.json [17B] react\index.cjs.js [8550B] react\README.md [110468B] .guides/setup.md [1682B] .guides/config.json [236B] package.json [862B] README.md [104100B] index.d.ts [22343B] 
+I0221 19:39:37.782691   16548 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I0221 19:39:37.782691   16548 load.go:109] Finished reloading
+I0221 19:39:37.784119   16548 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:9399
+I0221 19:39:37.784119   16548 dev.go:104] Listening on address (HTTP + gRPC): [::1]:9399
+I0221 19:39:42.248487   16548 migrate.go:24] Running migration SQL:
+Step 1: CREATE EXTENSION IF NOT EXISTS "uuid-ossp"
+Step 2: CREATE TABLE "public"."mover" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "address" text NULL, "avatar_url" text NULL, "company_name" text NOT NULL, "created_at" timestamptz NOT NULL, "description" text NULL, "email" text NOT NULL, "phone_number" text NULL, "service_areas" text[] NULL, "vehicle_url" text NULL, PRIMARY KEY ("id"))
+Step 3: CREATE TYPE "public"."invoice_status" AS ENUM ('ISSUED', 'PAID', 'OVERDUE', 'CANCELLED')
+Step 4: CREATE TYPE "public"."job_status" AS ENUM ('SCHEDULED', 'IN_PROGRESS', 'COMPLETED', 'CANCELLED')
+Step 5: CREATE TYPE "public"."payment_status" AS ENUM ('PENDING', 'PAID', 'FAILED', 'REFUNDED')
+Step 6: CREATE TYPE "public"."request_status" AS ENUM ('OPEN', 'ASSIGNED', 'COMPLETED', 'CANCELLED')
+Step 7: CREATE TYPE "public"."vehicle_status" AS ENUM ('ACTIVE', 'MAINTENANCE', 'INACTIVE')
+Step 8: CREATE TYPE "public"."bid_status" AS ENUM ('PENDING', 'ACCEPTED', 'REJECTED')
+Step 9: CREATE TABLE "public"."user" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "address" text NULL, "created_at" timestamptz NOT NULL, "display_name" text NOT NULL, "email" text NOT NULL, "phone_number" text NULL, PRIMARY KEY ("id"))
+Step 10: CREATE TABLE "public"."moving_request" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "user_id" uuid NOT NULL, "created_at" timestamptz NOT NULL, "description" text NULL, "destination_address" text NOT NULL, "item_details" text NULL, "move_date" date NOT NULL, "origin_address" text NOT NULL, "status" "public"."request_status" NOT NULL, PRIMARY KEY ("id"), CONSTRAINT "moving_request_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "public"."user" ("id") ON DELETE CASCADE)
+Step 11: CREATE INDEX "moving_request_userId_idx" ON "public"."moving_request" ("user_id")
+Step 12: CREATE TABLE "public"."bid" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "mover_id" uuid NOT NULL, "moving_request_id" uuid NOT NULL, "amount" double precision NOT NULL, "created_at" timestamptz NOT NULL, "details" text NULL, "status" "public"."bid_status" NOT NULL, PRIMARY KEY ("id"), CONSTRAINT "bid_mover_id_fkey" FOREIGN KEY ("mover_id") REFERENCES "public"."mover" ("id") ON DELETE CASCADE, CONSTRAINT "bid_moving_request_id_fkey" FOREIGN KEY ("moving_request_id") REFERENCES "public"."moving_request" ("id") ON DELETE CASCADE)
+Step 13: CREATE INDEX "bid_moverId_idx" ON "public"."bid" ("mover_id")
+Step 14: CREATE INDEX "bid_movingRequestId_idx" ON "public"."bid" ("moving_request_id")
+Step 15: CREATE TABLE "public"."vehicle" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "mover_id" uuid NOT NULL, "capacity" double precision NOT NULL, "created_at" timestamptz NOT NULL, "license_plate" text NOT NULL, "make" text NOT NULL, "model" text NOT NULL, "status" "public"."vehicle_status" NOT NULL, "year" integer NOT NULL, PRIMARY KEY ("id"), CONSTRAINT "vehicle_mover_id_fkey" FOREIGN KEY ("mover_id") REFERENCES "public"."mover" ("id") ON DELETE CASCADE)
+Step 16: CREATE INDEX "vehicle_moverId_idx" ON "public"."vehicle" ("mover_id")
+Step 17: CREATE TABLE "public"."job" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "bid_id" uuid NOT NULL, "mover_id" uuid NOT NULL, "moving_request_id" uuid NOT NULL, "vehicle_id" uuid NOT NULL, "completion_date" date NULL, "created_at" timestamptz NOT NULL, "notes" text NULL, "start_date" date NOT NULL, "status" "public"."job_status" NOT NULL, PRIMARY KEY ("id"), CONSTRAINT "job_bid_id_fkey" FOREIGN KEY ("bid_id") REFERENCES "public"."bid" ("id") ON DELETE CASCADE, CONSTRAINT "job_mover_id_fkey" FOREIGN KEY ("mover_id") REFERENCES "public"."mover" ("id") ON DELETE CASCADE, CONSTRAINT "job_moving_request_id_fkey" FOREIGN KEY ("moving_request_id") REFERENCES "public"."moving_request" ("id") ON DELETE CASCADE, CONSTRAINT "job_vehicle_id_fkey" FOREIGN KEY ("vehicle_id") REFERENCES "public"."vehicle" ("id") ON DELETE CASCADE)
+Step 18: CREATE INDEX "job_bidId_idx" ON "public"."job" ("bid_id")
+Step 19: CREATE INDEX "job_moverId_idx" ON "public"."job" ("mover_id")
+Step 20: CREATE INDEX "job_movingRequestId_idx" ON "public"."job" ("moving_request_id")
+Step 21: CREATE INDEX "job_vehicleId_idx" ON "public"."job" ("vehicle_id")
+Step 22: CREATE TABLE "public"."inventory" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "job_id" uuid NOT NULL, "description" text NULL, "name" text NOT NULL, "quantity" integer NOT NULL, PRIMARY KEY ("id"), CONSTRAINT "inventory_job_id_fkey" FOREIGN KEY ("job_id") REFERENCES "public"."job" ("id") ON DELETE CASCADE)
+Step 23: CREATE INDEX "inventory_jobId_idx" ON "public"."inventory" ("job_id")
+Step 24: CREATE TABLE "public"."payment" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "job_id" uuid NOT NULL, "amount" double precision NOT NULL, "payment_date" timestamptz NOT NULL, "payment_type" text NOT NULL, "status" "public"."payment_status" NOT NULL, "transaction_id" text NULL, PRIMARY KEY ("id"), CONSTRAINT "payment_job_id_fkey" FOREIGN KEY ("job_id") REFERENCES "public"."job" ("id") ON DELETE CASCADE)
+Step 25: CREATE INDEX "payment_jobId_idx" ON "public"."payment" ("job_id")
+Step 26: CREATE TABLE "public"."invoice" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "job_id" uuid NOT NULL, "payment_id" uuid NULL, "amount_due" double precision NOT NULL, "created_at" timestamptz NOT NULL, "due_date" date NOT NULL, "issue_date" date NOT NULL, "status" "public"."invoice_status" NOT NULL, PRIMARY KEY ("id"), CONSTRAINT "invoice_job_id_fkey" FOREIGN KEY ("job_id") REFERENCES "public"."job" ("id") ON DELETE CASCADE, CONSTRAINT "invoice_payment_id_fkey" FOREIGN KEY ("payment_id") REFERENCES "public"."payment" ("id") ON DELETE SET NULL)
+Step 27: CREATE INDEX "invoice_jobId_idx" ON "public"."invoice" ("job_id")
+Step 28: CREATE INDEX "invoice_paymentId_idx" ON "public"."invoice" ("payment_id")
+I0221 19:39:42.431875   16548 control.go:100] [/emulator/lychee-moving-development dd64] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3439B] connector\queries.gql [2084B] 

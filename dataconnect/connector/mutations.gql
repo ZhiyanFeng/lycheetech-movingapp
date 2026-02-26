@@ -1,0 +1,116 @@
+
+mutation CreateUser($displayName: String!, $email: String!, $phoneNumber: String, $address: String) @auth(level: PUBLIC) {
+  user_insert(data: {
+    displayName: $displayName,
+    email: $email,
+    phoneNumber: $phoneNumber,
+    address: $address
+  })
+}
+
+mutation UpdateUser($id: UUID!, $displayName: String, $phoneNumber: String, $address: String) @auth(level: PUBLIC) {
+  user_update(id: $id, data: {
+    displayName: $displayName,
+    phoneNumber: $phoneNumber,
+    address: $address
+  })
+}
+
+mutation CreateMover($companyName: String!, $email: String!, $phoneNumber: String, $address: String, $serviceAreas: [String!]) @auth(level: PUBLIC) {
+  mover_insert(data: {
+    companyName: $companyName,
+    email: $email,
+    phoneNumber: $phoneNumber,
+    address: $address,
+    serviceAreas: $serviceAreas
+  })
+}
+
+mutation UpdateMover($id: UUID!, $companyName: String, $phoneNumber: String, $address: String, $serviceAreas: [String!]) @auth(level: PUBLIC) {
+  mover_update(id: $id, data: {
+    companyName: $companyName,
+    phoneNumber: $phoneNumber,
+    address: $address,
+    serviceAreas: $serviceAreas
+  })
+}
+
+mutation CreateVehicle($moverId: UUID!, $make: String!, $model: String!, $year: Int!, $licensePlate: String!, $capacity: Float!) @auth(level: PUBLIC) {
+  vehicle_insert(data: {
+    moverId: $moverId,
+    make: $make,
+    model: $model,
+    year: $year,
+    licensePlate: $licensePlate,
+    capacity: $capacity,
+    status: ACTIVE
+  })
+}
+# Using default status (ACTIVE) or explicit here for clarity
+
+mutation CreateMovingRequest($userId: UUID!, $originAddress: String!, $destinationAddress: String!, $moveDate: Date!) @auth(level: PUBLIC) {
+  movingRequest_insert(data: {
+    userId: $userId,
+    originAddress: $originAddress,
+    destinationAddress: $destinationAddress,
+    moveDate: $moveDate,
+    status: OPEN
+  })
+}
+
+mutation UpdateMovingRequestStatus($id: UUID!, $status: RequestStatus!) @auth(level: PUBLIC) {
+  movingRequest_update(id: $id, data: {
+    status: $status
+  })
+}
+
+mutation CreateBid($moverId: UUID!, $movingRequestId: UUID!, $amount: Float!) @auth(level: PUBLIC) {
+  bid_insert(data: {
+    moverId: $moverId,
+    movingRequestId: $movingRequestId,
+    amount: $amount,
+    status: PENDING
+  })
+}
+
+mutation UpdateBidStatus($id: UUID!, $status: BidStatus!) @auth(level: PUBLIC) {
+  bid_update(id: $id, data: {
+    status: $status
+  })
+}
+
+mutation CreateJob($movingRequestId: UUID!, $moverId: UUID!, $bidId: UUID!, $vehicleId: UUID!, $startDate: Date!) @auth(level: PUBLIC) {
+  job_insert(data: {
+    movingRequestId: $movingRequestId,
+    moverId: $moverId,
+    bidId: $bidId,
+    vehicleId: $vehicleId,
+    startDate: $startDate,
+    status: SCHEDULED
+  })
+}
+
+mutation UpdateJobStatus($id: UUID!, $status: JobStatus!) @auth(level: PUBLIC) {
+  job_update(id: $id, data: {
+    status: $status
+  })
+}
+
+mutation CreatePayment($jobId: UUID!, $amount: Float!, $paymentType: String!) @auth(level: PUBLIC) {
+  payment_insert(data: {
+    jobId: $jobId,
+    amount: $amount,
+    paymentType: $paymentType,
+    status: PENDING
+  })
+}
+
+mutation CreateInvoice($jobId: UUID!, $amountDue: Float!, $dueDate: Date!, $issueDate: Date!) @auth(level: PUBLIC) {
+  invoice_insert(data: {
+    jobId: $jobId,
+    amountDue: $amountDue,
+    dueDate: $dueDate,
+    issueDate: $issueDate,
+    status: ISSUED
+  })
+}

@@ -1,0 +1,127 @@
+
+query GetUser($id: UUID!) @auth(level: PUBLIC) {
+  user(id: $id) {
+    id
+    displayName
+    email
+    phoneNumber
+    address
+    createdAt
+  }
+}
+
+query GetUserByEmail($email: String!) @auth(level: PUBLIC) {
+  users(where: { email: { eq: $email } }) {
+    id
+    displayName
+    email
+    phoneNumber
+    address
+    createdAt
+  }
+}
+
+query ListMovers @auth(level: PUBLIC) {
+  movers {
+    id
+    companyName
+    email
+    phoneNumber
+    serviceAreas
+    description
+    avatarUrl
+    vehicleUrl
+  }
+}
+
+query GetMover($id: UUID!) @auth(level: PUBLIC) {
+  mover(id: $id) {
+    id
+    companyName
+    email
+    phoneNumber
+    serviceAreas
+    description
+    vehicleUrl
+    createdAt
+  }
+}
+
+query ListMovingRequestsByStatus($status: RequestStatus!) @auth(level: PUBLIC) {
+  movingRequests(where: { status: { eq: $status } }) {
+    id
+    originAddress
+    destinationAddress
+    moveDate
+    status
+    createdAt
+    user {
+      displayName
+    }
+  }
+}
+
+query GetMovingRequest($id: UUID!) @auth(level: PUBLIC) {
+  movingRequest(id: $id) {
+    id
+    originAddress
+    destinationAddress
+    moveDate
+    status
+    description
+    itemDetails
+    createdAt
+    user {
+      id
+      displayName
+      email
+    }
+  }
+}
+
+query ListBidsForRequest($requestId: UUID!) @auth(level: PUBLIC) {
+  bids(where: { movingRequest: { id: { eq: $requestId } } }) {
+    id
+    amount
+    status
+    details
+    createdAt
+    mover {
+      id
+      companyName
+    }
+  }
+}
+
+query ListJobsForUser($userId: UUID!) @auth(level: PUBLIC) {
+  jobs(where: { movingRequest: { user: { id: { eq: $userId } } } }) {
+    id
+    startDate
+    status
+    notes
+    mover {
+      companyName
+    }
+  }
+}
+
+query GetJob($id: UUID!) @auth(level: PUBLIC) {
+  job(id: $id) {
+    id
+    startDate
+    status
+    notes
+    createdAt
+    mover {
+      companyName
+      phoneNumber
+    }
+    movingRequest {
+      originAddress
+      destinationAddress
+    }
+    bid {
+      amount
+    }
+  }
+}

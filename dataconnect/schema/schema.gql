@@ -1,7 +1,47 @@
+enum VehicleStatus {
+  ACTIVE
+  MAINTENANCE
+  INACTIVE
+}
+
+enum RequestStatus {
+  OPEN
+  ASSIGNED
+  COMPLETED
+  CANCELLED
+}
+
+enum BidStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+enum JobStatus {
+  SCHEDULED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+enum InvoiceStatus {
+  ISSUED
+  PAID
+  OVERDUE
+  CANCELLED
+}
+
 type User @table {
   displayName: String!
   email: String!
-  createdAt: Timestamp!
+  createdAt: Timestamp! @default(expr: "request.time")
   phoneNumber: String
   address: String
 }
@@ -9,7 +49,7 @@ type User @table {
 type Mover @table {
   companyName: String!
   email: String!
-  createdAt: Timestamp!
+  createdAt: Timestamp! @default(expr: "request.time")
   phoneNumber: String
   address: String
   description: String
@@ -18,7 +58,6 @@ type Mover @table {
   vehicleUrl: String
 }
 
-
 type Vehicle @table {
   mover: Mover!
   make: String!
@@ -26,8 +65,8 @@ type Vehicle @table {
   year: Int!
   licensePlate: String!
   capacity: Float!
-  createdAt: Timestamp!
-  status: String!
+  createdAt: Timestamp! @default(expr: "request.time")
+  status: VehicleStatus!
 }
 
 type MovingRequest @table {
@@ -35,8 +74,8 @@ type MovingRequest @table {
   originAddress: String!
   destinationAddress: String!
   moveDate: Date!
-  createdAt: Timestamp!
-  status: String!
+  createdAt: Timestamp! @default(expr: "request.time")
+  status: RequestStatus!
   description: String
   itemDetails: String
 }
@@ -45,8 +84,8 @@ type Bid @table {
   mover: Mover!
   movingRequest: MovingRequest!
   amount: Float!
-  createdAt: Timestamp!
-  status: String!
+  createdAt: Timestamp! @default(expr: "request.time")
+  status: BidStatus!
   details: String
 }
 
@@ -56,12 +95,11 @@ type Job @table {
   bid: Bid!
   vehicle: Vehicle!
   startDate: Date!
-  status: String!
-  createdAt: Timestamp!
+  status: JobStatus!
+  createdAt: Timestamp! @default(expr: "request.time")
   completionDate: Date
   notes: String
-  downPayment: Payment
-  invoice: Invoice
+  # References to payment/invoice are best handled by relations from those types unless 1:1 specifically enforced
 }
 
 type Inventory @table {
@@ -75,8 +113,8 @@ type Payment @table {
   job: Job!
   amount: Float!
   paymentType: String!
-  paymentDate: Timestamp!
-  status: String!
+  paymentDate: Timestamp! @default(expr: "request.time")
+  status: PaymentStatus!
   transactionId: String
 }
 
@@ -84,18 +122,8 @@ type Invoice @table {
   job: Job!
   amountDue: Float!
   dueDate: Date!
-  createdAt: Timestamp!
-  status: String!
+  createdAt: Timestamp! @default(expr: "request.time")
+  status: InvoiceStatus!
   issueDate: Date!
   payment: Payment
-}
-
-type Booking @table {
-  movingRequest: MovingRequest!
-  acceptedBid: Bid!
-  user: User!
-  mover: Mover!
-  bookingDate: Timestamp!
-  status: String!
-  notes: String
 }

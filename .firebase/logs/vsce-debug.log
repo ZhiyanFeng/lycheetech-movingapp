@@ -1,0 +1,643 @@
+[debug] [2026-02-20T12:55:24.461Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2026-02-20T12:55:29.362Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-20T12:55:29.364Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-20T12:55:29.364Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-20T12:55:29.365Z] Checked if tokens are valid: false, expires at: 1771592654081
+[debug] [2026-02-20T12:55:29.366Z] Checked if tokens are valid: false, expires at: 1771592654081
+[debug] [2026-02-20T12:55:29.366Z] > refreshing access token with scopes: []
+[debug] [2026-02-20T12:55:29.367Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-20T12:55:29.367Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-20T12:55:29.373Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 3.1.1) on port 50001
+[debug] [2026-02-20T12:55:29.618Z] I0220 20:55:29.599724   22348 control.go:100] [/emulator/lychee-moving-development 746d] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1460B] 
+Connector "moving": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 20:55:29.599724   22348 control.go:100] [/emulator/lychee-moving-development 746d] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1460B] \nConnector \"moving\": sources: \n"}}
+[debug] [2026-02-20T12:55:29.619Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-02-20T12:55:29.619Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-02-20T12:55:29.619Z] Starting Data Connect Emulator with command {"binary":"C:\\Users\\zhiya\\.cache\\firebase\\emulators\\dataconnect-emulator-3.1.1.exe","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\zhiya\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.1.1.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-02-20T12:55:29.655Z] I0220 20:55:29.644147   15080 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 20:55:29.644147   15080 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T12:55:29.677Z] I0220 20:55:29.677630   15080 control.go:100] [/emulator/lychee-moving-development 1e55] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1460B] 
+Connector "moving": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 20:55:29.677630   15080 control.go:100] [/emulator/lychee-moving-development 1e55] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1460B] \nConnector \"moving\": sources: \n"}}
+[debug] [2026-02-20T12:55:29.714Z] E0220 20:55:29.714284   15080 load.go:95] Errors generating SDK: [connector "moving"]: invalid Data Connect Connector no query found in connector
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0220 20:55:29.714284   15080 load.go:95] Errors generating SDK: [connector \"moving\"]: invalid Data Connect Connector no query found in connector\n"}}
+[debug] [2026-02-20T12:55:29.719Z] I0220 20:55:29.718437   15080 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\input.gql [87768B] main\relation.gql [47021B] prelude.gql [73281B] main\query.gql [9971B] main\mutation.gql [26790B] main\implicit.gql [5653B] 
+I0220 20:55:29.718437   15080 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 20:55:29.718437   15080 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\input.gql [87768B] main\\relation.gql [47021B] prelude.gql [73281B] main\\query.gql [9971B] main\\mutation.gql [26790B] main\\implicit.gql [5653B] \nI0220 20:55:29.718437   15080 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-20T12:55:29.754Z] I0220 20:55:29.733605   15080 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 20:55:29.733605   15080 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[debug] [2026-02-20T12:55:30.250Z] I0220 20:55:30.250790   15080 engine.go:205] [/emulator/lychee-moving-development 1e55] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 20:55:30.250790   15080 engine.go:205] [/emulator/lychee-moving-development 1e55] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2026-02-20T12:55:30.429Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-20T12:55:30.429Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-20T12:55:30.472Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-20T12:55:30.473Z] Checked if tokens are valid: true, expires at: 1771595729429
+[debug] [2026-02-20T12:55:30.474Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-20T12:55:31.846Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-20T12:55:31.846Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-20T14:13:09.719Z] I0220 22:13:09.719138   15080 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:13:09.719138   15080 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T14:13:09.755Z] I0220 22:13:09.755324   15080 control.go:100] [/emulator/lychee-moving-development ebc9] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1771B] 
+Connector "moving": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:13:09.755324   15080 control.go:100] [/emulator/lychee-moving-development ebc9] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1771B] \nConnector \"moving\": sources: \n"}}
+[debug] [2026-02-20T14:13:09.788Z] E0220 22:13:09.787697   15080 load.go:95] Errors generating SDK: [connector "moving"]: invalid Data Connect Connector no query found in connector
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0220 22:13:09.787697   15080 load.go:95] Errors generating SDK: [connector \"moving\"]: invalid Data Connect Connector no query found in connector\n"}}
+[debug] [2026-02-20T14:13:09.790Z] I0220 22:13:09.789705   15080 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\mutation.gql [33650B] main\implicit.gql [6877B] prelude.gql [73281B] main\input.gql [108743B] main\relation.gql [58755B] main\query.gql [12508B] 
+I0220 22:13:09.789705   15080 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:13:09.789705   15080 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\mutation.gql [33650B] main\\implicit.gql [6877B] prelude.gql [73281B] main\\input.gql [108743B] main\\relation.gql [58755B] main\\query.gql [12508B] \nI0220 22:13:09.789705   15080 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-20T14:13:59.761Z] I0220 22:13:59.756943   15080 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:13:59.756943   15080 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T14:14:00.266Z] I0220 22:14:00.264304   15080 control.go:100] [/emulator/lychee-moving-development 7112] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1769B] 
+Connector "moving": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:14:00.264304   15080 control.go:100] [/emulator/lychee-moving-development 7112] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1769B] \nConnector \"moving\": sources: \n"}}
+[debug] [2026-02-20T14:14:00.507Z] E0220 22:14:00.505013   15080 load.go:95] Errors generating SDK: [connector "moving"]: invalid Data Connect Connector no query found in connector
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0220 22:14:00.505013   15080 load.go:95] Errors generating SDK: [connector \"moving\"]: invalid Data Connect Connector no query found in connector\n"}}
+[debug] [2026-02-20T14:14:00.522Z] I0220 22:14:00.521494   15080 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\mutation.gql [33650B] main\implicit.gql [6877B] prelude.gql [73281B] main\input.gql [108743B] main\relation.gql [58755B] main\query.gql [12508B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:14:00.521494   15080 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\mutation.gql [33650B] main\\implicit.gql [6877B] prelude.gql [73281B] main\\input.gql [108743B] main\\relation.gql [58755B] main\\query.gql [12508B] \n"}}
+[debug] [2026-02-20T14:14:00.524Z] I0220 22:14:00.521494   15080 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:14:00.521494   15080 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-20T14:16:19.719Z] I0220 22:16:19.719774   15080 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:16:19.719774   15080 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T14:16:19.747Z] I0220 22:16:19.746897   15080 control.go:100] [/emulator/lychee-moving-development d985] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:16:19.746897   15080 control.go:100] [/emulator/lychee-moving-development d985] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: \n"}}
+[debug] [2026-02-20T14:16:19.777Z] E0220 22:16:19.776898   15080 load.go:95] Errors generating SDK: [connector "moving"]: invalid Data Connect Connector no query found in connector
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0220 22:16:19.776898   15080 load.go:95] Errors generating SDK: [connector \"moving\"]: invalid Data Connect Connector no query found in connector\n"}}
+[debug] [2026-02-20T14:16:19.779Z] I0220 22:16:19.778901   15080 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\relation.gql [58755B] main\query.gql [12508B] main\mutation.gql [33650B] main\implicit.gql [6877B] main\input.gql [108743B] prelude.gql [73281B] 
+I0220 22:16:19.778901   15080 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:16:19.778901   15080 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\relation.gql [58755B] main\\query.gql [12508B] main\\mutation.gql [33650B] main\\implicit.gql [6877B] main\\input.gql [108743B] prelude.gql [73281B] \nI0220 22:16:19.778901   15080 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-20T14:28:07.454Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: undefined
+[debug] [2026-02-20T14:28:07.455Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-20T14:28:07.456Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-20T14:28:07.456Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-20T14:28:07.456Z] Checked if tokens are valid: false, expires at: 1771595729429
+[debug] [2026-02-20T14:28:07.456Z] Checked if tokens are valid: false, expires at: 1771595729429
+[debug] [2026-02-20T14:28:07.456Z] > refreshing access token with scopes: []
+[debug] [2026-02-20T14:28:07.457Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-20T14:28:07.457Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-20T14:28:07.469Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: undefined
+[debug] [2026-02-20T14:28:07.469Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-20T14:28:07.470Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-20T14:28:07.470Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-20T14:28:07.470Z] Checked if tokens are valid: false, expires at: 1771595729429
+[debug] [2026-02-20T14:28:07.470Z] Checked if tokens are valid: false, expires at: 1771595729429
+[debug] [2026-02-20T14:28:07.470Z] > refreshing access token with scopes: []
+[debug] [2026-02-20T14:28:07.470Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-20T14:28:07.470Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-20T14:28:08.651Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-20T14:28:08.651Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-20T14:28:08.682Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-20T14:28:08.683Z] Checked if tokens are valid: true, expires at: 1771601287651
+[debug] [2026-02-20T14:28:08.684Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-20T14:28:08.691Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-20T14:28:08.691Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-20T14:28:08.713Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-20T14:28:08.714Z] Checked if tokens are valid: true, expires at: 1771601287691
+[debug] [2026-02-20T14:28:08.714Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-20T14:28:10.014Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-20T14:28:10.014Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-20T14:28:10.122Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-20T14:28:10.122Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-20T14:30:29.719Z] I0220 22:30:29.719903   15080 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:30:29.719903   15080 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T14:30:29.762Z] I0220 22:30:29.762613   15080 control.go:100] [/emulator/lychee-moving-development f9fc] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: connector\queries.gql [0B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:30:29.762613   15080 control.go:100] [/emulator/lychee-moving-development f9fc] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: connector\\queries.gql [0B] \n"}}
+[debug] [2026-02-20T14:30:29.800Z] I0220 22:30:29.799924   15080 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:30:29.799924   15080 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\n"}}
+[debug] [2026-02-20T14:30:29.808Z] I0220 22:30:29.808138   15080 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [73281B] main\query.gql [12508B] main\mutation.gql [33650B] main\implicit.gql [6877B] main\input.gql [108743B] main\relation.gql [58755B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:30:29.808138   15080 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [73281B] main\\query.gql [12508B] main\\mutation.gql [33650B] main\\implicit.gql [6877B] main\\input.gql [108743B] main\\relation.gql [58755B] \n"}}
+[debug] [2026-02-20T14:30:29.833Z] I0220 22:30:29.833663   15080 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+Generated sources: react\esm\package.json [17B] .guides/config.json [236B] index.d.ts [1058B] esm\index.esm.js [139B] package.json [862B] react\index.d.ts [228B] react\esm\index.esm.js [0B] .guides/usage.md [1318B] index.cjs.js [174B] react\README.md [5437B] react\package.json [459B] react\index.cjs.js [0B] .guides/setup.md [1682B] esm\package.json [17B] README.md [2860B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:30:29.833663   15080 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\nGenerated sources: react\\esm\\package.json [17B] .guides/config.json [236B] index.d.ts [1058B] esm\\index.esm.js [139B] package.json [862B] react\\index.d.ts [228B] react\\esm\\index.esm.js [0B] .guides/usage.md [1318B] index.cjs.js [174B] react\\README.md [5437B] react\\package.json [459B] react\\index.cjs.js [0B] .guides/setup.md [1682B] esm\\package.json [17B] README.md [2860B] \n"}}
+[debug] [2026-02-20T14:30:29.865Z] I0220 22:30:29.865277   15080 installsdk.go:86] Running command: C:\nvm4w\nodejs\npm.cmd install file:lib\generated
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:30:29.865277   15080 installsdk.go:86] Running command: C:\\nvm4w\\nodejs\\npm.cmd install file:lib\\generated\n"}}
+[debug] [2026-02-20T14:30:44.328Z] E0220 22:30:44.328946   15080 installsdk.go:88] Failed to install package: exit status 0xc000013a
+I0220 22:30:44.328946   15080 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0220 22:30:44.328946   15080 installsdk.go:88] Failed to install package: exit status 0xc000013a\nI0220 22:30:44.328946   15080 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-20T14:31:39.720Z] I0220 22:31:39.719635   15080 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:31:39.719635   15080 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T14:31:39.753Z] I0220 22:31:39.752985   15080 control.go:100] [/emulator/lychee-moving-development d7cf] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: connector\queries.gql [0B] connector\mutations.gql [0B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:31:39.752985   15080 control.go:100] [/emulator/lychee-moving-development d7cf] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: connector\\queries.gql [0B] connector\\mutations.gql [0B] \n"}}
+[debug] [2026-02-20T14:31:39.787Z] I0220 22:31:39.786855   15080 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:31:39.786855   15080 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\n"}}
+[debug] [2026-02-20T14:31:39.792Z] I0220 22:31:39.792363   15080 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [73281B] main\relation.gql [58755B] main\query.gql [12508B] main\mutation.gql [33650B] main\implicit.gql [6877B] main\input.gql [108743B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:31:39.792363   15080 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [73281B] main\\relation.gql [58755B] main\\query.gql [12508B] main\\mutation.gql [33650B] main\\implicit.gql [6877B] main\\input.gql [108743B] \n"}}
+[debug] [2026-02-20T14:31:39.797Z] I0220 22:31:39.796550   15080 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+Generated sources: react\esm\package.json [17B] react\index.cjs.js [0B] react\esm\index.esm.js [0B] react\README.md [5437B] .guides/usage.md [1318B] .guides/setup.md [1682B] .guides/config.json [236B] react\package.json [459B] index.d.ts [1058B] index.cjs.js [174B] esm\index.esm.js [139B] esm\package.json [17B] package.json [862B] README.md [2860B] react\index.d.ts [228B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:31:39.796550   15080 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\nGenerated sources: react\\esm\\package.json [17B] react\\index.cjs.js [0B] react\\esm\\index.esm.js [0B] react\\README.md [5437B] .guides/usage.md [1318B] .guides/setup.md [1682B] .guides/config.json [236B] react\\package.json [459B] index.d.ts [1058B] index.cjs.js [174B] esm\\index.esm.js [139B] esm\\package.json [17B] package.json [862B] README.md [2860B] react\\index.d.ts [228B] \n"}}
+[debug] [2026-02-20T14:31:39.798Z] I0220 22:31:39.797551   15080 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I0220 22:31:39.797551   15080 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:31:39.797551   15080 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation\nI0220 22:31:39.797551   15080 load.go:109] Finished reloading\n"}}
+[info] +  Wrote .gemini/extensions/firebase/gemini-extension.json 
+[info] +  Wrote .gemini/extensions/firebase/contexts/FIREBASE-BASE.md 
+[info] +  Wrote .gemini/extensions/firebase/FIREBASE.md 
+[info] [Firebase Plugin] Stopping Data Connect toolkit
+[warn] !  Data Connect Emulator has exited upon receiving signal: SIGINT 
+[debug] [2026-02-20T14:57:11.464Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2026-02-20T14:57:14.959Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-20T14:57:14.960Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-20T14:57:14.961Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-20T14:57:14.962Z] Checked if tokens are valid: true, expires at: 1771601287691
+[debug] [2026-02-20T14:57:14.963Z] Checked if tokens are valid: true, expires at: 1771601287691
+[debug] [2026-02-20T14:57:14.963Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-20T14:57:14.963Z] Checked if tokens are valid: true, expires at: 1771601287691
+[debug] [2026-02-20T14:57:14.964Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-20T14:57:14.971Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 3.1.1) on port 50001
+[debug] [2026-02-20T14:57:15.278Z] I0220 22:57:15.257175   13176 control.go:100] [/emulator/lychee-moving-development 3d34] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: connector\mutations.gql [0B] connector\queries.gql [0B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:57:15.257175   13176 control.go:100] [/emulator/lychee-moving-development 3d34] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: connector\\mutations.gql [0B] connector\\queries.gql [0B] \n"}}
+[debug] [2026-02-20T14:57:15.279Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-02-20T14:57:15.279Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-02-20T14:57:15.279Z] Starting Data Connect Emulator with command {"binary":"C:\\Users\\zhiya\\.cache\\firebase\\emulators\\dataconnect-emulator-3.1.1.exe","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\zhiya\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.1.1.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-02-20T14:57:15.303Z] I0220 22:57:15.303366   35588 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:57:15.303366   35588 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T14:57:15.359Z] I0220 22:57:15.357906   35588 control.go:100] [/emulator/lychee-moving-development 1dcd] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: connector\mutations.gql [0B] connector\queries.gql [0B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:57:15.357906   35588 control.go:100] [/emulator/lychee-moving-development 1dcd] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: connector\\mutations.gql [0B] connector\\queries.gql [0B] \n"}}
+[debug] [2026-02-20T14:57:15.419Z] I0220 22:57:15.419526   35588 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:57:15.419526   35588 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\n"}}
+[debug] [2026-02-20T14:57:15.428Z] I0220 22:57:15.428161   35588 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\query.gql [12508B] main\mutation.gql [33650B] prelude.gql [73281B] main\implicit.gql [6877B] main\input.gql [108743B] main\relation.gql [58755B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:57:15.428161   35588 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\query.gql [12508B] main\\mutation.gql [33650B] prelude.gql [73281B] main\\implicit.gql [6877B] main\\input.gql [108743B] main\\relation.gql [58755B] \n"}}
+[debug] [2026-02-20T14:57:15.437Z] I0220 22:57:15.437888   35588 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+Generated sources: react\esm\package.json [17B] react\esm\index.esm.js [0B] .guides/setup.md [1682B] esm\package.json [17B] .guides/usage.md [1318B] index.d.ts [1058B] index.cjs.js [174B] .guides/config.json [236B] esm\index.esm.js [139B] README.md [2860B] react\index.d.ts [228B] react\package.json [459B] react\index.cjs.js [0B] react\README.md [5437B] package.json [862B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:57:15.437888   35588 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\nGenerated sources: react\\esm\\package.json [17B] react\\esm\\index.esm.js [0B] .guides/setup.md [1682B] esm\\package.json [17B] .guides/usage.md [1318B] index.d.ts [1058B] index.cjs.js [174B] .guides/config.json [236B] esm\\index.esm.js [139B] README.md [2860B] react\\index.d.ts [228B] react\\package.json [459B] react\\index.cjs.js [0B] react\\README.md [5437B] package.json [862B] \n"}}
+[debug] [2026-02-20T14:57:15.439Z] I0220 22:57:15.439696   35588 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I0220 22:57:15.439696   35588 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:57:15.439696   35588 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation\nI0220 22:57:15.439696   35588 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-20T14:57:15.462Z] I0220 22:57:15.462477   35588 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:57:15.462477   35588 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[debug] [2026-02-20T14:57:15.752Z] I0220 22:57:15.736459   35588 engine.go:205] [/emulator/lychee-moving-development 1dcd] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 22:57:15.736459   35588 engine.go:205] [/emulator/lychee-moving-development 1dcd] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2026-02-20T14:57:17.127Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-20T14:57:17.127Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-20T14:58:57.020Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: undefined
+[debug] [2026-02-20T14:58:57.020Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-20T14:58:57.021Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-20T14:58:57.021Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-20T14:58:57.022Z] Checked if tokens are valid: true, expires at: 1771601287691
+[debug] [2026-02-20T14:58:57.022Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-20T14:58:57.023Z] Checked if tokens are valid: true, expires at: 1771601287691
+[debug] [2026-02-20T14:58:57.023Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-20T14:58:57.030Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: undefined
+[debug] [2026-02-20T14:58:57.030Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-20T14:58:57.030Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-20T14:58:57.031Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-20T14:58:57.031Z] Checked if tokens are valid: true, expires at: 1771601287691
+[debug] [2026-02-20T14:58:57.031Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-20T14:58:57.032Z] Checked if tokens are valid: true, expires at: 1771601287691
+[debug] [2026-02-20T14:58:57.032Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-20T14:58:58.149Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-20T14:58:58.149Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-20T14:58:58.153Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-20T14:58:58.153Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] +  Wrote .gemini/extensions/firebase/gemini-extension.json 
+[info] +  Wrote .gemini/extensions/firebase/gemini-extension.json 
+[debug] [2026-02-20T15:04:45.443Z] I0220 23:04:45.443245   35588 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:04:45.443245   35588 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T15:04:45.478Z] I0220 23:04:45.477384   35588 control.go:100] [/emulator/lychee-moving-development bdb1] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: connector\mutations.gql [0B] connector\queries.gql [1733B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:04:45.477384   35588 control.go:100] [/emulator/lychee-moving-development bdb1] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: connector\\mutations.gql [0B] connector\\queries.gql [1733B] \n"}}
+[debug] [2026-02-20T15:04:45.514Z] I0220 23:04:45.513695   35588 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:04:45.513695   35588 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\n"}}
+[debug] [2026-02-20T15:04:45.522Z] I0220 23:04:45.521214   35588 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\input.gql [108743B] main\relation.gql [58755B] main\query.gql [12508B] main\mutation.gql [33650B] prelude.gql [73281B] main\implicit.gql [6877B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:04:45.521214   35588 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\input.gql [108743B] main\\relation.gql [58755B] main\\query.gql [12508B] main\\mutation.gql [33650B] prelude.gql [73281B] main\\implicit.gql [6877B] \n"}}
+[debug] [2026-02-20T15:04:45.530Z] I0220 23:04:45.530101   35588 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+Generated sources: index.d.ts [8965B] package.json [862B] react\esm\package.json [17B] react\esm\index.esm.js [3093B] react\README.md [40290B] esm\index.esm.js [3351B] .guides/setup.md [1682B] esm\package.json [17B] index.cjs.js [3857B] react\index.cjs.js [3267B] README.md [37388B] react\index.d.ts [3679B] react\package.json [459B] .guides/usage.md [3470B] .guides/config.json [236B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:04:45.530101   35588 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\nGenerated sources: index.d.ts [8965B] package.json [862B] react\\esm\\package.json [17B] react\\esm\\index.esm.js [3093B] react\\README.md [40290B] esm\\index.esm.js [3351B] .guides/setup.md [1682B] esm\\package.json [17B] index.cjs.js [3857B] react\\index.cjs.js [3267B] README.md [37388B] react\\index.d.ts [3679B] react\\package.json [459B] .guides/usage.md [3470B] .guides/config.json [236B] \n"}}
+[debug] [2026-02-20T15:04:45.532Z] I0220 23:04:45.531105   35588 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I0220 23:04:45.531105   35588 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:04:45.531105   35588 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation\nI0220 23:04:45.531105   35588 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-20T15:05:05.443Z] I0220 23:05:05.442756   35588 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:05:05.442756   35588 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T15:05:05.474Z] W0220 23:05:05.474091   35588 control.go:74] [/emulator/lychee-moving-development 2bdd] connector "moving" has errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+
+sources: connector\mutations.gql [2782B] connector\queries.gql [1733B] 
+I0220 23:05:05.474091   35588 control.go:100] [/emulator/lychee-moving-development 2bdd] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: connector\mutations.gql [2782B] connector\queries.gql [1733B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0220 23:05:05.474091   35588 control.go:74] [/emulator/lychee-moving-development 2bdd] connector \"moving\" has errors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n\nsources: connector\\mutations.gql [2782B] connector\\queries.gql [1733B] \nI0220 23:05:05.474091   35588 control.go:100] [/emulator/lychee-moving-development 2bdd] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: connector\\mutations.gql [2782B] connector\\queries.gql [1733B] \n"}}
+[debug] [2026-02-20T15:05:05.475Z] E0220 23:05:05.475613   35588 load.go:73] Could not load sources: 
+Errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0220 23:05:05.475613   35588 load.go:73] Could not load sources: \nErrors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n"}}
+[debug] [2026-02-20T15:05:05.477Z] I0220 23:05:05.477614   35588 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\relation.gql [58755B] main\query.gql [12508B] main\mutation.gql [33650B] prelude.gql [73281B] main\implicit.gql [6877B] main\input.gql [108743B] 
+I0220 23:05:05.477614   35588 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:05:05.477614   35588 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\relation.gql [58755B] main\\query.gql [12508B] main\\mutation.gql [33650B] prelude.gql [73281B] main\\implicit.gql [6877B] main\\input.gql [108743B] \nI0220 23:05:05.477614   35588 load.go:74] Finished reloading\n"}}
+[debug] [2026-02-20T15:08:45.443Z] I0220 23:08:45.443080   35588 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:08:45.443080   35588 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T15:08:45.474Z] I0220 23:08:45.474635   35588 control.go:100] [/emulator/lychee-moving-development 7e9c] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: connector\queries.gql [1733B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:08:45.474635   35588 control.go:100] [/emulator/lychee-moving-development 7e9c] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: connector\\queries.gql [1733B] \n"}}
+[debug] [2026-02-20T15:08:45.509Z] I0220 23:08:45.508941   35588 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:08:45.508941   35588 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\n"}}
+[debug] [2026-02-20T15:08:45.517Z] I0220 23:08:45.517298   35588 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\implicit.gql [6877B] main\input.gql [108743B] main\relation.gql [58755B] main\query.gql [12508B] main\mutation.gql [33650B] prelude.gql [73281B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:08:45.517298   35588 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\implicit.gql [6877B] main\\input.gql [108743B] main\\relation.gql [58755B] main\\query.gql [12508B] main\\mutation.gql [33650B] prelude.gql [73281B] \n"}}
+[debug] [2026-02-20T15:08:45.524Z] I0220 23:08:45.523841   35588 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+Generated sources: react\esm\index.esm.js [3093B] esm\package.json [17B] react\esm\package.json [17B] .guides/usage.md [3470B] esm\index.esm.js [3351B] index.cjs.js [3857B] package.json [862B] react\index.d.ts [3679B] index.d.ts [8965B] react\package.json [459B] react\README.md [40290B] .guides/setup.md [1682B] .guides/config.json [236B] README.md [37388B] react\index.cjs.js [3267B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:08:45.523841   35588 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\nGenerated sources: react\\esm\\index.esm.js [3093B] esm\\package.json [17B] react\\esm\\package.json [17B] .guides/usage.md [3470B] esm\\index.esm.js [3351B] index.cjs.js [3857B] package.json [862B] react\\index.d.ts [3679B] index.d.ts [8965B] react\\package.json [459B] react\\README.md [40290B] .guides/setup.md [1682B] .guides/config.json [236B] README.md [37388B] react\\index.cjs.js [3267B] \n"}}
+[debug] [2026-02-20T15:08:45.525Z] I0220 23:08:45.524851   35588 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I0220 23:08:45.525854   35588 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:08:45.524851   35588 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation\nI0220 23:08:45.525854   35588 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-20T15:09:05.443Z] I0220 23:09:05.443223   35588 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:09:05.443223   35588 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T15:09:05.478Z] W0220 23:09:05.477918   35588 control.go:74] [/emulator/lychee-moving-development 29f7] connector "moving" has errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+
+sources: connector\queries.gql [1733B] connector\mutations.gql [2808B] 
+I0220 23:09:05.477918   35588 control.go:100] [/emulator/lychee-moving-development 29f7] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: connector\mutations.gql [2808B] connector\queries.gql [1733B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0220 23:09:05.477918   35588 control.go:74] [/emulator/lychee-moving-development 29f7] connector \"moving\" has errors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n\nsources: connector\\queries.gql [1733B] connector\\mutations.gql [2808B] \nI0220 23:09:05.477918   35588 control.go:100] [/emulator/lychee-moving-development 29f7] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: connector\\mutations.gql [2808B] connector\\queries.gql [1733B] \n"}}
+[debug] [2026-02-20T15:09:05.479Z] E0220 23:09:05.480031   35588 load.go:73] Could not load sources: 
+Errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0220 23:09:05.480031   35588 load.go:73] Could not load sources: \nErrors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n"}}
+[debug] [2026-02-20T15:09:05.481Z] I0220 23:09:05.482172   35588 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [73281B] main\implicit.gql [6877B] main\input.gql [108743B] main\relation.gql [58755B] main\query.gql [12508B] main\mutation.gql [33650B] 
+I0220 23:09:05.482172   35588 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:09:05.482172   35588 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [73281B] main\\implicit.gql [6877B] main\\input.gql [108743B] main\\relation.gql [58755B] main\\query.gql [12508B] main\\mutation.gql [33650B] \nI0220 23:09:05.482172   35588 load.go:74] Finished reloading\n"}}
+[debug] [2026-02-20T15:09:25.443Z] I0220 23:09:25.442761   35588 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:09:25.442761   35588 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-20T15:09:25.477Z] W0220 23:09:25.476441   35588 control.go:74] [/emulator/lychee-moving-development a20d] connector "moving" has errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+
+sources: connector\mutations.gql [4200B] connector\queries.gql [1733B] 
+I0220 23:09:25.476441   35588 control.go:100] [/emulator/lychee-moving-development a20d] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: connector\mutations.gql [4200B] connector\queries.gql [1733B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0220 23:09:25.476441   35588 control.go:74] [/emulator/lychee-moving-development a20d] connector \"moving\" has errors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n\nsources: connector\\mutations.gql [4200B] connector\\queries.gql [1733B] \nI0220 23:09:25.476441   35588 control.go:100] [/emulator/lychee-moving-development a20d] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: connector\\mutations.gql [4200B] connector\\queries.gql [1733B] \n"}}
+[debug] [2026-02-20T15:09:25.478Z] E0220 23:09:25.478479   35588 load.go:73] Could not load sources: 
+Errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0220 23:09:25.478479   35588 load.go:73] Could not load sources: \nErrors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n"}}
+[debug] [2026-02-20T15:09:25.480Z] I0220 23:09:25.480594   35588 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [73281B] main\implicit.gql [6877B] main\input.gql [108743B] main\relation.gql [58755B] main\query.gql [12508B] main\mutation.gql [33650B] 
+I0220 23:09:25.480594   35588 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0220 23:09:25.480594   35588 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [73281B] main\\implicit.gql [6877B] main\\input.gql [108743B] main\\relation.gql [58755B] main\\query.gql [12508B] main\\mutation.gql [33650B] \nI0220 23:09:25.480594   35588 load.go:74] Finished reloading\n"}}
+[debug] [2026-02-21T03:05:26.877Z] I0221 11:05:26.876958   35588 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 11:05:26.876958   35588 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T03:05:26.910Z] W0221 11:05:26.909275   35588 control.go:74] [/emulator/lychee-moving-development 81f8] connector "moving" has errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+
+sources: connector\mutations.gql [4200B] connector\queries.gql [0B] 
+I0221 11:05:26.909275   35588 control.go:100] [/emulator/lychee-moving-development 81f8] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1767B] 
+Connector "moving": sources: connector\queries.gql [0B] connector\mutations.gql [4200B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0221 11:05:26.909275   35588 control.go:74] [/emulator/lychee-moving-development 81f8] connector \"moving\" has errors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n\nsources: connector\\mutations.gql [4200B] connector\\queries.gql [0B] \nI0221 11:05:26.909275   35588 control.go:100] [/emulator/lychee-moving-development 81f8] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1767B] \nConnector \"moving\": sources: connector\\queries.gql [0B] connector\\mutations.gql [4200B] \n"}}
+[debug] [2026-02-21T03:05:26.911Z] E0221 11:05:26.911787   35588 load.go:73] Could not load sources: 
+Errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0221 11:05:26.911787   35588 load.go:73] Could not load sources: \nErrors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n"}}
+[debug] [2026-02-21T03:05:26.913Z] I0221 11:05:26.913295   35588 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [73281B] main\implicit.gql [6877B] main\input.gql [108743B] main\relation.gql [58755B] main\query.gql [12508B] main\mutation.gql [33650B] 
+I0221 11:05:26.913295   35588 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 11:05:26.913295   35588 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [73281B] main\\implicit.gql [6877B] main\\input.gql [108743B] main\\relation.gql [58755B] main\\query.gql [12508B] main\\mutation.gql [33650B] \nI0221 11:05:26.913295   35588 load.go:74] Finished reloading\n"}}
+[debug] [2026-02-21T03:12:06.876Z] I0221 11:12:06.876353   35588 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 11:12:06.876353   35588 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T03:12:06.916Z] W0221 11:12:06.915573   35588 control.go:74] [/emulator/lychee-moving-development 4f05] connector "moving" has errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:46:15: Enum "RequestStatus" cannot represent non-enum value: "pending".
+connector\mutations.gql:53:14: Variable "$status" of type "String!" used in position expecting type "RequestStatus".
+connector\mutations.gql:62:15: Enum "BidStatus" cannot represent non-enum value: "pending". Did you mean the enum value "PENDING"?
+connector\mutations.gql:74:15: Enum "JobStatus" cannot represent non-enum value: "scheduled". Did you mean the enum value "SCHEDULED"?
+connector\mutations.gql:85:15: Enum "PaymentStatus" cannot represent non-enum value: "pending". Did you mean the enum value "PENDING"?
+connector\mutations.gql:99:15: Enum "VehicleStatus" cannot represent non-enum value: "active". Did you mean the enum value "ACTIVE" or "INACTIVE"?
+connector\mutations.gql:118:15: Enum "InvoiceStatus" cannot represent non-enum value: "issued". Did you mean the enum value "ISSUED"?
+connector\mutations.gql:124:4: Cannot query field "booking_insert" on type "Mutation". Did you mean "bid_insert", "invoice_insert", "job_insert", "mover_insert", or "payment_insert"?
+
+sources: connector\mutations.gql [4200B] connector\queries.gql [0B] 
+I0221 11:12:06.916998   35588 control.go:100] [/emulator/lychee-moving-development 4f05] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [4200B] connector\queries.gql [0B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0221 11:12:06.915573   35588 control.go:74] [/emulator/lychee-moving-development 4f05] connector \"moving\" has errors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:46:15: Enum \"RequestStatus\" cannot represent non-enum value: \"pending\".\nconnector\\mutations.gql:53:14: Variable \"$status\" of type \"String!\" used in position expecting type \"RequestStatus\".\nconnector\\mutations.gql:62:15: Enum \"BidStatus\" cannot represent non-enum value: \"pending\". Did you mean the enum value \"PENDING\"?\nconnector\\mutations.gql:74:15: Enum \"JobStatus\" cannot represent non-enum value: \"scheduled\". Did you mean the enum value \"SCHEDULED\"?\nconnector\\mutations.gql:85:15: Enum \"PaymentStatus\" cannot represent non-enum value: \"pending\". Did you mean the enum value \"PENDING\"?\nconnector\\mutations.gql:99:15: Enum \"VehicleStatus\" cannot represent non-enum value: \"active\". Did you mean the enum value \"ACTIVE\" or \"INACTIVE\"?\nconnector\\mutations.gql:118:15: Enum \"InvoiceStatus\" cannot represent non-enum value: \"issued\". Did you mean the enum value \"ISSUED\"?\nconnector\\mutations.gql:124:4: Cannot query field \"booking_insert\" on type \"Mutation\". Did you mean \"bid_insert\", \"invoice_insert\", \"job_insert\", \"mover_insert\", or \"payment_insert\"?\n\nsources: connector\\mutations.gql [4200B] connector\\queries.gql [0B] \nI0221 11:12:06.916998   35588 control.go:100] [/emulator/lychee-moving-development 4f05] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [4200B] connector\\queries.gql [0B] \n"}}
+[debug] [2026-02-21T03:12:06.919Z] E0221 11:12:06.919424   35588 load.go:73] Could not load sources: 
+Errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:46:15: Enum "RequestStatus" cannot represent non-enum value: "pending".
+connector\mutations.gql:53:14: Variable "$status" of type "String!" used in position expecting type "RequestStatus".
+connector\mutations.gql:62:15: Enum "BidStatus" cannot represent non-enum value: "pending". Did you mean the enum value "PENDING"?
+connector\mutations.gql:74:15: Enum "JobStatus" cannot represent non-enum value: "scheduled". Did you mean the enum value "SCHEDULED"?
+connector\mutations.gql:85:15: Enum "PaymentStatus" cannot represent non-enum value: "pending". Did you mean the enum value "PENDING"?
+connector\mutations.gql:99:15: Enum "VehicleStatus" cannot represent non-enum value: "active". Did you mean the enum value "ACTIVE" or "INACTIVE"?
+connector\mutations.gql:118:15: Enum "InvoiceStatus" cannot represent non-enum value: "issued". Did you mean the enum value "ISSUED"?
+connector\mutations.gql:124:4: Cannot query field "booking_insert" on type "Mutation". Did you mean "bid_insert", "invoice_insert", "job_insert", "mover_insert", or "payment_insert"?
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0221 11:12:06.919424   35588 load.go:73] Could not load sources: \nErrors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:46:15: Enum \"RequestStatus\" cannot represent non-enum value: \"pending\".\nconnector\\mutations.gql:53:14: Variable \"$status\" of type \"String!\" used in position expecting type \"RequestStatus\".\nconnector\\mutations.gql:62:15: Enum \"BidStatus\" cannot represent non-enum value: \"pending\". Did you mean the enum value \"PENDING\"?\nconnector\\mutations.gql:74:15: Enum \"JobStatus\" cannot represent non-enum value: \"scheduled\". Did you mean the enum value \"SCHEDULED\"?\nconnector\\mutations.gql:85:15: Enum \"PaymentStatus\" cannot represent non-enum value: \"pending\". Did you mean the enum value \"PENDING\"?\nconnector\\mutations.gql:99:15: Enum \"VehicleStatus\" cannot represent non-enum value: \"active\". Did you mean the enum value \"ACTIVE\" or \"INACTIVE\"?\nconnector\\mutations.gql:118:15: Enum \"InvoiceStatus\" cannot represent non-enum value: \"issued\". Did you mean the enum value \"ISSUED\"?\nconnector\\mutations.gql:124:4: Cannot query field \"booking_insert\" on type \"Mutation\". Did you mean \"bid_insert\", \"invoice_insert\", \"job_insert\", \"mover_insert\", or \"payment_insert\"?\n"}}
+[debug] [2026-02-21T03:12:06.921Z] I0221 11:12:06.921168   35588 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\mutation.gql [30265B] main\implicit.gql [5158B] main\input.gql [116973B] main\relation.gql [49255B] main\query.gql [11253B] prelude.gql [73281B] 
+I0221 11:12:06.921168   35588 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 11:12:06.921168   35588 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\mutation.gql [30265B] main\\implicit.gql [5158B] main\\input.gql [116973B] main\\relation.gql [49255B] main\\query.gql [11253B] prelude.gql [73281B] \nI0221 11:12:06.921168   35588 load.go:74] Finished reloading\n"}}
+[debug] [2026-02-21T03:12:26.881Z] I0221 11:12:26.879494   35588 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 11:12:26.879494   35588 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T03:12:27.318Z] W0221 11:12:27.317704   35588 control.go:74] [/emulator/lychee-moving-development dc7f] connector "moving" has errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:46:15: Enum "RequestStatus" cannot represent non-enum value: "pending".
+connector\mutations.gql:53:14: Variable "$status" of type "String!" used in position expecting type "RequestStatus".
+connector\mutations.gql:62:15: Enum "BidStatus" cannot represent non-enum value: "pending". Did you mean the enum value "PENDING"?
+connector\mutations.gql:74:15: Enum "JobStatus" cannot represent non-enum value: "scheduled". Did you mean the enum value "SCHEDULED"?
+connector\mutations.gql:85:15: Enum "PaymentStatus" cannot represent non-enum value: "pending". Did you mean the enum value "PENDING"?
+connector\mutations.gql:99:15: Enum "VehicleStatus" cannot represent non-enum value: "active". Did you mean the enum value "ACTIVE" or "INACTIVE"?
+connector\mutations.gql:118:15: Enum "InvoiceStatus" cannot represent non-enum value: "issued". Did you mean the enum value "ISSUED"?
+connector\mutations.gql:124:4: Cannot query field "booking_insert" on type "Mutation". Did you mean "bid_insert", "invoice_insert", "job_insert", "mover_insert", or "payment_insert"?
+
+sources: connector\mutations.gql [4200B] connector\queries.gql [2084B] 
+I0221 11:12:27.318700   35588 control.go:100] [/emulator/lychee-moving-development dc7f] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [4200B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0221 11:12:27.317704   35588 control.go:74] [/emulator/lychee-moving-development dc7f] connector \"moving\" has errors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:46:15: Enum \"RequestStatus\" cannot represent non-enum value: \"pending\".\nconnector\\mutations.gql:53:14: Variable \"$status\" of type \"String!\" used in position expecting type \"RequestStatus\".\nconnector\\mutations.gql:62:15: Enum \"BidStatus\" cannot represent non-enum value: \"pending\". Did you mean the enum value \"PENDING\"?\nconnector\\mutations.gql:74:15: Enum \"JobStatus\" cannot represent non-enum value: \"scheduled\". Did you mean the enum value \"SCHEDULED\"?\nconnector\\mutations.gql:85:15: Enum \"PaymentStatus\" cannot represent non-enum value: \"pending\". Did you mean the enum value \"PENDING\"?\nconnector\\mutations.gql:99:15: Enum \"VehicleStatus\" cannot represent non-enum value: \"active\". Did you mean the enum value \"ACTIVE\" or \"INACTIVE\"?\nconnector\\mutations.gql:118:15: Enum \"InvoiceStatus\" cannot represent non-enum value: \"issued\". Did you mean the enum value \"ISSUED\"?\nconnector\\mutations.gql:124:4: Cannot query field \"booking_insert\" on type \"Mutation\". Did you mean \"bid_insert\", \"invoice_insert\", \"job_insert\", \"mover_insert\", or \"payment_insert\"?\n\nsources: connector\\mutations.gql [4200B] connector\\queries.gql [2084B] \nI0221 11:12:27.318700   35588 control.go:100] [/emulator/lychee-moving-development dc7f] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [4200B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-21T03:12:27.330Z] E0221 11:12:27.330070   35588 load.go:73] Could not load sources: 
+Errors: connector\mutations.gql:27:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:36:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:46:15: Enum "RequestStatus" cannot represent non-enum value: "pending".
+connector\mutations.gql:53:14: Variable "$status" of type "String!" used in position expecting type "RequestStatus".
+connector\mutations.gql:62:15: Enum "BidStatus" cannot represent non-enum value: "pending". Did you mean the enum value "PENDING"?
+connector\mutations.gql:74:15: Enum "JobStatus" cannot represent non-enum value: "scheduled". Did you mean the enum value "SCHEDULED"?
+connector\mutations.gql:85:15: Enum "PaymentStatus" cannot represent non-enum value: "pending". Did you mean the enum value "PENDING"?
+connector\mutations.gql:99:15: Enum "VehicleStatus" cannot represent non-enum value: "active". Did you mean the enum value "ACTIVE" or "INACTIVE"?
+connector\mutations.gql:118:15: Enum "InvoiceStatus" cannot represent non-enum value: "issued". Did you mean the enum value "ISSUED"?
+connector\mutations.gql:124:4: Cannot query field "booking_insert" on type "Mutation". Did you mean "bid_insert", "invoice_insert", "job_insert", "mover_insert", or "payment_insert"?
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0221 11:12:27.330070   35588 load.go:73] Could not load sources: \nErrors: connector\\mutations.gql:27:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:36:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:46:15: Enum \"RequestStatus\" cannot represent non-enum value: \"pending\".\nconnector\\mutations.gql:53:14: Variable \"$status\" of type \"String!\" used in position expecting type \"RequestStatus\".\nconnector\\mutations.gql:62:15: Enum \"BidStatus\" cannot represent non-enum value: \"pending\". Did you mean the enum value \"PENDING\"?\nconnector\\mutations.gql:74:15: Enum \"JobStatus\" cannot represent non-enum value: \"scheduled\". Did you mean the enum value \"SCHEDULED\"?\nconnector\\mutations.gql:85:15: Enum \"PaymentStatus\" cannot represent non-enum value: \"pending\". Did you mean the enum value \"PENDING\"?\nconnector\\mutations.gql:99:15: Enum \"VehicleStatus\" cannot represent non-enum value: \"active\". Did you mean the enum value \"ACTIVE\" or \"INACTIVE\"?\nconnector\\mutations.gql:118:15: Enum \"InvoiceStatus\" cannot represent non-enum value: \"issued\". Did you mean the enum value \"ISSUED\"?\nconnector\\mutations.gql:124:4: Cannot query field \"booking_insert\" on type \"Mutation\". Did you mean \"bid_insert\", \"invoice_insert\", \"job_insert\", \"mover_insert\", or \"payment_insert\"?\n"}}
+[debug] [2026-02-21T03:12:27.333Z] I0221 11:12:27.333101   35588 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\relation.gql [49255B] prelude.gql [73281B] main\query.gql [11253B] main\mutation.gql [30265B] main\implicit.gql [5158B] main\input.gql [116973B] 
+I0221 11:12:27.333101   35588 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 11:12:27.333101   35588 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\relation.gql [49255B] prelude.gql [73281B] main\\query.gql [11253B] main\\mutation.gql [30265B] main\\implicit.gql [5158B] main\\input.gql [116973B] \nI0221 11:12:27.333101   35588 load.go:74] Finished reloading\n"}}
+[debug] [2026-02-21T03:12:36.877Z] I0221 11:12:36.877043   35588 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 11:12:36.877043   35588 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T03:12:36.915Z] W0221 11:12:36.915161   35588 control.go:74] [/emulator/lychee-moving-development 10af] connector "moving" has errors: connector\mutations.gql:25:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:34:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+
+sources: connector\queries.gql [2084B] connector\mutations.gql [3497B] 
+I0221 11:12:36.915161   35588 control.go:100] [/emulator/lychee-moving-development 10af] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3497B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0221 11:12:36.915161   35588 control.go:74] [/emulator/lychee-moving-development 10af] connector \"moving\" has errors: connector\\mutations.gql:25:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:34:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n\nsources: connector\\queries.gql [2084B] connector\\mutations.gql [3497B] \nI0221 11:12:36.915161   35588 control.go:100] [/emulator/lychee-moving-development 10af] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [3497B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-21T03:12:36.916Z] E0221 11:12:36.915668   35588 load.go:73] Could not load sources: 
+Errors: connector\mutations.gql:25:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:34:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0221 11:12:36.915668   35588 load.go:73] Could not load sources: \nErrors: connector\\mutations.gql:25:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:34:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n"}}
+[debug] [2026-02-21T03:12:36.919Z] I0221 11:12:36.918671   35588 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\implicit.gql [5158B] prelude.gql [73281B] main\input.gql [116973B] main\relation.gql [49255B] main\query.gql [11253B] main\mutation.gql [30265B] 
+I0221 11:12:36.918671   35588 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 11:12:36.918671   35588 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\implicit.gql [5158B] prelude.gql [73281B] main\\input.gql [116973B] main\\relation.gql [49255B] main\\query.gql [11253B] main\\mutation.gql [30265B] \nI0221 11:12:36.918671   35588 load.go:74] Finished reloading\n"}}
+[debug] [2026-02-21T10:23:26.676Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2026-02-21T10:24:03.228Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-21T10:24:03.231Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-21T10:24:03.231Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-21T10:24:03.235Z] Checked if tokens are valid: false, expires at: 1771601287691
+[debug] [2026-02-21T10:24:03.235Z] Checked if tokens are valid: false, expires at: 1771601287691
+[debug] [2026-02-21T10:24:03.236Z] > refreshing access token with scopes: []
+[debug] [2026-02-21T10:24:03.238Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-21T10:24:03.238Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-21T10:24:03.253Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 3.1.1) on port 50001
+[debug] [2026-02-21T10:24:04.646Z] W0221 18:24:05.752290   14216 control.go:74] [/emulator/lychee-moving-development c0cd] connector "moving" has errors: connector\mutations.gql:25:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:34:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+
+sources: connector\mutations.gql [3497B] connector\queries.gql [2084B] 
+I0221 18:24:05.752290   14216 control.go:100] [/emulator/lychee-moving-development c0cd] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3497B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0221 18:24:05.752290   14216 control.go:74] [/emulator/lychee-moving-development c0cd] connector \"moving\" has errors: connector\\mutations.gql:25:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:34:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n\nsources: connector\\mutations.gql [3497B] connector\\queries.gql [2084B] \nI0221 18:24:05.752290   14216 control.go:100] [/emulator/lychee-moving-development c0cd] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [3497B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-21T10:24:04.647Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-02-21T10:24:04.648Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-02-21T10:24:04.648Z] Starting Data Connect Emulator with command {"binary":"C:\\Users\\zhiya\\.cache\\firebase\\emulators\\dataconnect-emulator-3.1.1.exe","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\zhiya\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.1.1.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-02-21T10:24:04.679Z] I0221 18:24:05.787095   31952 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 18:24:05.787095   31952 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T10:24:04.854Z] W0221 18:24:05.830423   31952 control.go:74] [/emulator/lychee-moving-development 2dfb] connector "moving" has errors: connector\mutations.gql:25:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:34:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+
+sources: connector\mutations.gql [3497B] connector\queries.gql [2084B] 
+I0221 18:24:05.830423   31952 control.go:100] [/emulator/lychee-moving-development 2dfb] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\queries.gql [2084B] connector\mutations.gql [3497B] 
+E0221 18:24:05.832943   31952 load.go:73] Could not load sources: 
+Errors: connector\mutations.gql:25:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:34:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+I0221 18:24:05.834953   31952 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [73281B] main\relation.gql [49255B] main\query.gql [11253B] main\mutation.gql [30265B] main\implicit.gql [5158B] main\input.gql [116973B] 
+I0221 18:24:05.834953   31952 load.go:74] Finished reloading
+I0221 18:24:05.854902   31952 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0221 18:24:05.830423   31952 control.go:74] [/emulator/lychee-moving-development 2dfb] connector \"moving\" has errors: connector\\mutations.gql:25:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:34:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n\nsources: connector\\mutations.gql [3497B] connector\\queries.gql [2084B] \nI0221 18:24:05.830423   31952 control.go:100] [/emulator/lychee-moving-development 2dfb] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\queries.gql [2084B] connector\\mutations.gql [3497B] \nE0221 18:24:05.832943   31952 load.go:73] Could not load sources: \nErrors: connector\\mutations.gql:25:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:34:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nI0221 18:24:05.834953   31952 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [73281B] main\\relation.gql [49255B] main\\query.gql [11253B] main\\mutation.gql [30265B] main\\implicit.gql [5158B] main\\input.gql [116973B] \nI0221 18:24:05.834953   31952 load.go:74] Finished reloading\nI0221 18:24:05.854902   31952 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[debug] [2026-02-21T10:24:05.151Z] I0221 18:24:06.262108   31952 engine.go:205] [/emulator/lychee-moving-development 2dfb] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 18:24:06.262108   31952 engine.go:205] [/emulator/lychee-moving-development 2dfb] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2026-02-21T10:24:05.217Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-21T10:24:05.218Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-21T10:24:05.242Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-21T10:24:05.244Z] Checked if tokens are valid: true, expires at: 1771673044218
+[debug] [2026-02-21T10:24:05.245Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-21T10:24:06.733Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-21T10:24:06.733Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-21T10:55:05.836Z] I0221 18:55:05.836357   31952 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 18:55:05.836357   31952 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T10:55:05.858Z] E0221 18:55:05.858955   31952 load.go:95] Errors generating SDK: [connector "moving"]: invalid Data Connect Connector connector\mutations.gql:25:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:34:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0221 18:55:05.858955   31952 load.go:95] Errors generating SDK: [connector \"moving\"]: invalid Data Connect Connector connector\\mutations.gql:25:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:34:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n"}}
+[debug] [2026-02-21T10:55:05.860Z] I0221 18:55:05.861080   31952 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [73281B] main\input.gql [116973B] main\relation.gql [49255B] main\query.gql [11253B] main\mutation.gql [30265B] main\implicit.gql [5158B] 
+I0221 18:55:05.861080   31952 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 18:55:05.861080   31952 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [73281B] main\\input.gql [116973B] main\\relation.gql [49255B] main\\query.gql [11253B] main\\mutation.gql [30265B] main\\implicit.gql [5158B] \nI0221 18:55:05.861080   31952 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-21T10:59:25.912Z] I0221 18:59:25.911785   31952 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 18:59:25.911785   31952 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T10:59:25.958Z] W0221 18:59:25.957280   31952 control.go:74] [/emulator/lychee-moving-development d810] connector "moving" has errors: connector\mutations.gql:25:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:34:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+
+sources: connector\mutations.gql [3437B] connector\queries.gql [2084B] 
+I0221 18:59:25.957280   31952 control.go:100] [/emulator/lychee-moving-development d810] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3437B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0221 18:59:25.957280   31952 control.go:74] [/emulator/lychee-moving-development d810] connector \"moving\" has errors: connector\\mutations.gql:25:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:34:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n\nsources: connector\\mutations.gql [3437B] connector\\queries.gql [2084B] \nI0221 18:59:25.957280   31952 control.go:100] [/emulator/lychee-moving-development d810] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [3437B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-21T10:59:25.960Z] E0221 18:59:25.960282   31952 load.go:73] Could not load sources: 
+Errors: connector\mutations.gql:25:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+connector\mutations.gql:34:20: Variable "$serviceAreas" of type "[String]" used in position expecting type "[String!]".
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0221 18:59:25.960282   31952 load.go:73] Could not load sources: \nErrors: connector\\mutations.gql:25:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\nconnector\\mutations.gql:34:20: Variable \"$serviceAreas\" of type \"[String]\" used in position expecting type \"[String!]\".\n"}}
+[debug] [2026-02-21T10:59:25.962Z] I0221 18:59:25.962788   31952 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [73281B] main\implicit.gql [5158B] main\input.gql [116973B] main\relation.gql [49255B] main\query.gql [11253B] main\mutation.gql [30265B] 
+I0221 18:59:25.962788   31952 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 18:59:25.962788   31952 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [73281B] main\\implicit.gql [5158B] main\\input.gql [116973B] main\\relation.gql [49255B] main\\query.gql [11253B] main\\mutation.gql [30265B] \nI0221 18:59:25.962788   31952 load.go:74] Finished reloading\n"}}
+[debug] [2026-02-21T11:01:25.885Z] I0221 19:01:25.885325   31952 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:01:25.885325   31952 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T11:01:25.933Z] I0221 19:01:25.932837   31952 control.go:100] [/emulator/lychee-moving-development 54b6] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3439B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:01:25.932837   31952 control.go:100] [/emulator/lychee-moving-development 54b6] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [3439B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-21T11:01:25.975Z] I0221 19:01:25.974841   31952 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:01:25.974841   31952 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\n"}}
+[debug] [2026-02-21T11:01:25.988Z] I0221 19:01:25.987360   31952 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:01:25.987360   31952 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\n"}}
+[debug] [2026-02-21T11:01:25.999Z] I0221 19:01:25.997876   31952 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [73281B] main\query.gql [11253B] main\mutation.gql [30265B] main\implicit.gql [5158B] main\input.gql [116973B] main\relation.gql [49255B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:01:25.997876   31952 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [73281B] main\\query.gql [11253B] main\\mutation.gql [30265B] main\\implicit.gql [5158B] main\\input.gql [116973B] main\\relation.gql [49255B] \n"}}
+[debug] [2026-02-21T11:01:26.004Z] I0221 19:01:26.004323   31952 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+Generated sources: react\README.md [109676B] esm\package.json [17B] index.cjs.js [10943B] README.md [103308B] react\index.d.ts [10498B] react\esm\package.json [17B] react\index.cjs.js [8550B] .guides/setup.md [1682B] react\package.json [459B] react\esm\index.esm.js [8095B] esm\index.esm.js [9570B] package.json [862B] .guides/usage.md [4220B] .guides/config.json [236B] index.d.ts [22343B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:01:26.004323   31952 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\nGenerated sources: react\\README.md [109676B] esm\\package.json [17B] index.cjs.js [10943B] README.md [103308B] react\\index.d.ts [10498B] react\\esm\\package.json [17B] react\\index.cjs.js [8550B] .guides/setup.md [1682B] react\\package.json [459B] react\\esm\\index.esm.js [8095B] esm\\index.esm.js [9570B] package.json [862B] .guides/usage.md [4220B] .guides/config.json [236B] index.d.ts [22343B] \n"}}
+[debug] [2026-02-21T11:01:26.020Z] I0221 19:01:26.020392   31952 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:01:26.020392   31952 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation\n"}}
+[debug] [2026-02-21T11:01:26.025Z] I0221 19:01:26.024419   31952 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+Generated sources: index.cjs.js [10943B] react\package.json [459B] react\esm\package.json [17B] react\index.cjs.js [8550B] react\README.md [110468B] index.d.ts [22343B] package.json [862B] react\esm\index.esm.js [8095B] .guides/setup.md [1682B] .guides/usage.md [4220B] README.md [104100B] react\index.d.ts [10498B] .guides/config.json [236B] esm\index.esm.js [9570B] esm\package.json [17B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:01:26.024419   31952 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\nGenerated sources: index.cjs.js [10943B] react\\package.json [459B] react\\esm\\package.json [17B] react\\index.cjs.js [8550B] react\\README.md [110468B] index.d.ts [22343B] package.json [862B] react\\esm\\index.esm.js [8095B] .guides/setup.md [1682B] .guides/usage.md [4220B] README.md [104100B] react\\index.d.ts [10498B] .guides/config.json [236B] esm\\index.esm.js [9570B] esm\\package.json [17B] \n"}}
+[debug] [2026-02-21T11:01:26.031Z] I0221 19:01:26.030525   31952 installsdk.go:86] Running command: C:\nvm4w\nodejs\npm.cmd install file:src\dataconnect-generated
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:01:26.030525   31952 installsdk.go:86] Running command: C:\\nvm4w\\nodejs\\npm.cmd install file:src\\dataconnect-generated\n"}}
+[debug] [2026-02-21T11:01:42.427Z] E0221 19:01:42.422755   31952 installsdk.go:88] Failed to install package: exit status 0xc000013a
+I0221 19:01:42.422755   31952 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0221 19:01:42.422755   31952 installsdk.go:88] Failed to install package: exit status 0xc000013a\nI0221 19:01:42.422755   31952 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-21T11:04:45.835Z] I0221 19:04:45.836180   31952 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:04:45.836180   31952 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T11:04:45.856Z] I0221 19:04:45.856251   31952 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:04:45.856251   31952 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\n"}}
+[debug] [2026-02-21T11:04:45.869Z] I0221 19:04:45.869113   31952 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\implicit.gql [5158B] main\input.gql [116973B] prelude.gql [73281B] main\relation.gql [49255B] main\query.gql [11253B] main\mutation.gql [30265B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:04:45.869113   31952 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\implicit.gql [5158B] main\\input.gql [116973B] prelude.gql [73281B] main\\relation.gql [49255B] main\\query.gql [11253B] main\\mutation.gql [30265B] \n"}}
+[debug] [2026-02-21T11:04:45.873Z] I0221 19:04:45.874121   31952 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\generated"
+Generated sources: esm\index.esm.js [9570B] esm\package.json [17B] package.json [862B] .guides/config.json [236B] index.cjs.js [10943B] react\README.md [109676B] .guides/usage.md [4220B] .guides/setup.md [1682B] README.md [103308B] react\index.d.ts [10498B] react\package.json [459B] react\esm\package.json [17B] react\index.cjs.js [8550B] index.d.ts [22343B] react\esm\index.esm.js [8095B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:04:45.874121   31952 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\generated\"\nGenerated sources: esm\\index.esm.js [9570B] esm\\package.json [17B] package.json [862B] .guides/config.json [236B] index.cjs.js [10943B] react\\README.md [109676B] .guides/usage.md [4220B] .guides/setup.md [1682B] README.md [103308B] react\\index.d.ts [10498B] react\\package.json [459B] react\\esm\\package.json [17B] react\\index.cjs.js [8550B] index.d.ts [22343B] react\\esm\\index.esm.js [8095B] \n"}}
+[debug] [2026-02-21T11:04:45.880Z] I0221 19:04:45.879916   31952 installsdk.go:86] Running command: C:\nvm4w\nodejs\npm.cmd install file:lib\generated
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:04:45.879916   31952 installsdk.go:86] Running command: C:\\nvm4w\\nodejs\\npm.cmd install file:lib\\generated\n"}}
+[debug] [2026-02-21T11:04:48.431Z] E0221 19:04:48.430785   31952 installsdk.go:88] Failed to install package: exit status 0xc000013a
+I0221 19:04:48.432224   31952 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E0221 19:04:48.430785   31952 installsdk.go:88] Failed to install package: exit status 0xc000013a\nI0221 19:04:48.432224   31952 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-21T11:05:35.836Z] I0221 19:05:35.836258   31952 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:35.836258   31952 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T11:05:35.858Z] I0221 19:05:35.857998   31952 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\dataconnect-generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:35.857998   31952 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\dataconnect-generated\"\n"}}
+[debug] [2026-02-21T11:05:35.872Z] I0221 19:05:35.871981   31952 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\query.gql [11253B] main\mutation.gql [30265B] prelude.gql [73281B] main\implicit.gql [5158B] main\input.gql [116973B] main\relation.gql [49255B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:35.871981   31952 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\query.gql [11253B] main\\mutation.gql [30265B] prelude.gql [73281B] main\\implicit.gql [5158B] main\\input.gql [116973B] main\\relation.gql [49255B] \n"}}
+[debug] [2026-02-21T11:05:35.888Z] I0221 19:05:35.888722   31952 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\dataconnect-generated"
+Generated sources: index.d.ts [22343B] react\index.d.ts [10498B] react\package.json [459B] .guides/usage.md [4220B] package.json [862B] README.md [104100B] react\esm\package.json [17B] .guides/config.json [236B] esm\index.esm.js [9570B] index.cjs.js [10943B] react\index.cjs.js [8550B] react\esm\index.esm.js [8095B] react\README.md [110468B] .guides/setup.md [1682B] esm\package.json [17B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:35.888722   31952 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\dataconnect-generated\"\nGenerated sources: index.d.ts [22343B] react\\index.d.ts [10498B] react\\package.json [459B] .guides/usage.md [4220B] package.json [862B] README.md [104100B] react\\esm\\package.json [17B] .guides/config.json [236B] esm\\index.esm.js [9570B] index.cjs.js [10943B] react\\index.cjs.js [8550B] react\\esm\\index.esm.js [8095B] react\\README.md [110468B] .guides/setup.md [1682B] esm\\package.json [17B] \n"}}
+[debug] [2026-02-21T11:05:35.894Z] I0221 19:05:35.893729   31952 installsdk.go:86] Running command: C:\nvm4w\nodejs\npm.cmd install file:lib\dataconnect-generated
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:35.893729   31952 installsdk.go:86] Running command: C:\\nvm4w\\nodejs\\npm.cmd install file:lib\\dataconnect-generated\n"}}
+[debug] [2026-02-21T11:05:39.902Z] I0221 19:05:39.901985   31952 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:39.901985   31952 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-21T11:05:55.836Z] I0221 19:05:55.836557   31952 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:55.836557   31952 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T11:05:55.858Z] I0221 19:05:55.857950   31952 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\dataconnect-generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:55.857950   31952 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\dataconnect-generated\"\n"}}
+[debug] [2026-02-21T11:05:55.868Z] I0221 19:05:55.868048   31952 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:55.868048   31952 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\n"}}
+[debug] [2026-02-21T11:05:55.882Z] I0221 19:05:55.881738   31952 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\mutation.gql [30265B] prelude.gql [73281B] main\implicit.gql [5158B] main\input.gql [116973B] main\relation.gql [49255B] main\query.gql [11253B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:55.881738   31952 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\mutation.gql [30265B] prelude.gql [73281B] main\\implicit.gql [5158B] main\\input.gql [116973B] main\\relation.gql [49255B] main\\query.gql [11253B] \n"}}
+[debug] [2026-02-21T11:05:55.886Z] I0221 19:05:55.885012   31952 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\lib\\dataconnect-generated"
+Generated sources: .guides/setup.md [1682B] .guides/config.json [236B] package.json [862B] README.md [104100B] react\index.d.ts [10498B] react\package.json [459B] react\esm\index.esm.js [8095B] index.d.ts [22343B] esm\index.esm.js [9570B] react\esm\package.json [17B] .guides/usage.md [4220B] index.cjs.js [10943B] react\index.cjs.js [8550B] esm\package.json [17B] react\README.md [110468B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:55.885012   31952 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\lib\\\\dataconnect-generated\"\nGenerated sources: .guides/setup.md [1682B] .guides/config.json [236B] package.json [862B] README.md [104100B] react\\index.d.ts [10498B] react\\package.json [459B] react\\esm\\index.esm.js [8095B] index.d.ts [22343B] esm\\index.esm.js [9570B] react\\esm\\package.json [17B] .guides/usage.md [4220B] index.cjs.js [10943B] react\\index.cjs.js [8550B] esm\\package.json [17B] react\\README.md [110468B] \n"}}
+[debug] [2026-02-21T11:05:55.891Z] I0221 19:05:55.891478   31952 installsdk.go:86] Running command: C:\nvm4w\nodejs\npm.cmd install file:lib\dataconnect-generated
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:55.891478   31952 installsdk.go:86] Running command: C:\\nvm4w\\nodejs\\npm.cmd install file:lib\\dataconnect-generated\n"}}
+[debug] [2026-02-21T11:05:59.993Z] I0221 19:05:59.993112   31952 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+Generated sources: esm\package.json [17B] index.cjs.js [10943B] README.md [104100B] .guides/setup.md [1682B] react\package.json [459B] react\esm\package.json [17B] react\index.cjs.js [8550B] index.d.ts [22343B] .guides/config.json [236B] .guides/usage.md [4220B] esm\index.esm.js [9570B] package.json [862B] react\index.d.ts [10498B] react\esm\index.esm.js [8095B] react\README.md [110468B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:05:59.993112   31952 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\nGenerated sources: esm\\package.json [17B] index.cjs.js [10943B] README.md [104100B] .guides/setup.md [1682B] react\\package.json [459B] react\\esm\\package.json [17B] react\\index.cjs.js [8550B] index.d.ts [22343B] .guides/config.json [236B] .guides/usage.md [4220B] esm\\index.esm.js [9570B] package.json [862B] react\\index.d.ts [10498B] react\\esm\\index.esm.js [8095B] react\\README.md [110468B] \n"}}
+[debug] [2026-02-21T11:06:00.000Z] I0221 19:06:00.000033   31952 installsdk.go:86] Running command: C:\nvm4w\nodejs\npm.cmd install file:src\dataconnect-generated
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:06:00.000033   31952 installsdk.go:86] Running command: C:\\nvm4w\\nodejs\\npm.cmd install file:src\\dataconnect-generated\n"}}
+[debug] [2026-02-21T11:06:03.853Z] I0221 19:06:03.853112   31952 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:06:03.853112   31952 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-21T11:06:25.836Z] I0221 19:06:25.836644   31952 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:06:25.836644   31952 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-21T11:06:25.856Z] I0221 19:06:25.856329   31952 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:06:25.856329   31952 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\n"}}
+[debug] [2026-02-21T11:06:25.868Z] I0221 19:06:25.868114   31952 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\query.gql [11253B] main\mutation.gql [30265B] prelude.gql [73281B] main\implicit.gql [5158B] main\input.gql [116973B] main\relation.gql [49255B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:06:25.868114   31952 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\query.gql [11253B] main\\mutation.gql [30265B] prelude.gql [73281B] main\\implicit.gql [5158B] main\\input.gql [116973B] main\\relation.gql [49255B] \n"}}
+[debug] [2026-02-21T11:06:25.872Z] I0221 19:06:25.872623   31952 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+Generated sources: react\index.cjs.js [8550B] index.d.ts [22343B] esm\index.esm.js [9570B] esm\package.json [17B] index.cjs.js [10943B] package.json [862B] react\index.d.ts [10498B] react\esm\package.json [17B] README.md [104100B] react\esm\index.esm.js [8095B] .guides/config.json [236B] react\README.md [110468B] react\package.json [459B] .guides/usage.md [4220B] .guides/setup.md [1682B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:06:25.872623   31952 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\nGenerated sources: react\\index.cjs.js [8550B] index.d.ts [22343B] esm\\index.esm.js [9570B] esm\\package.json [17B] index.cjs.js [10943B] package.json [862B] react\\index.d.ts [10498B] react\\esm\\package.json [17B] README.md [104100B] react\\esm\\index.esm.js [8095B] .guides/config.json [236B] react\\README.md [110468B] react\\package.json [459B] .guides/usage.md [4220B] .guides/setup.md [1682B] \n"}}
+[debug] [2026-02-21T11:06:25.878Z] I0221 19:06:25.876636   31952 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I0221 19:06:25.878146   31952 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:06:25.876636   31952 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation\nI0221 19:06:25.878146   31952 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-21T11:19:33.230Z] [Firebase Plugin] Received emulators started notification. Running detection.
+[debug] [2026-02-21T11:19:33.230Z] Found emulator hub locator: {"version":"15.5.1","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":12540}
+[debug] [2026-02-21T11:19:33.231Z] >>> [apiv2][query] GET http://127.0.0.1:4400/emulators [none]
+[debug] [2026-02-21T11:19:33.502Z] <<< [apiv2][status] GET http://127.0.0.1:4400/emulators 200
+[debug] [2026-02-21T11:19:33.502Z] <<< [apiv2][body] GET http://127.0.0.1:4400/emulators {"hub":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"name":"hub","host":"127.0.0.1","port":4400},"logging":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"name":"logging","host":"127.0.0.1","port":4500},"dataconnect":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"name":"dataconnect","host":"127.0.0.1","port":9399,"pid":34480,"timeout":10000}}
+[debug] [2026-02-21T11:19:33.859Z] I0221 19:19:33.859113   31952 engine.go:205] [/emulator/lychee-moving-development 54b6] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:19:33.859113   31952 engine.go:205] [/emulator/lychee-moving-development 54b6] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2026-02-21T11:20:05.028Z] [Firebase Plugin] Received emulators shutdown notification.
+[debug] [2026-02-21T11:20:05.031Z] [Firebase Plugin] Received emulators shutdown notification.
+[debug] [2026-02-21T11:23:14.100Z] [Firebase Plugin] Received emulators started notification. Running detection.
+[debug] [2026-02-21T11:23:14.100Z] Found emulator hub locator: {"version":"15.5.1","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":14412}
+[debug] [2026-02-21T11:23:14.100Z] >>> [apiv2][query] GET http://127.0.0.1:4400/emulators [none]
+[debug] [2026-02-21T11:23:14.114Z] <<< [apiv2][status] GET http://127.0.0.1:4400/emulators 200
+[debug] [2026-02-21T11:23:14.115Z] <<< [apiv2][body] GET http://127.0.0.1:4400/emulators {"hub":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"name":"hub","host":"127.0.0.1","port":4400},"logging":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"name":"logging","host":"127.0.0.1","port":4500},"dataconnect":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"name":"dataconnect","host":"127.0.0.1","port":9399,"pid":5964,"timeout":10000}}
+[debug] [2026-02-21T11:23:14.242Z] I0221 19:23:14.243049   31952 engine.go:205] [/emulator/lychee-moving-development 54b6] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:23:14.243049   31952 engine.go:205] [/emulator/lychee-moving-development 54b6] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2026-02-21T11:23:28.507Z] [Firebase Plugin] Received emulators shutdown notification.
+[debug] [2026-02-21T11:23:28.510Z] [Firebase Plugin] Received emulators shutdown notification.
+[debug] [2026-02-21T11:39:42.463Z] [Firebase Plugin] Received emulators started notification. Running detection.
+[debug] [2026-02-21T11:39:42.463Z] Found emulator hub locator: {"version":"15.5.1","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":12752}
+[debug] [2026-02-21T11:39:42.463Z] >>> [apiv2][query] GET http://127.0.0.1:4400/emulators [none]
+[debug] [2026-02-21T11:39:42.477Z] <<< [apiv2][status] GET http://127.0.0.1:4400/emulators 200
+[debug] [2026-02-21T11:39:42.477Z] <<< [apiv2][body] GET http://127.0.0.1:4400/emulators {"hub":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"name":"hub","host":"127.0.0.1","port":4400},"ui":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"name":"ui","host":"127.0.0.1","port":4000},"logging":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"name":"logging","host":"127.0.0.1","port":4500},"auth":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"name":"auth","host":"127.0.0.1","port":9099},"dataconnect":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"name":"dataconnect","host":"127.0.0.1","port":9399,"pid":16548,"timeout":10000}}
+[debug] [2026-02-21T11:39:42.606Z] I0221 19:39:42.607023   31952 engine.go:205] [/emulator/lychee-moving-development 54b6] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0221 19:39:42.607023   31952 engine.go:205] [/emulator/lychee-moving-development 54b6] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2026-02-22T03:03:33.371Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: undefined
+[debug] [2026-02-22T03:03:33.371Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-22T03:03:33.372Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-22T03:03:33.372Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-22T03:03:33.373Z] Checked if tokens are valid: false, expires at: 1771673044218
+[debug] [2026-02-22T03:03:33.373Z] Checked if tokens are valid: false, expires at: 1771673044218
+[debug] [2026-02-22T03:03:33.373Z] > refreshing access token with scopes: []
+[debug] [2026-02-22T03:03:33.373Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-22T03:03:33.374Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-22T03:03:33.381Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: undefined
+[debug] [2026-02-22T03:03:33.381Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-22T03:03:33.382Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-22T03:03:33.382Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-22T03:03:33.383Z] Checked if tokens are valid: false, expires at: 1771673044218
+[debug] [2026-02-22T03:03:33.383Z] Checked if tokens are valid: false, expires at: 1771673044218
+[debug] [2026-02-22T03:03:33.383Z] > refreshing access token with scopes: []
+[debug] [2026-02-22T03:03:33.383Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-22T03:03:33.383Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-22T03:03:33.386Z] Found emulator hub locator: {"version":"15.5.1","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":12752}
+[debug] [2026-02-22T03:03:33.386Z] >>> [apiv2][query] GET http://127.0.0.1:4400/emulators [none]
+[debug] [2026-02-22T03:03:33.400Z] <<< [apiv2][status] GET http://127.0.0.1:4400/emulators 200
+[debug] [2026-02-22T03:03:33.400Z] <<< [apiv2][body] GET http://127.0.0.1:4400/emulators {"hub":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"name":"hub","host":"127.0.0.1","port":4400},"ui":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"name":"ui","host":"127.0.0.1","port":4000},"logging":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"name":"logging","host":"127.0.0.1","port":4500},"auth":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"name":"auth","host":"127.0.0.1","port":9099},"dataconnect":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"name":"dataconnect","host":"127.0.0.1","port":9399,"pid":16548,"timeout":10000}}
+[debug] [2026-02-22T03:03:34.950Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-22T03:03:34.951Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-22T03:03:35.000Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-22T03:03:35.001Z] Checked if tokens are valid: true, expires at: 1771733013951
+[debug] [2026-02-22T03:03:35.002Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-22T03:03:35.010Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-22T03:03:35.010Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-22T03:03:35.032Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-22T03:03:35.033Z] Checked if tokens are valid: true, expires at: 1771733014010
+[debug] [2026-02-22T03:03:35.033Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-22T03:03:36.310Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-22T03:03:36.310Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-22T03:03:36.323Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-22T03:03:36.324Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
