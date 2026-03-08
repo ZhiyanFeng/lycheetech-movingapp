@@ -94,9 +94,10 @@ export default function ProfileScreen() {
           <TouchableOpacity
             style={styles.logoutButton}
             onPress={handleLogout}
+            disabled={loading}
           >
             <Text variant="body" style={styles.logoutText}>
-              Log Out
+              {loading ? 'Signing Out...' : 'Log Out'}
             </Text>
           </TouchableOpacity>
         </Layout>

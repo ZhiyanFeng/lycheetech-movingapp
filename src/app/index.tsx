@@ -1,36 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'expo-router';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import { useAuth } from '../contexts';
 
 export default function Index() {
   const router = useRouter();
-  const [isMounted, setIsMounted] = useState(false);
+  const { user, loading } = useAuth();
 
   useEffect(() => {
-    // Wait for component to mount
-    setIsMounted(true);
-  }, []);
+    if (loading) return;
 
-  useEffect(() => {
-    if (!isMounted) return;
+    // Navigate based on authentication status
+    if (user) {
+      router.replace('/(app)');
+    } else {
+      router.replace('/(auth)/login');
+    }
+  }, [user, loading]);
 
-    // Small delay to ensure router is ready
-    const timer = setTimeout(() => {
-      // Check authentication status
-      const isAuthenticated = false; // Replace with actual auth check from Redux
-
-      // Navigate based on auth status
-      if (isAuthenticated) {
-        router.replace('/(app)');
-      } else {
-        router.replace('/(auth)/login');
-      }
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, [isMounted]);
-
-  // Show loading screen while determining route
+  // Show loading screen while checking auth status
   return (
     <View style={styles.container}>
       <ActivityIndicator size="large" color="#007AFF" />
