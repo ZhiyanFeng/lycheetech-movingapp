@@ -641,3 +641,167 @@ I0221 19:06:25.878146   31952 load.go:109] Finished reloading
 [debug] [2026-02-22T03:03:36.310Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
 [debug] [2026-02-22T03:03:36.323Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
 [debug] [2026-02-22T03:03:36.324Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-26T03:34:45.014Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2026-02-26T03:35:17.120Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-26T03:35:17.122Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-26T03:35:17.122Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-26T03:35:17.124Z] Checked if tokens are valid: false, expires at: 1771733014010
+[debug] [2026-02-26T03:35:17.125Z] Checked if tokens are valid: false, expires at: 1771733014010
+[debug] [2026-02-26T03:35:17.125Z] > refreshing access token with scopes: []
+[debug] [2026-02-26T03:35:17.126Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-26T03:35:17.127Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-26T03:35:17.136Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 3.1.1) on port 50001
+[debug] [2026-02-26T03:35:18.506Z] I0226 11:35:18.480398   12912 control.go:100] [/emulator/lychee-moving-development dacf] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3439B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 11:35:18.480398   12912 control.go:100] [/emulator/lychee-moving-development dacf] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [3439B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-26T03:35:18.507Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-02-26T03:35:18.507Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-02-26T03:35:18.507Z] Starting Data Connect Emulator with command {"binary":"C:\\Users\\zhiya\\.cache\\firebase\\emulators\\dataconnect-emulator-3.1.1.exe","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\zhiya\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.1.1.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-02-26T03:35:18.543Z] I0226 11:35:18.539300   15144 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 11:35:18.539300   15144 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-26T03:35:18.626Z] I0226 11:35:18.624976   15144 control.go:100] [/emulator/lychee-moving-development 74e0] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3439B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 11:35:18.624976   15144 control.go:100] [/emulator/lychee-moving-development 74e0] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [3439B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-26T03:35:18.712Z] I0226 11:35:18.711378   15144 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 11:35:18.711378   15144 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\n"}}
+[debug] [2026-02-26T03:35:18.736Z] I0226 11:35:18.736643   15144 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\relation.gql [49255B] main\query.gql [11253B] main\mutation.gql [30265B] main\implicit.gql [5158B] main\input.gql [116973B] prelude.gql [73281B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 11:35:18.736643   15144 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\relation.gql [49255B] main\\query.gql [11253B] main\\mutation.gql [30265B] main\\implicit.gql [5158B] main\\input.gql [116973B] prelude.gql [73281B] \n"}}
+[debug] [2026-02-26T03:35:18.742Z] I0226 11:35:18.741653   15144 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+Generated sources: esm\package.json [17B] package.json [862B] .guides/setup.md [1682B] esm\index.esm.js [9570B] index.cjs.js [10943B] README.md [104100B] react\index.d.ts [10498B] react\README.md [110468B] index.d.ts [22343B] react\index.cjs.js [8550B] react\esm\index.esm.js [8095B] .guides/usage.md [4220B] react\package.json [459B] react\esm\package.json [17B] .guides/config.json [236B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 11:35:18.741653   15144 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\nGenerated sources: esm\\package.json [17B] package.json [862B] .guides/setup.md [1682B] esm\\index.esm.js [9570B] index.cjs.js [10943B] README.md [104100B] react\\index.d.ts [10498B] react\\README.md [110468B] index.d.ts [22343B] react\\index.cjs.js [8550B] react\\esm\\index.esm.js [8095B] .guides/usage.md [4220B] react\\package.json [459B] react\\esm\\package.json [17B] .guides/config.json [236B] \n"}}
+[debug] [2026-02-26T03:35:18.745Z] I0226 11:35:18.743657   15144 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I0226 11:35:18.744166   15144 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 11:35:18.743657   15144 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation\nI0226 11:35:18.744166   15144 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-26T03:35:18.786Z] I0226 11:35:18.786818   15144 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 11:35:18.786818   15144 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[debug] [2026-02-26T03:35:19.202Z] I0226 11:35:19.136813   15144 engine.go:205] [/emulator/lychee-moving-development 74e0] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 11:35:19.136813   15144 engine.go:205] [/emulator/lychee-moving-development 74e0] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2026-02-26T03:35:19.568Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-26T03:35:19.568Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-26T03:35:19.594Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-26T03:35:19.595Z] Checked if tokens are valid: true, expires at: 1772080518569
+[debug] [2026-02-26T03:35:19.596Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-26T03:35:21.031Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-26T03:35:21.031Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-02-26T05:44:23.925Z] [Firebase Plugin] Received emulators started notification. Running detection.
+[debug] [2026-02-26T05:44:23.926Z] Found emulator hub locator: {"version":"15.5.1","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":17480}
+[debug] [2026-02-26T05:44:23.926Z] >>> [apiv2][query] GET http://127.0.0.1:4400/emulators [none]
+[debug] [2026-02-26T05:44:26.093Z] <<< [apiv2][status] GET http://127.0.0.1:4400/emulators 200
+[debug] [2026-02-26T05:44:26.094Z] <<< [apiv2][body] GET http://127.0.0.1:4400/emulators {"hub":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"name":"hub","host":"127.0.0.1","port":4400},"ui":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"name":"ui","host":"127.0.0.1","port":4000},"logging":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"name":"logging","host":"127.0.0.1","port":4500},"auth":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"name":"auth","host":"127.0.0.1","port":9099},"firestore":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"name":"firestore","host":"127.0.0.1","port":8080,"pid":2376,"reservedPorts":[9150],"webSocketHost":"127.0.0.1","webSocketPort":9150},"dataconnect":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"name":"dataconnect","host":"127.0.0.1","port":9399,"pid":21668,"timeout":10000}}
+[debug] [2026-02-26T05:44:26.858Z] I0226 13:44:26.858371   15144 engine.go:205] [/emulator/lychee-moving-development 74e0] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 13:44:26.858371   15144 engine.go:205] [/emulator/lychee-moving-development 74e0] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2026-02-26T05:51:00.024Z] [Firebase Plugin] Received emulators shutdown notification.
+[debug] [2026-02-26T05:51:00.025Z] [Firebase Plugin] Received emulators shutdown notification.
+[info] [Firebase Plugin] Stopping Data Connect toolkit
+[warn] !  Data Connect Emulator has exited upon receiving signal: SIGINT 
+[debug] [2026-02-26T05:51:50.365Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2026-02-26T05:51:54.234Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-26T05:51:54.235Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-26T05:51:54.235Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-26T05:51:54.237Z] Checked if tokens are valid: false, expires at: 1772080518569
+[debug] [2026-02-26T05:51:54.237Z] Checked if tokens are valid: false, expires at: 1772080518569
+[debug] [2026-02-26T05:51:54.237Z] > refreshing access token with scopes: []
+[debug] [2026-02-26T05:51:54.238Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-26T05:51:54.238Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-26T05:51:54.245Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 3.1.4) on port 50001
+[info] i  dataconnect: downloading dataconnect-emulator-3.1.4.exe... {"metadata":{"emulator":{"name":"dataconnect"},"message":"downloading dataconnect-emulator-3.1.4.exe..."}}
+[debug] [2026-02-26T05:51:54.836Z] >>> [apiv2][query] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-amd64-v3.1.4 
+[debug] [2026-02-26T05:51:55.915Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-26T05:51:55.915Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-26T05:51:55.960Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-26T05:51:55.961Z] Checked if tokens are valid: true, expires at: 1772088714915
+[debug] [2026-02-26T05:51:55.962Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-26T05:52:02.049Z] <<< [apiv2][status] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-amd64-v3.1.4 200
+[debug] [2026-02-26T05:52:02.049Z] <<< [apiv2][body] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-amd64-v3.1.4 [stream]
+[debug] [2026-02-26T05:52:02.998Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-26T05:52:02.998Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  dataconnect: Removing outdated emulator files: dataconnect-emulator-3.1.1.exe {"metadata":{"emulator":{"name":"dataconnect"},"message":"Removing outdated emulator files: dataconnect-emulator-3.1.1.exe"}}
+[debug] [2026-02-26T05:52:14.432Z] I0226 13:52:14.408435    9792 control.go:100] [/emulator/lychee-moving-development 3d40] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3439B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 13:52:14.408435    9792 control.go:100] [/emulator/lychee-moving-development 3d40] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [3439B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-26T05:52:14.433Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-02-26T05:52:14.433Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-02-26T05:52:14.433Z] Starting Data Connect Emulator with command {"binary":"C:\\Users\\zhiya\\.cache\\firebase\\emulators\\dataconnect-emulator-3.1.4.exe","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\zhiya\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.1.4.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-02-26T05:52:14.457Z] I0226 13:52:14.457116   14184 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 13:52:14.457116   14184 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-26T05:52:14.498Z] I0226 13:52:14.497790   14184 control.go:100] [/emulator/lychee-moving-development a71c] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3439B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 13:52:14.497790   14184 control.go:100] [/emulator/lychee-moving-development a71c] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [3439B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-26T05:52:14.539Z] I0226 13:52:14.539684   14184 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 13:52:14.539684   14184 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\n"}}
+[debug] [2026-02-26T05:52:14.553Z] I0226 13:52:14.553285   14184 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [80731B] main\query.gql [11253B] main\mutation.gql [30265B] main\implicit.gql [5158B] main\input.gql [116973B] main\relation.gql [49255B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 13:52:14.553285   14184 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [80731B] main\\query.gql [11253B] main\\mutation.gql [30265B] main\\implicit.gql [5158B] main\\input.gql [116973B] main\\relation.gql [49255B] \n"}}
+[debug] [2026-02-26T05:52:14.557Z] I0226 13:52:14.557750   14184 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+Generated sources: index.d.ts [22343B] index.cjs.js [10943B] react\index.d.ts [10498B] react\package.json [459B] .guides/config.json [236B] esm\package.json [17B] package.json [862B] README.md [104100B] react\index.cjs.js [8550B] react\esm\index.esm.js [8095B] react\esm\package.json [17B] .guides/usage.md [4220B] .guides/setup.md [1682B] esm\index.esm.js [9570B] react\README.md [110468B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 13:52:14.557750   14184 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\nGenerated sources: index.d.ts [22343B] index.cjs.js [10943B] react\\index.d.ts [10498B] react\\package.json [459B] .guides/config.json [236B] esm\\package.json [17B] package.json [862B] README.md [104100B] react\\index.cjs.js [8550B] react\\esm\\index.esm.js [8095B] react\\esm\\package.json [17B] .guides/usage.md [4220B] .guides/setup.md [1682B] esm\\index.esm.js [9570B] react\\README.md [110468B] \n"}}
+[debug] [2026-02-26T05:52:14.559Z] I0226 13:52:14.559970   14184 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I0226 13:52:14.559970   14184 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 13:52:14.559970   14184 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation\nI0226 13:52:14.559970   14184 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-26T05:52:14.577Z] I0226 13:52:14.578117   14184 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 13:52:14.578117   14184 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[debug] [2026-02-26T05:52:15.050Z] I0226 13:52:15.050561   14184 engine.go:208] [/emulator/lychee-moving-development a71c] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0226 13:52:15.050561   14184 engine.go:208] [/emulator/lychee-moving-development a71c] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2026-02-26T05:54:53.192Z] [Firebase Plugin] Received CLI notification.
+[debug] [2026-02-26T05:54:53.200Z] [Firebase Plugin] Received emulators shutdown notification.
+[info] [Firebase Plugin] Stopping Data Connect toolkit
+[warn] !  Data Connect Emulator has exited upon receiving signal: SIGINT 
+[debug] [2026-02-28T09:59:37.898Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2026-02-28T09:59:56.550Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-02-28T09:59:56.551Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-28T09:59:56.551Z] > authorizing via signed-in user (iluvcanton@gmail.com)
+[debug] [2026-02-28T09:59:56.553Z] Checked if tokens are valid: false, expires at: 1772088714915
+[debug] [2026-02-28T09:59:56.553Z] Checked if tokens are valid: false, expires at: 1772088714915
+[debug] [2026-02-28T09:59:56.553Z] > refreshing access token with scopes: []
+[debug] [2026-02-28T09:59:56.554Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-28T09:59:56.554Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-28T09:59:56.560Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 3.1.4) on port 50001
+[debug] [2026-02-28T09:59:57.412Z] I0228 17:59:57.388315   18332 control.go:100] [/emulator/lychee-moving-development da9a] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3439B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0228 17:59:57.388315   18332 control.go:100] [/emulator/lychee-moving-development da9a] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [3439B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-28T09:59:57.413Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-02-28T09:59:57.413Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-02-28T09:59:57.413Z] Starting Data Connect Emulator with command {"binary":"C:\\Users\\zhiya\\.cache\\firebase\\emulators\\dataconnect-emulator-3.1.4.exe","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\zhiya\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.1.4.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-02-28T09:59:57.446Z] I0228 17:59:57.439769   24584 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0228 17:59:57.439769   24584 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-02-28T09:59:57.546Z] I0228 17:59:57.496153   24584 control.go:100] [/emulator/lychee-moving-development ba56] UpdateResources(): done
+Main schema: sources: schema\schema.gql [2350B] 
+Connector "moving": sources: connector\mutations.gql [3439B] connector\queries.gql [2084B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0228 17:59:57.496153   24584 control.go:100] [/emulator/lychee-moving-development ba56] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [2350B] \nConnector \"moving\": sources: connector\\mutations.gql [3439B] connector\\queries.gql [2084B] \n"}}
+[debug] [2026-02-28T09:59:57.575Z] I0228 17:59:57.550938   24584 codegen.go:80] [connector "moving" javascriptSdk] Generating sources into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+I0228 17:59:57.570673   24584 collector.go:107] schema extensions wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\input.gql [116973B] main\relation.gql [49255B] main\query.gql [11253B] main\mutation.gql [30265B] prelude.gql [80731B] main\implicit.gql [5158B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0228 17:59:57.550938   24584 codegen.go:80] [connector \"moving\" javascriptSdk] Generating sources into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\nI0228 17:59:57.570673   24584 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\input.gql [116973B] main\\relation.gql [49255B] main\\query.gql [11253B] main\\mutation.gql [30265B] prelude.gql [80731B] main\\implicit.gql [5158B] \n"}}
+[debug] [2026-02-28T09:59:57.617Z] I0228 17:59:57.583214   24584 collector.go:107] connector "moving" javascriptSdk wrote into "c:\\Users\\zhiya\\Dev\\React\\lycheetech-movingapp\\src\\dataconnect-generated"
+Generated sources: index.d.ts [22343B] index.cjs.js [10943B] README.md [104100B] react\index.d.ts [10498B] react\package.json [459B] react\esm\package.json [17B] esm\index.esm.js [9570B] esm\package.json [17B] react\README.md [110468B] .guides/config.json [236B] .guides/setup.md [1682B] package.json [862B] react\index.cjs.js [8550B] react\esm\index.esm.js [8095B] .guides/usage.md [4220B] 
+I0228 17:59:57.607799   24584 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I0228 17:59:57.607799   24584 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0228 17:59:57.583214   24584 collector.go:107] connector \"moving\" javascriptSdk wrote into \"c:\\\\Users\\\\zhiya\\\\Dev\\\\React\\\\lycheetech-movingapp\\\\src\\\\dataconnect-generated\"\nGenerated sources: index.d.ts [22343B] index.cjs.js [10943B] README.md [104100B] react\\index.d.ts [10498B] react\\package.json [459B] react\\esm\\package.json [17B] esm\\index.esm.js [9570B] esm\\package.json [17B] react\\README.md [110468B] .guides/config.json [236B] .guides/setup.md [1682B] package.json [862B] react\\index.cjs.js [8550B] react\\esm\\index.esm.js [8095B] .guides/usage.md [4220B] \nI0228 17:59:57.607799   24584 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation\nI0228 17:59:57.607799   24584 load.go:109] Finished reloading\n"}}
+[debug] [2026-02-28T09:59:57.637Z] I0228 17:59:57.636047   24584 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0228 17:59:57.636047   24584 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[debug] [2026-02-28T09:59:57.750Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-28T09:59:57.750Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-28T09:59:57.784Z] [Firebase Plugin] User found:  iluvcanton@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-02-28T09:59:57.785Z] Checked if tokens are valid: true, expires at: 1772276396750
+[debug] [2026-02-28T09:59:57.786Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-02-28T09:59:57.859Z] I0228 17:59:57.858980   24584 engine.go:208] [/emulator/lychee-moving-development ba56] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0228 17:59:57.858980   24584 engine.go:208] [/emulator/lychee-moving-development ba56] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2026-02-28T09:59:58.483Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-02-28T09:59:58.483Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] [Firebase Plugin] Stopping Data Connect toolkit
+[warn] !  Data Connect Emulator has exited upon receiving signal: SIGINT 

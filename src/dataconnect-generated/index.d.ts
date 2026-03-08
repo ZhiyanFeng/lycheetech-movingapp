@@ -1,19 +1,4 @@
-import { connectDataConnectEmulator, getDataConnect } from '@firebase/data-connect';
-import { getApp } from '@react-native-firebase/app';
-
-const app = getApp();
-const dataConnect = getDataConnect(app, {
-  connector: 'default',
-  location: 'us-central1',
-  serviceId: 'lychee-moving-development', // replace with your service ID from dataconnect.yaml
-});
-
-const EMULATOR_HOST = Platform.OS === 'android' ? '10.0.2.2' : 'localhost';
-
-if (__DEV__) {
-  connectDataConnectEmulator(dataConnect, EMULATOR_HOST, 9399);
-}
-export { dataConnect };
+import { ConnectorConfig, DataConnect, QueryRef, QueryPromise, MutationRef, MutationPromise } from 'firebase/data-connect';
 
 export const connectorConfig: ConnectorConfig;
 
@@ -389,114 +374,6 @@ export interface Vehicle_Key {
   __typename?: 'Vehicle_Key';
 }
 
-interface GetUserRef {
-  /* Allow users to create refs without passing in DataConnect */
-  (vars: GetUserVariables): QueryRef<GetUserData, GetUserVariables>;
-  /* Allow users to pass in custom DataConnect instances */
-  (dc: DataConnect, vars: GetUserVariables): QueryRef<GetUserData, GetUserVariables>;
-  operationName: string;
-}
-export const getUserRef: GetUserRef;
-
-export function getUser(vars: GetUserVariables): QueryPromise<GetUserData, GetUserVariables>;
-export function getUser(dc: DataConnect, vars: GetUserVariables): QueryPromise<GetUserData, GetUserVariables>;
-
-interface GetUserByEmailRef {
-  /* Allow users to create refs without passing in DataConnect */
-  (vars: GetUserByEmailVariables): QueryRef<GetUserByEmailData, GetUserByEmailVariables>;
-  /* Allow users to pass in custom DataConnect instances */
-  (dc: DataConnect, vars: GetUserByEmailVariables): QueryRef<GetUserByEmailData, GetUserByEmailVariables>;
-  operationName: string;
-}
-export const getUserByEmailRef: GetUserByEmailRef;
-
-export function getUserByEmail(vars: GetUserByEmailVariables): QueryPromise<GetUserByEmailData, GetUserByEmailVariables>;
-export function getUserByEmail(dc: DataConnect, vars: GetUserByEmailVariables): QueryPromise<GetUserByEmailData, GetUserByEmailVariables>;
-
-interface ListMoversRef {
-  /* Allow users to create refs without passing in DataConnect */
-  (): QueryRef<ListMoversData, undefined>;
-  /* Allow users to pass in custom DataConnect instances */
-  (dc: DataConnect): QueryRef<ListMoversData, undefined>;
-  operationName: string;
-}
-export const listMoversRef: ListMoversRef;
-
-export function listMovers(): QueryPromise<ListMoversData, undefined>;
-export function listMovers(dc: DataConnect): QueryPromise<ListMoversData, undefined>;
-
-interface GetMoverRef {
-  /* Allow users to create refs without passing in DataConnect */
-  (vars: GetMoverVariables): QueryRef<GetMoverData, GetMoverVariables>;
-  /* Allow users to pass in custom DataConnect instances */
-  (dc: DataConnect, vars: GetMoverVariables): QueryRef<GetMoverData, GetMoverVariables>;
-  operationName: string;
-}
-export const getMoverRef: GetMoverRef;
-
-export function getMover(vars: GetMoverVariables): QueryPromise<GetMoverData, GetMoverVariables>;
-export function getMover(dc: DataConnect, vars: GetMoverVariables): QueryPromise<GetMoverData, GetMoverVariables>;
-
-interface ListMovingRequestsByStatusRef {
-  /* Allow users to create refs without passing in DataConnect */
-  (vars: ListMovingRequestsByStatusVariables): QueryRef<ListMovingRequestsByStatusData, ListMovingRequestsByStatusVariables>;
-  /* Allow users to pass in custom DataConnect instances */
-  (dc: DataConnect, vars: ListMovingRequestsByStatusVariables): QueryRef<ListMovingRequestsByStatusData, ListMovingRequestsByStatusVariables>;
-  operationName: string;
-}
-export const listMovingRequestsByStatusRef: ListMovingRequestsByStatusRef;
-
-export function listMovingRequestsByStatus(vars: ListMovingRequestsByStatusVariables): QueryPromise<ListMovingRequestsByStatusData, ListMovingRequestsByStatusVariables>;
-export function listMovingRequestsByStatus(dc: DataConnect, vars: ListMovingRequestsByStatusVariables): QueryPromise<ListMovingRequestsByStatusData, ListMovingRequestsByStatusVariables>;
-
-interface GetMovingRequestRef {
-  /* Allow users to create refs without passing in DataConnect */
-  (vars: GetMovingRequestVariables): QueryRef<GetMovingRequestData, GetMovingRequestVariables>;
-  /* Allow users to pass in custom DataConnect instances */
-  (dc: DataConnect, vars: GetMovingRequestVariables): QueryRef<GetMovingRequestData, GetMovingRequestVariables>;
-  operationName: string;
-}
-export const getMovingRequestRef: GetMovingRequestRef;
-
-export function getMovingRequest(vars: GetMovingRequestVariables): QueryPromise<GetMovingRequestData, GetMovingRequestVariables>;
-export function getMovingRequest(dc: DataConnect, vars: GetMovingRequestVariables): QueryPromise<GetMovingRequestData, GetMovingRequestVariables>;
-
-interface ListBidsForRequestRef {
-  /* Allow users to create refs without passing in DataConnect */
-  (vars: ListBidsForRequestVariables): QueryRef<ListBidsForRequestData, ListBidsForRequestVariables>;
-  /* Allow users to pass in custom DataConnect instances */
-  (dc: DataConnect, vars: ListBidsForRequestVariables): QueryRef<ListBidsForRequestData, ListBidsForRequestVariables>;
-  operationName: string;
-}
-export const listBidsForRequestRef: ListBidsForRequestRef;
-
-export function listBidsForRequest(vars: ListBidsForRequestVariables): QueryPromise<ListBidsForRequestData, ListBidsForRequestVariables>;
-export function listBidsForRequest(dc: DataConnect, vars: ListBidsForRequestVariables): QueryPromise<ListBidsForRequestData, ListBidsForRequestVariables>;
-
-interface ListJobsForUserRef {
-  /* Allow users to create refs without passing in DataConnect */
-  (vars: ListJobsForUserVariables): QueryRef<ListJobsForUserData, ListJobsForUserVariables>;
-  /* Allow users to pass in custom DataConnect instances */
-  (dc: DataConnect, vars: ListJobsForUserVariables): QueryRef<ListJobsForUserData, ListJobsForUserVariables>;
-  operationName: string;
-}
-export const listJobsForUserRef: ListJobsForUserRef;
-
-export function listJobsForUser(vars: ListJobsForUserVariables): QueryPromise<ListJobsForUserData, ListJobsForUserVariables>;
-export function listJobsForUser(dc: DataConnect, vars: ListJobsForUserVariables): QueryPromise<ListJobsForUserData, ListJobsForUserVariables>;
-
-interface GetJobRef {
-  /* Allow users to create refs without passing in DataConnect */
-  (vars: GetJobVariables): QueryRef<GetJobData, GetJobVariables>;
-  /* Allow users to pass in custom DataConnect instances */
-  (dc: DataConnect, vars: GetJobVariables): QueryRef<GetJobData, GetJobVariables>;
-  operationName: string;
-}
-export const getJobRef: GetJobRef;
-
-export function getJob(vars: GetJobVariables): QueryPromise<GetJobData, GetJobVariables>;
-export function getJob(dc: DataConnect, vars: GetJobVariables): QueryPromise<GetJobData, GetJobVariables>;
-
 interface CreateUserRef {
   /* Allow users to create refs without passing in DataConnect */
   (vars: CreateUserVariables): MutationRef<CreateUserData, CreateUserVariables>;
@@ -652,4 +529,112 @@ export const createInvoiceRef: CreateInvoiceRef;
 
 export function createInvoice(vars: CreateInvoiceVariables): MutationPromise<CreateInvoiceData, CreateInvoiceVariables>;
 export function createInvoice(dc: DataConnect, vars: CreateInvoiceVariables): MutationPromise<CreateInvoiceData, CreateInvoiceVariables>;
+
+interface GetUserRef {
+  /* Allow users to create refs without passing in DataConnect */
+  (vars: GetUserVariables): QueryRef<GetUserData, GetUserVariables>;
+  /* Allow users to pass in custom DataConnect instances */
+  (dc: DataConnect, vars: GetUserVariables): QueryRef<GetUserData, GetUserVariables>;
+  operationName: string;
+}
+export const getUserRef: GetUserRef;
+
+export function getUser(vars: GetUserVariables): QueryPromise<GetUserData, GetUserVariables>;
+export function getUser(dc: DataConnect, vars: GetUserVariables): QueryPromise<GetUserData, GetUserVariables>;
+
+interface GetUserByEmailRef {
+  /* Allow users to create refs without passing in DataConnect */
+  (vars: GetUserByEmailVariables): QueryRef<GetUserByEmailData, GetUserByEmailVariables>;
+  /* Allow users to pass in custom DataConnect instances */
+  (dc: DataConnect, vars: GetUserByEmailVariables): QueryRef<GetUserByEmailData, GetUserByEmailVariables>;
+  operationName: string;
+}
+export const getUserByEmailRef: GetUserByEmailRef;
+
+export function getUserByEmail(vars: GetUserByEmailVariables): QueryPromise<GetUserByEmailData, GetUserByEmailVariables>;
+export function getUserByEmail(dc: DataConnect, vars: GetUserByEmailVariables): QueryPromise<GetUserByEmailData, GetUserByEmailVariables>;
+
+interface ListMoversRef {
+  /* Allow users to create refs without passing in DataConnect */
+  (): QueryRef<ListMoversData, undefined>;
+  /* Allow users to pass in custom DataConnect instances */
+  (dc: DataConnect): QueryRef<ListMoversData, undefined>;
+  operationName: string;
+}
+export const listMoversRef: ListMoversRef;
+
+export function listMovers(): QueryPromise<ListMoversData, undefined>;
+export function listMovers(dc: DataConnect): QueryPromise<ListMoversData, undefined>;
+
+interface GetMoverRef {
+  /* Allow users to create refs without passing in DataConnect */
+  (vars: GetMoverVariables): QueryRef<GetMoverData, GetMoverVariables>;
+  /* Allow users to pass in custom DataConnect instances */
+  (dc: DataConnect, vars: GetMoverVariables): QueryRef<GetMoverData, GetMoverVariables>;
+  operationName: string;
+}
+export const getMoverRef: GetMoverRef;
+
+export function getMover(vars: GetMoverVariables): QueryPromise<GetMoverData, GetMoverVariables>;
+export function getMover(dc: DataConnect, vars: GetMoverVariables): QueryPromise<GetMoverData, GetMoverVariables>;
+
+interface ListMovingRequestsByStatusRef {
+  /* Allow users to create refs without passing in DataConnect */
+  (vars: ListMovingRequestsByStatusVariables): QueryRef<ListMovingRequestsByStatusData, ListMovingRequestsByStatusVariables>;
+  /* Allow users to pass in custom DataConnect instances */
+  (dc: DataConnect, vars: ListMovingRequestsByStatusVariables): QueryRef<ListMovingRequestsByStatusData, ListMovingRequestsByStatusVariables>;
+  operationName: string;
+}
+export const listMovingRequestsByStatusRef: ListMovingRequestsByStatusRef;
+
+export function listMovingRequestsByStatus(vars: ListMovingRequestsByStatusVariables): QueryPromise<ListMovingRequestsByStatusData, ListMovingRequestsByStatusVariables>;
+export function listMovingRequestsByStatus(dc: DataConnect, vars: ListMovingRequestsByStatusVariables): QueryPromise<ListMovingRequestsByStatusData, ListMovingRequestsByStatusVariables>;
+
+interface GetMovingRequestRef {
+  /* Allow users to create refs without passing in DataConnect */
+  (vars: GetMovingRequestVariables): QueryRef<GetMovingRequestData, GetMovingRequestVariables>;
+  /* Allow users to pass in custom DataConnect instances */
+  (dc: DataConnect, vars: GetMovingRequestVariables): QueryRef<GetMovingRequestData, GetMovingRequestVariables>;
+  operationName: string;
+}
+export const getMovingRequestRef: GetMovingRequestRef;
+
+export function getMovingRequest(vars: GetMovingRequestVariables): QueryPromise<GetMovingRequestData, GetMovingRequestVariables>;
+export function getMovingRequest(dc: DataConnect, vars: GetMovingRequestVariables): QueryPromise<GetMovingRequestData, GetMovingRequestVariables>;
+
+interface ListBidsForRequestRef {
+  /* Allow users to create refs without passing in DataConnect */
+  (vars: ListBidsForRequestVariables): QueryRef<ListBidsForRequestData, ListBidsForRequestVariables>;
+  /* Allow users to pass in custom DataConnect instances */
+  (dc: DataConnect, vars: ListBidsForRequestVariables): QueryRef<ListBidsForRequestData, ListBidsForRequestVariables>;
+  operationName: string;
+}
+export const listBidsForRequestRef: ListBidsForRequestRef;
+
+export function listBidsForRequest(vars: ListBidsForRequestVariables): QueryPromise<ListBidsForRequestData, ListBidsForRequestVariables>;
+export function listBidsForRequest(dc: DataConnect, vars: ListBidsForRequestVariables): QueryPromise<ListBidsForRequestData, ListBidsForRequestVariables>;
+
+interface ListJobsForUserRef {
+  /* Allow users to create refs without passing in DataConnect */
+  (vars: ListJobsForUserVariables): QueryRef<ListJobsForUserData, ListJobsForUserVariables>;
+  /* Allow users to pass in custom DataConnect instances */
+  (dc: DataConnect, vars: ListJobsForUserVariables): QueryRef<ListJobsForUserData, ListJobsForUserVariables>;
+  operationName: string;
+}
+export const listJobsForUserRef: ListJobsForUserRef;
+
+export function listJobsForUser(vars: ListJobsForUserVariables): QueryPromise<ListJobsForUserData, ListJobsForUserVariables>;
+export function listJobsForUser(dc: DataConnect, vars: ListJobsForUserVariables): QueryPromise<ListJobsForUserData, ListJobsForUserVariables>;
+
+interface GetJobRef {
+  /* Allow users to create refs without passing in DataConnect */
+  (vars: GetJobVariables): QueryRef<GetJobData, GetJobVariables>;
+  /* Allow users to pass in custom DataConnect instances */
+  (dc: DataConnect, vars: GetJobVariables): QueryRef<GetJobData, GetJobVariables>;
+  operationName: string;
+}
+export const getJobRef: GetJobRef;
+
+export function getJob(vars: GetJobVariables): QueryPromise<GetJobData, GetJobVariables>;
+export function getJob(dc: DataConnect, vars: GetJobVariables): QueryPromise<GetJobData, GetJobVariables>;
 

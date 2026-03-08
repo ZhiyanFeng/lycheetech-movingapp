@@ -30,114 +30,6 @@ const connectorConfig = {
 };
 exports.connectorConfig = connectorConfig;
 
-const getUserRef = (dcOrVars, vars) => {
-  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
-  dcInstance._useGeneratedSdk();
-  return queryRef(dcInstance, 'GetUser', inputVars);
-}
-getUserRef.operationName = 'GetUser';
-exports.getUserRef = getUserRef;
-
-exports.getUser = function getUser(dcOrVars, vars) {
-  return executeQuery(getUserRef(dcOrVars, vars));
-};
-
-const getUserByEmailRef = (dcOrVars, vars) => {
-  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
-  dcInstance._useGeneratedSdk();
-  return queryRef(dcInstance, 'GetUserByEmail', inputVars);
-}
-getUserByEmailRef.operationName = 'GetUserByEmail';
-exports.getUserByEmailRef = getUserByEmailRef;
-
-exports.getUserByEmail = function getUserByEmail(dcOrVars, vars) {
-  return executeQuery(getUserByEmailRef(dcOrVars, vars));
-};
-
-const listMoversRef = (dc) => {
-  const { dc: dcInstance} = validateArgs(connectorConfig, dc, undefined);
-  dcInstance._useGeneratedSdk();
-  return queryRef(dcInstance, 'ListMovers');
-}
-listMoversRef.operationName = 'ListMovers';
-exports.listMoversRef = listMoversRef;
-
-exports.listMovers = function listMovers(dc) {
-  return executeQuery(listMoversRef(dc));
-};
-
-const getMoverRef = (dcOrVars, vars) => {
-  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
-  dcInstance._useGeneratedSdk();
-  return queryRef(dcInstance, 'GetMover', inputVars);
-}
-getMoverRef.operationName = 'GetMover';
-exports.getMoverRef = getMoverRef;
-
-exports.getMover = function getMover(dcOrVars, vars) {
-  return executeQuery(getMoverRef(dcOrVars, vars));
-};
-
-const listMovingRequestsByStatusRef = (dcOrVars, vars) => {
-  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
-  dcInstance._useGeneratedSdk();
-  return queryRef(dcInstance, 'ListMovingRequestsByStatus', inputVars);
-}
-listMovingRequestsByStatusRef.operationName = 'ListMovingRequestsByStatus';
-exports.listMovingRequestsByStatusRef = listMovingRequestsByStatusRef;
-
-exports.listMovingRequestsByStatus = function listMovingRequestsByStatus(dcOrVars, vars) {
-  return executeQuery(listMovingRequestsByStatusRef(dcOrVars, vars));
-};
-
-const getMovingRequestRef = (dcOrVars, vars) => {
-  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
-  dcInstance._useGeneratedSdk();
-  return queryRef(dcInstance, 'GetMovingRequest', inputVars);
-}
-getMovingRequestRef.operationName = 'GetMovingRequest';
-exports.getMovingRequestRef = getMovingRequestRef;
-
-exports.getMovingRequest = function getMovingRequest(dcOrVars, vars) {
-  return executeQuery(getMovingRequestRef(dcOrVars, vars));
-};
-
-const listBidsForRequestRef = (dcOrVars, vars) => {
-  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
-  dcInstance._useGeneratedSdk();
-  return queryRef(dcInstance, 'ListBidsForRequest', inputVars);
-}
-listBidsForRequestRef.operationName = 'ListBidsForRequest';
-exports.listBidsForRequestRef = listBidsForRequestRef;
-
-exports.listBidsForRequest = function listBidsForRequest(dcOrVars, vars) {
-  return executeQuery(listBidsForRequestRef(dcOrVars, vars));
-};
-
-const listJobsForUserRef = (dcOrVars, vars) => {
-  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
-  dcInstance._useGeneratedSdk();
-  return queryRef(dcInstance, 'ListJobsForUser', inputVars);
-}
-listJobsForUserRef.operationName = 'ListJobsForUser';
-exports.listJobsForUserRef = listJobsForUserRef;
-
-exports.listJobsForUser = function listJobsForUser(dcOrVars, vars) {
-  return executeQuery(listJobsForUserRef(dcOrVars, vars));
-};
-
-const getJobRef = (dcOrVars, vars) => {
-  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
-  dcInstance._useGeneratedSdk();
-  return queryRef(dcInstance, 'GetJob', inputVars);
-}
-getJobRef.operationName = 'GetJob';
-exports.getJobRef = getJobRef;
-
-exports.getJob = function getJob(dcOrVars, vars) {
-  return executeQuery(getJobRef(dcOrVars, vars));
-};
-
 const createUserRef = (dcOrVars, vars) => {
   const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
   dcInstance._useGeneratedSdk();
@@ -292,4 +184,112 @@ exports.createInvoiceRef = createInvoiceRef;
 
 exports.createInvoice = function createInvoice(dcOrVars, vars) {
   return executeMutation(createInvoiceRef(dcOrVars, vars));
+};
+
+const getUserRef = (dcOrVars, vars) => {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
+  dcInstance._useGeneratedSdk();
+  return queryRef(dcInstance, 'GetUser', inputVars);
+}
+getUserRef.operationName = 'GetUser';
+exports.getUserRef = getUserRef;
+
+exports.getUser = function getUser(dcOrVars, vars) {
+  return executeQuery(getUserRef(dcOrVars, vars));
+};
+
+const getUserByEmailRef = (dcOrVars, vars) => {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
+  dcInstance._useGeneratedSdk();
+  return queryRef(dcInstance, 'GetUserByEmail', inputVars);
+}
+getUserByEmailRef.operationName = 'GetUserByEmail';
+exports.getUserByEmailRef = getUserByEmailRef;
+
+exports.getUserByEmail = function getUserByEmail(dcOrVars, vars) {
+  return executeQuery(getUserByEmailRef(dcOrVars, vars));
+};
+
+const listMoversRef = (dc) => {
+  const { dc: dcInstance} = validateArgs(connectorConfig, dc, undefined);
+  dcInstance._useGeneratedSdk();
+  return queryRef(dcInstance, 'ListMovers');
+}
+listMoversRef.operationName = 'ListMovers';
+exports.listMoversRef = listMoversRef;
+
+exports.listMovers = function listMovers(dc) {
+  return executeQuery(listMoversRef(dc));
+};
+
+const getMoverRef = (dcOrVars, vars) => {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
+  dcInstance._useGeneratedSdk();
+  return queryRef(dcInstance, 'GetMover', inputVars);
+}
+getMoverRef.operationName = 'GetMover';
+exports.getMoverRef = getMoverRef;
+
+exports.getMover = function getMover(dcOrVars, vars) {
+  return executeQuery(getMoverRef(dcOrVars, vars));
+};
+
+const listMovingRequestsByStatusRef = (dcOrVars, vars) => {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
+  dcInstance._useGeneratedSdk();
+  return queryRef(dcInstance, 'ListMovingRequestsByStatus', inputVars);
+}
+listMovingRequestsByStatusRef.operationName = 'ListMovingRequestsByStatus';
+exports.listMovingRequestsByStatusRef = listMovingRequestsByStatusRef;
+
+exports.listMovingRequestsByStatus = function listMovingRequestsByStatus(dcOrVars, vars) {
+  return executeQuery(listMovingRequestsByStatusRef(dcOrVars, vars));
+};
+
+const getMovingRequestRef = (dcOrVars, vars) => {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
+  dcInstance._useGeneratedSdk();
+  return queryRef(dcInstance, 'GetMovingRequest', inputVars);
+}
+getMovingRequestRef.operationName = 'GetMovingRequest';
+exports.getMovingRequestRef = getMovingRequestRef;
+
+exports.getMovingRequest = function getMovingRequest(dcOrVars, vars) {
+  return executeQuery(getMovingRequestRef(dcOrVars, vars));
+};
+
+const listBidsForRequestRef = (dcOrVars, vars) => {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
+  dcInstance._useGeneratedSdk();
+  return queryRef(dcInstance, 'ListBidsForRequest', inputVars);
+}
+listBidsForRequestRef.operationName = 'ListBidsForRequest';
+exports.listBidsForRequestRef = listBidsForRequestRef;
+
+exports.listBidsForRequest = function listBidsForRequest(dcOrVars, vars) {
+  return executeQuery(listBidsForRequestRef(dcOrVars, vars));
+};
+
+const listJobsForUserRef = (dcOrVars, vars) => {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
+  dcInstance._useGeneratedSdk();
+  return queryRef(dcInstance, 'ListJobsForUser', inputVars);
+}
+listJobsForUserRef.operationName = 'ListJobsForUser';
+exports.listJobsForUserRef = listJobsForUserRef;
+
+exports.listJobsForUser = function listJobsForUser(dcOrVars, vars) {
+  return executeQuery(listJobsForUserRef(dcOrVars, vars));
+};
+
+const getJobRef = (dcOrVars, vars) => {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(connectorConfig, dcOrVars, vars, true);
+  dcInstance._useGeneratedSdk();
+  return queryRef(dcInstance, 'GetJob', inputVars);
+}
+getJobRef.operationName = 'GetJob';
+exports.getJobRef = getJobRef;
+
+exports.getJob = function getJob(dcOrVars, vars) {
+  return executeQuery(getJobRef(dcOrVars, vars));
 };
