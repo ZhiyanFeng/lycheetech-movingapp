@@ -38,8 +38,7 @@
       "expo-web-browser",
       "@react-native-firebase/app",
       "@react-native-firebase/auth",
-      "@react-native-firebase/crashlytics",
-      "@firebase/data-connect"
+      "@react-native-firebase/crashlytics"
     ]
   }
 }
