@@ -4,13 +4,11 @@ import { useRouter, Link } from 'expo-router';
 import { Container,Button, Input,  Layout } from '../../components/ui';
 import { Text as CustomText } from '../../components/ui/text';
 import { useColors } from '../../hooks/useColors';
-import { useAuth } from '../../contexts';
 import { spacing } from '../../../themes';
 
 export default function ForgotPasswordScreen() {
   const router = useRouter();
   const colors = useColors();
-  const { resetPassword } = useAuth();
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
@@ -26,14 +24,11 @@ export default function ForgotPasswordScreen() {
 
     setLoading(true);
 
-    try {
-      await resetPassword(email);
-      setSent(true);
-    } catch (err: any) {
-      setError(err.message || 'Failed to send reset email. Please try again.');
-    } finally {
+    // Simulate API call
+    setTimeout(() => {
       setLoading(false);
-    }
+      setSent(true);
+    }, 2000);
   };
 
   if (sent) {

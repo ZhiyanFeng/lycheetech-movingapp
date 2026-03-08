@@ -4,13 +4,11 @@ import { useRouter, Link } from 'expo-router';
 import { Container, Button, Input, Layout } from '../../components/ui';
 import { Text as CustomText } from '../../components/ui/text';
 import { useColors } from '../../hooks/useColors';
-import { useAuth } from '../../contexts';
 import { spacing } from '../../../themes';
 
 export default function RegisterScreen() {
   const router = useRouter();
   const colors = useColors();
-  const { signUp } = useAuth();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -31,21 +29,19 @@ export default function RegisterScreen() {
       return;
     }
 
-    if (password.length < 6) {
-      setError('Password must be at least 6 characters');
+    if (password.length < 8) {
+      setError('Password must be at least 8 characters');
       return;
     }
 
     setLoading(true);
 
-    try {
-      await signUp(email, password);
-      // Navigation will happen automatically via the auth state listener in index.tsx
-    } catch (err: any) {
-      setError(err.message || 'Failed to create account. Please try again.');
-    } finally {
+    // Simulate API call
+    setTimeout(() => {
       setLoading(false);
-    }
+      // Navigate to main app on success
+      router.replace('/(app)');
+    }, 2000);
   };
 
   return (
